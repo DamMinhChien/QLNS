@@ -1,0 +1,300 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{D52E2193-B411-4269-B729-60D5E9A55ADC}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>Main</RootNamespace>
+    <AssemblyName>Main</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Function\AutoResizer.cs" />
+    <Compile Include="ChamCongForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ChamCongForm.Designer.cs">
+      <DependentUpon>ChamCongForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Login_Home_Forgot\HomeForm_TP.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Login_Home_Forgot\HomeForm_TP.Designer.cs">
+      <DependentUpon>HomeForm_TP.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Login_Home_Forgot\ForgotPassForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Login_Home_Forgot\ForgotPassForm.Designer.cs">
+      <DependentUpon>ForgotPassForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Function\Function.cs" />
+    <Compile Include="Login_Home_Forgot\LoginForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Login_Home_Forgot\LoginForm.Designer.cs">
+      <DependentUpon>LoginForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Login_Home_Forgot\HomeForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Login_Home_Forgot\HomeForm.Designer.cs">
+      <DependentUpon>HomeForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="QuanLyChucVu\QuanLyChucVuForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="QuanLyChucVu\QuanLyChucVuForm.Designer.cs">
+      <DependentUpon>QuanLyChucVuForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="QuanLyNhanSuDataSet.Designer.cs" />
+    <Compile Include="QuanLyNhanVien\QuanLyNhanVienForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="QuanLyNhanVien\QuanLyNhanVienForm.Designer.cs">
+      <DependentUpon>QuanLyNhanVienForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="QuanLyPhongBan\QuanLyPhongBanForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="QuanLyPhongBan\QuanLyPhongBanForm.Designer.cs">
+      <DependentUpon>QuanLyPhongBanForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="QuanLyTaiKhoan\QuanLyTaiKhoan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="QuanLyTaiKhoan\QuanLyTaiKhoan.Designer.cs">
+      <DependentUpon>QuanLyTaiKhoan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="QuanLyTaiKhoan\SuaTaiKhoanForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="QuanLyTaiKhoan\SuaTaiKhoanForm.Designer.cs">
+      <DependentUpon>SuaTaiKhoanForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="QuanLyTaiKhoan\ThemTaiKhoanForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="QuanLyTaiKhoan\ThemTaiKhoanForm.Designer.cs">
+      <DependentUpon>ThemTaiKhoanForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="QuanLyPhongBan\SuaPhongBanForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="QuanLyPhongBan\SuaPhongBanForm.Designer.cs">
+      <DependentUpon>SuaPhongBanForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="QuanLyPhongBan\ThemPhongBanForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="QuanLyPhongBan\ThemPhongBanForm.Designer.cs">
+      <DependentUpon>ThemPhongBanForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="QuanLyNhanVien\SuaNhanVienForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="QuanLyNhanVien\SuaNhanVienForm.Designer.cs">
+      <DependentUpon>SuaNhanVienForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="QuanLyNhanVien\ThemNhanVienForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="QuanLyNhanVien\ThemNhanVienForm.Designer.cs">
+      <DependentUpon>ThemNhanVienForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="QuanLyChucVu\SuaChucVuForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="QuanLyChucVu\SuaChucVuForm.Designer.cs">
+      <DependentUpon>SuaChucVuForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="QuanLyChucVu\ThemChucVuForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="QuanLyChucVu\ThemChucVuForm.Designer.cs">
+      <DependentUpon>ThemChucVuForm.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="ChamCongForm.resx">
+      <DependentUpon>ChamCongForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Login_Home_Forgot\ForgotPassForm.resx">
+      <DependentUpon>ForgotPassForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Login_Home_Forgot\HomeForm.resx">
+      <DependentUpon>HomeForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Login_Home_Forgot\HomeForm_TP.resx">
+      <DependentUpon>HomeForm_TP.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Login_Home_Forgot\LoginForm.resx">
+      <DependentUpon>LoginForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="QuanLyChucVu\QuanLyChucVuForm.resx">
+      <DependentUpon>QuanLyChucVuForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="QuanLyNhanVien\QuanLyNhanVienForm.resx">
+      <DependentUpon>QuanLyNhanVienForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="QuanLyPhongBan\QuanLyPhongBanForm.resx">
+      <DependentUpon>QuanLyPhongBanForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="QuanLyTaiKhoan\QuanLyTaiKhoan.resx">
+      <DependentUpon>QuanLyTaiKhoan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="QuanLyTaiKhoan\SuaTaiKhoanForm.resx">
+      <DependentUpon>SuaTaiKhoanForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="QuanLyTaiKhoan\ThemTaiKhoanForm.resx">
+      <DependentUpon>ThemTaiKhoanForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="QuanLyPhongBan\SuaPhongBanForm.resx">
+      <DependentUpon>SuaPhongBanForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="QuanLyPhongBan\ThemPhongBanForm.resx">
+      <DependentUpon>ThemPhongBanForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="QuanLyNhanVien\SuaNhanVienForm.resx">
+      <DependentUpon>SuaNhanVienForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="QuanLyNhanVien\ThemNhanVienForm.resx">
+      <DependentUpon>ThemNhanVienForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="QuanLyChucVu\SuaChucVuForm.resx">
+      <DependentUpon>SuaChucVuForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="QuanLyChucVu\ThemChucVuForm.resx">
+      <DependentUpon>ThemChucVuForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pngtree-avatar-icon-profile-icon-member-login-vector-isolated-png-image_1978396.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\6681221.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Screenshot 2024-10-06 152651.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ABC-2021-LOGO.svg.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Screenshot 2024-10-06 153752.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Screenshot 2024-10-06 153825.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1635595-200.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\business_application_addmale_useradd_insert_add_user_client_23121.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\note-task-comment-message-edit-write_1086131.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\trash-can_1153121.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1486504837-descending-filter-filtering-tool-funnel-sort_813631.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\repeat_update_refresh_reload_sync_icon_2255561.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Save_icon-icons.com_737021.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\vcsconflicting_934971.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Redo_icon-icons.com_73698.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Undo_icon-icons.com_73701.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\searchmagnifierinterfacesymbol1_79893.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\8220447.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\c.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\b.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\a.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Roll-call.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\hierarchy-line-icon-outline-symbol-vector-illustration-concept-sign-2JPD185.jpg" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
