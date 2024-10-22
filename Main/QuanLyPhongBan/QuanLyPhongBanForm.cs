@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
+//Xóa cái dòng này đi!
 namespace Main
 {
     public partial class QuanLyPhongBanForm : Form
