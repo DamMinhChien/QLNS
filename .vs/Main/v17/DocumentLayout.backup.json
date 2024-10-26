@@ -11,7 +11,7 @@
       "RelativeMoniker": "D:0:0:{D52E2193-B411-4269-B729-60D5E9A55ADC}|Main\\Main.csproj|solutionrelative:main\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{D52E2193-B411-4269-B729-60D5E9A55ADC}|Main\\Main.csproj|c:\\users\\dammi\\source\\repos\\main\\main\\chamcongform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{D52E2193-B411-4269-B729-60D5E9A55ADC}|Main\\Main.csproj|C:\\Users\\dammi\\source\\repos\\Main\\main\\chamcongform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{D52E2193-B411-4269-B729-60D5E9A55ADC}|Main\\Main.csproj|solutionrelative:main\\chamcongform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
@@ -39,8 +39,7 @@
               "ViewState": "AgIAAAgAAAAAAAAAAAAxwBIAAAAwAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-10-11T12:00:46.275Z",
-              "IsPinned": true,
-              "EditorCaption": ""
+              "IsPinned": true
             },
             {
               "$type": "Document",
@@ -53,8 +52,7 @@
               "ViewState": "AgIAAC0AAAAAAAAAAAAwwFgAAAATAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-10-20T04:02:09.201Z",
-              "IsPinned": true,
-              "EditorCaption": ""
+              "IsPinned": true
             },
             {
               "$type": "Bookmark",
@@ -68,7 +66,7 @@
               "RelativeDocumentMoniker": "Main\\ChamCongForm.cs",
               "ToolTip": "C:\\Users\\dammi\\source\\repos\\Main\\Main\\ChamCongForm.cs",
               "RelativeToolTip": "Main\\ChamCongForm.cs",
-              "ViewState": "AgIAAFYAAAAAAAAAAAAmwGkAAAAkAAAAAAAAAA==",
+              "ViewState": "AgIAAE4AAAAAAAAAAAAmwGkAAAAkAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-10-22T08:36:33.525Z",
               "EditorCaption": ""
@@ -82,8 +80,7 @@
               "ToolTip": "C:\\Users\\dammi\\source\\repos\\Main\\Main\\ChamCongForm.cs [Design]",
               "RelativeToolTip": "Main\\ChamCongForm.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-22T08:36:30.907Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2024-10-22T08:36:30.907Z"
             }
           ]
         }
