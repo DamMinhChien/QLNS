@@ -31,12 +31,12 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.btn_About = new System.Windows.Forms.Button();
             this.btn_Sys = new System.Windows.Forms.Button();
-            this.btnInf = new System.Windows.Forms.Button();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.panel_Body = new System.Windows.Forms.Panel();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnThongBaoCaNhan = new System.Windows.Forms.Button();
             this.btnThongBaoPhongBan = new System.Windows.Forms.Button();
+            this.btnInf = new System.Windows.Forms.Button();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.panel_Body = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -78,6 +78,28 @@
             this.btn_Sys.UseVisualStyleBackColor = true;
             this.btn_Sys.Click += new System.EventHandler(this.btn_Sys_Click);
             // 
+            // btnThongBaoCaNhan
+            // 
+            this.btnThongBaoCaNhan.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnThongBaoCaNhan.Location = new System.Drawing.Point(0, 329);
+            this.btnThongBaoCaNhan.Name = "btnThongBaoCaNhan";
+            this.btnThongBaoCaNhan.Size = new System.Drawing.Size(303, 88);
+            this.btnThongBaoCaNhan.TabIndex = 4;
+            this.btnThongBaoCaNhan.Text = "Thông báo cá nhân";
+            this.btnThongBaoCaNhan.UseVisualStyleBackColor = true;
+            this.btnThongBaoCaNhan.Click += new System.EventHandler(this.btnThongBaoCaNhan_Click);
+            // 
+            // btnThongBaoPhongBan
+            // 
+            this.btnThongBaoPhongBan.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnThongBaoPhongBan.Location = new System.Drawing.Point(0, 241);
+            this.btnThongBaoPhongBan.Name = "btnThongBaoPhongBan";
+            this.btnThongBaoPhongBan.Size = new System.Drawing.Size(303, 88);
+            this.btnThongBaoPhongBan.TabIndex = 5;
+            this.btnThongBaoPhongBan.Text = "Thông báo phòng ban";
+            this.btnThongBaoPhongBan.UseVisualStyleBackColor = true;
+            this.btnThongBaoPhongBan.Click += new System.EventHandler(this.btnThongBaoPhongBan_Click);
+            // 
             // btnInf
             // 
             this.btnInf.Dock = System.Windows.Forms.DockStyle.Top;
@@ -99,15 +121,6 @@
             this.panel3.Size = new System.Drawing.Size(303, 153);
             this.panel3.TabIndex = 0;
             // 
-            // panel_Body
-            // 
-            this.panel_Body.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel_Body.Location = new System.Drawing.Point(312, 9);
-            this.panel_Body.Name = "panel_Body";
-            this.panel_Body.Size = new System.Drawing.Size(918, 594);
-            this.panel_Body.TabIndex = 1;
-            this.panel_Body.Paint += new System.Windows.Forms.PaintEventHandler(this.panel_Body_Paint);
-            // 
             // pictureBox1
             // 
             this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -119,25 +132,14 @@
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
-            // btnThongBaoCaNhan
+            // panel_Body
             // 
-            this.btnThongBaoCaNhan.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnThongBaoCaNhan.Location = new System.Drawing.Point(0, 329);
-            this.btnThongBaoCaNhan.Name = "btnThongBaoCaNhan";
-            this.btnThongBaoCaNhan.Size = new System.Drawing.Size(303, 88);
-            this.btnThongBaoCaNhan.TabIndex = 4;
-            this.btnThongBaoCaNhan.Text = "Thông báo cá nhân";
-            this.btnThongBaoCaNhan.UseVisualStyleBackColor = true;
-            // 
-            // btnThongBaoPhongBan
-            // 
-            this.btnThongBaoPhongBan.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnThongBaoPhongBan.Location = new System.Drawing.Point(0, 241);
-            this.btnThongBaoPhongBan.Name = "btnThongBaoPhongBan";
-            this.btnThongBaoPhongBan.Size = new System.Drawing.Size(303, 88);
-            this.btnThongBaoPhongBan.TabIndex = 5;
-            this.btnThongBaoPhongBan.Text = "Thông báo phòng ban";
-            this.btnThongBaoPhongBan.UseVisualStyleBackColor = true;
+            this.panel_Body.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel_Body.Location = new System.Drawing.Point(312, 9);
+            this.panel_Body.Name = "panel_Body";
+            this.panel_Body.Size = new System.Drawing.Size(918, 594);
+            this.panel_Body.TabIndex = 1;
+            this.panel_Body.Paint += new System.Windows.Forms.PaintEventHandler(this.panel_Body_Paint);
             // 
             // Home_NV
             // 

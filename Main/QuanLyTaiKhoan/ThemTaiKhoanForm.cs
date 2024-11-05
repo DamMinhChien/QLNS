@@ -130,6 +130,8 @@ namespace Main
                 // Thêm vào ComboBox
                 cmbLoaiTaiKhoan_tenCV.Items.Add(chucVu);
             }
+            ThemNhanVienForm themNhanVienForm = new ThemNhanVienForm();
+            themNhanVienForm.ShowDialog();
         }
 
         private void đăngXuấtToolStripMenuItem_Click(object sender, EventArgs e)

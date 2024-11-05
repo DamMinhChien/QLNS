@@ -13,6 +13,7 @@ namespace Main
 {
     public partial class Home_NV : Form
     {
+        private bool canChangePhongBan;
         public Home_NV()
         {
             InitializeComponent();
@@ -23,10 +24,12 @@ namespace Main
             InitializeComponent();
             this.username = username;
             this.password = password;
+            canChangePhongBan = false;
         }
 
         private string username;
         private string password;
+        private string maNhanVien;
 
         private void panel4_Paint(object sender, PaintEventArgs e)
         {
@@ -79,6 +82,29 @@ namespace Main
         private void panel_Body_Paint(object sender, PaintEventArgs e)
         {
 
+        }
+        private void GetMaNhanVien()
+        {
+            string query = "select maNhanVien from TaiKhoan where tenDangNhap = '" + username + "' and matKhau = '" + password + "'";
+            DataTable dataTable = Function.GetDataQuery(query);
+            if (dataTable.Rows.Count > 0)  // Kiểm tra xem có hàng nào không
+            {
+                DataRow row = dataTable.Rows[0];  // Lấy hàng đầu tiên
+
+                // Lấy giá trị từ cột đầu tiên
+                string value = row[0].ToString();  // Hoặc row["SingleColumn"]
+                maNhanVien = value;
+            }
+        }
+
+        private void btnThongBaoPhongBan_Click(object sender, EventArgs e)
+        {
+            OpenChildForm(new PhongBanXemThongBaoForm());
+        }
+
+        private void btnThongBaoCaNhan_Click(object sender, EventArgs e)
+        {
+            OpenChildForm(new NhanVien_TBCN(maNhanVien));
         }
     }
 }

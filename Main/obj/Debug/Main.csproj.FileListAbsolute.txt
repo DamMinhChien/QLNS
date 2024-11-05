@@ -99,4 +99,6 @@ C:\Users\dammi\source\repos\QLNS\Main\obj\Debug\Main.ThemThongBaoPhongBan_NhanVi
 C:\Users\dammi\source\repos\QLNS\Main\obj\Debug\Main.PhongBanSuaThongBaoForm.resources
 C:\Users\dammi\Source\Repos\QLNS\Main\obj\Debug\Main.ChamCongTP_Form.resources
 C:\Users\dammi\Source\Repos\QLNS\Main\obj\Debug\Main.NhanVien_TBCN.resources
-C:\Users\dammi\Source\Repos\QLNS\Main\obj\Debug\Main.NhanVien_TBPB.resources
+C:\Users\dammi\Source\Repos\QLNS\Main\obj\Debug\Main.QuanLyNhanVienTP_Form.resources
+C:\Users\dammi\Source\Repos\QLNS\Main\obj\Debug\Main.SuaNhanVienTP_Form.resources
+C:\Users\dammi\Source\Repos\QLNS\Main\obj\Debug\Main.ThemNhanVienTP_Form.resources

@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace Main
 {
-    public partial class NhanVien_TBPB : Form
+    public partial class QuanLyNhanVienTP_Form : Form
     {
-        public NhanVien_TBPB()
+        public QuanLyNhanVienTP_Form()
         {
             InitializeComponent();
         }

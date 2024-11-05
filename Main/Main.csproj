@@ -190,12 +190,6 @@
     <Compile Include="Login_NV\NhanVien_TBCN.Designer.cs">
       <DependentUpon>NhanVien_TBCN.cs</DependentUpon>
     </Compile>
-    <Compile Include="Login_NV\NhanVien_TBPB.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Login_NV\NhanVien_TBPB.Designer.cs">
-      <DependentUpon>NhanVien_TBPB.cs</DependentUpon>
-    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="QuanLyChucVu\QuanLyChucVuForm.cs">
@@ -205,6 +199,12 @@
       <DependentUpon>QuanLyChucVuForm.cs</DependentUpon>
     </Compile>
     <Compile Include="QuanLyNhanSuDataSet.Designer.cs" />
+    <Compile Include="Login_TP\QuanLyNhanVienTP_Form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Login_TP\QuanLyNhanVienTP_Form.Designer.cs">
+      <DependentUpon>QuanLyNhanVienTP_Form.cs</DependentUpon>
+    </Compile>
     <Compile Include="QuanLyNhanVien\QuanLyNhanVienForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -325,6 +325,18 @@
     <Compile Include="Login_TP\ThemThongBaoPhongBan_NhanVienForm.Designer.cs">
       <DependentUpon>ThemThongBaoPhongBan_NhanVienForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Login_TP\SuaNhanVienTP_Form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Login_TP\SuaNhanVienTP_Form.Designer.cs">
+      <DependentUpon>SuaNhanVienTP_Form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Login_TP\ThemNhanVienTP_Form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Login_TP\ThemNhanVienTP_Form.Designer.cs">
+      <DependentUpon>ThemNhanVienTP_Form.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="About\AboutForm.resx">
       <DependentUpon>AboutForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -348,9 +360,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Login_NV\NhanVien_TBCN.resx">
       <DependentUpon>NhanVien_TBCN.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Login_NV\NhanVien_TBPB.resx">
-      <DependentUpon>NhanVien_TBPB.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Login_TP\HomeForm_TP.resx">
       <DependentUpon>HomeForm_TP.cs</DependentUpon>
@@ -388,6 +397,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="QuanLyNhanVien\QuanLyNhanVienForm.resx">
       <DependentUpon>QuanLyNhanVienForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Login_TP\QuanLyNhanVienTP_Form.resx">
+      <DependentUpon>QuanLyNhanVienTP_Form.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="QuanLyPhongBan\QuanLyPhongBanForm.resx">
       <DependentUpon>QuanLyPhongBanForm.cs</DependentUpon>
@@ -445,6 +457,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Login_TP\ThemThongBaoPhongBan_NhanVienForm.resx">
       <DependentUpon>ThemThongBaoPhongBan_NhanVienForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Login_TP\SuaNhanVienTP_Form.resx">
+      <DependentUpon>SuaNhanVienTP_Form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Login_TP\ThemNhanVienTP_Form.resx">
+      <DependentUpon>ThemNhanVienTP_Form.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">

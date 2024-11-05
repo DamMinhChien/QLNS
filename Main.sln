@@ -5,7 +5,7 @@ VisualStudioVersion = 17.11.35312.102
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Main", "Main\Main.csproj", "{D52E2193-B411-4269-B729-60D5E9A55ADC}"
 EndProject
-Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "Setup1", "E:\Kì V\New folder\Setup1.vdproj", "{975DC796-57E9-45C8-9826-C7C794D44604}"
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "Setup1", "E:\Kì V\test_setup\Setup1\Setup1.vdproj", "{FC2D4898-931D-4E1F-9638-65FD2754797C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -17,8 +17,8 @@ Global
 		{D52E2193-B411-4269-B729-60D5E9A55ADC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D52E2193-B411-4269-B729-60D5E9A55ADC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D52E2193-B411-4269-B729-60D5E9A55ADC}.Release|Any CPU.Build.0 = Release|Any CPU
-		{975DC796-57E9-45C8-9826-C7C794D44604}.Debug|Any CPU.ActiveCfg = Debug
-		{975DC796-57E9-45C8-9826-C7C794D44604}.Release|Any CPU.ActiveCfg = Release
+		{FC2D4898-931D-4E1F-9638-65FD2754797C}.Debug|Any CPU.ActiveCfg = Debug
+		{FC2D4898-931D-4E1F-9638-65FD2754797C}.Release|Any CPU.ActiveCfg = Release
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -12,6 +12,8 @@ namespace Main
 {
     public partial class HomeForm_TP : Form
     {
+        private bool canChangePhongBan;
+
         private string maPhongBan;
         private string tenPhongBan;
 
@@ -20,6 +22,7 @@ namespace Main
         public HomeForm_TP()
         {
             InitializeComponent();
+            canChangePhongBan = false;
         }
 
         public HomeForm_TP(string username, string password)
@@ -41,13 +44,13 @@ namespace Main
 
         private void picQuanLyNhanVien_Click(object sender, EventArgs e)
         {
-            QuanLyNhanVienForm quanLyNhanVienForm = new QuanLyNhanVienForm();
-            quanLyNhanVienForm.Show();
+            QuanLyNhanVienTP_Form quanLyNhanVienTP_Form = new QuanLyNhanVienTP_Form(maPhongBan, tenPhongBan);
+            quanLyNhanVienTP_Form.Show();
         }
 
         private void picQuanLyphongBan_Click(object sender, EventArgs e)
         {
-            QuanLyPhongBanForm quanLyPhongBanForm = new QuanLyPhongBanForm();
+            QuanLyPhongBanForm quanLyPhongBanForm = new QuanLyPhongBanForm(canChangePhongBan);
             quanLyPhongBanForm.Show();
         }
 

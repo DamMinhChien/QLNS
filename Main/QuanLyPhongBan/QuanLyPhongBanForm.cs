@@ -12,9 +12,16 @@ namespace Main
 {
     public partial class QuanLyPhongBanForm : Form
     {
+        private bool canChangePhongBan;
         public QuanLyPhongBanForm()
         {
             InitializeComponent();
+        }
+
+        public QuanLyPhongBanForm(bool canChangePhongBan)
+        {
+            InitializeComponent();
+            this.canChangePhongBan = canChangePhongBan;
         }
 
         private void splitContainer1_Panel1_Paint(object sender, PaintEventArgs e)
@@ -26,6 +33,11 @@ namespace Main
         {
             Function.Find(txtTimPB, shadowText);
             Function.LoadDataGridView(dgvDanhSachPhongBan, "SELECT PhongBan.maPhongBan, tenPhongBan, COUNT(NhanVien.hoTen) AS SoLuongNhanVien, heSoPhongBan FROM PhongBan left JOIN NhanVien ON PhongBan.maPhongBan = NhanVien.maPhongBan GROUP BY PhongBan.maPhongBan, tenPhongBan, heSoPhongBan;");
+            if (!canChangePhongBan)
+            {
+                menuStrip2.Visible = false;
+                contextMenuStrip1.Visible = false;
+            }
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)

@@ -64,7 +64,7 @@ namespace Main
                 }
                 else
                 {
-                    Function.UpdateDataQuery("INSERT INTO TaiKhoan (maTaiKhoan,tenDangNhap , matKhau, maChucVu) VALUES ('12345','admin' ,'" + newPass + "', 'admin')");
+                    Function.UpdateDataQuery("INSERT INTO TaiKhoan (maTaiKhoan,tenDangNhap , matKhau, maNhanVien) VALUES ('12345','admin' ,'" + newPass + "', 'admin')");
                 }
             }
             else

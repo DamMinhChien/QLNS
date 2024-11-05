@@ -233,5 +233,10 @@ namespace Main
             AboutForm aboutForm = new AboutForm();
             aboutForm.Show();
         }
+
+        private void hệThốngToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

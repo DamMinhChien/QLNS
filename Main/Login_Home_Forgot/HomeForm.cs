@@ -12,9 +12,12 @@ namespace Main
 {
     public partial class HomeForm : Form
     {
+        private bool canChangePhongBan;
+
         public HomeForm()
         {
             InitializeComponent();
+            canChangePhongBan = true;
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -70,7 +73,7 @@ namespace Main
 
         private void pictureBox4_Click(object sender, EventArgs e)
         {
-            QuanLyPhongBanForm quanLyPhongBanForm = new QuanLyPhongBanForm();
+            QuanLyPhongBanForm quanLyPhongBanForm = new QuanLyPhongBanForm(canChangePhongBan);
             quanLyPhongBanForm.ShowDialog();
         }
 
