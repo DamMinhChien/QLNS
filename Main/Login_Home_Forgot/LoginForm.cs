@@ -34,10 +34,10 @@ namespace Main
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
-            String userName = txtUsername.Text.Trim().ToString();
-            String passWord = txtPassword.Text.Trim().ToString();
+            String userName = txtUsername.Text.Trim();
+            String passWord = txtPassword.Text.Trim();
 
-            if(string.IsNullOrEmpty(userName) || string.IsNullOrEmpty(passWord))
+            if (string.IsNullOrEmpty(userName) || string.IsNullOrEmpty(passWord))
             {
                 if (string.IsNullOrEmpty(userName))
                 {
@@ -51,41 +51,37 @@ namespace Main
             }
             else
             {
-                string query = "select * from TaiKhoan";
-                DataTable dataTable = Function.GetDataQuery(query);
+                // Kiểm tra thông tin đăng nhập
+                string myQuery = $"SELECT maChucVu FROM NhanVien nv INNER JOIN TaiKhoan tk ON tk.maNhanVien = nv.maNhanVien WHERE tenDangNhap = '{userName}' AND matKhau = '{passWord}'";
 
-                foreach(DataRow row in dataTable.Rows)
+                DataTable data = Function.GetDataQuery(myQuery);
+
+                if (data.Rows.Count > 0)
                 {
-                    if (row["tenDangNhap"].ToString().Trim() == userName && row["matKhau"].ToString().Trim() == passWord)
+                    string maChucVu = data.Rows[0][0].ToString();
+
+                    // Xác định vai trò người dùng và hiển thị form tương ứng
+                    if (maChucVu.StartsWith("ad"))
                     {
-                        //admin
-                        if (row["maChucVu"].ToString().Trim() == "admin")
-                        {
-                            new HomeForm().Show();
-                            this.Hide();
-                            return;
-                        }
-
-                        else if (row["maChucVu"].ToString().Trim() == "TP")
-                        {
-                            new HomeForm_TP().Show();
-                            this.Hide();
-                            return;
-                        }
-
-                        else
-                        {
-                            MessageBox.Show("Bạn không có quyền đăng nhập vào hệ thống!", "Thông báo",MessageBoxButtons.OK, MessageBoxIcon.Error);
-                            return;
-                        }
+                        new HomeForm().Show();
                     }
-                    
-                    
+                    else if (maChucVu.StartsWith("TP"))
+                    {
+                        new HomeForm_TP(userName, passWord).Show();
+                    }
+                    else
+                    {
+                        new Home_NV(userName, passWord).Show();
+                    }
+
+                    this.Hide();
                 }
-                MessageBox.Show("Tài khoản hoăc mật khẩu không đúng, vui lòng thử lại !", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                
+                else
+                {
+                    MessageBox.Show("Tài khoản hoặc mật khẩu không đúng, vui lòng thử lại !", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
             }
-            
+
         }
 
         private void lblExit_Click(object sender, EventArgs e)
@@ -112,6 +108,11 @@ namespace Main
         }
 
         private void LoginForm_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtUsername_TextChanged(object sender, EventArgs e)
         {
 
         }

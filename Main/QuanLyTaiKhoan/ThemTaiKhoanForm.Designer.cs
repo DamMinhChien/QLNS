@@ -33,7 +33,6 @@
             this.hệThốngToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.đăngXuấtToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.thoátỨngDụngToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.thốngkêToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.trợGiúpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -66,7 +65,6 @@
             this.menuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.hệThốngToolStripMenuItem,
-            this.thốngkêToolStripMenuItem,
             this.trợGiúpToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
@@ -98,17 +96,12 @@
             this.thoátỨngDụngToolStripMenuItem.Text = "&Thoát ứng dụng";
             this.thoátỨngDụngToolStripMenuItem.Click += new System.EventHandler(this.thoátỨngDụngToolStripMenuItem_Click);
             // 
-            // thốngkêToolStripMenuItem
-            // 
-            this.thốngkêToolStripMenuItem.Name = "thốngkêToolStripMenuItem";
-            this.thốngkêToolStripMenuItem.Size = new System.Drawing.Size(84, 24);
-            this.thốngkêToolStripMenuItem.Text = "Thống &kê";
-            // 
             // trợGiúpToolStripMenuItem
             // 
             this.trợGiúpToolStripMenuItem.Name = "trợGiúpToolStripMenuItem";
-            this.trợGiúpToolStripMenuItem.Size = new System.Drawing.Size(78, 24);
-            this.trợGiúpToolStripMenuItem.Text = "&Trợ giúp";
+            this.trợGiúpToolStripMenuItem.Size = new System.Drawing.Size(64, 24);
+            this.trợGiúpToolStripMenuItem.Text = "&About";
+            this.trợGiúpToolStripMenuItem.Click += new System.EventHandler(this.trợGiúpToolStripMenuItem_Click);
             // 
             // label1
             // 
@@ -364,7 +357,6 @@
         private System.Windows.Forms.ToolStripMenuItem hệThốngToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem đăngXuấtToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem thoátỨngDụngToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem thốngkêToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem trợGiúpToolStripMenuItem;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;

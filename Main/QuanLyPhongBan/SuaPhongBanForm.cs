@@ -40,6 +40,7 @@ namespace Main
         {
             txtID.Text = "";
             txtTenPB.Text = "";
+            txtHeSoPhongBan.Text = "";
         }
 
         private void btnCancel_Click(object sender, EventArgs e)
@@ -96,6 +97,12 @@ namespace Main
         private void thoátỨngDụngToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Function.ExitApp();
+        }
+
+        private void trợGiúpToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            AboutForm aboutForm = new AboutForm();
+            aboutForm.Show();
         }
     }
 }

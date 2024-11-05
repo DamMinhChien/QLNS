@@ -91,11 +91,16 @@ namespace Main
         private string selectedMaTaiKhoan;
         private string selectedTenDangNhap;
         private string selectedMatKhau;
-        private string selectedMaChucVu;
+        private string selectedMaNhanVien;
 
         private void sửaToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            SuaTaiKhoanForm suaTaiKhoanForm = new SuaTaiKhoanForm(selectedMaTaiKhoan, selectedTenDangNhap, selectedMatKhau, selectedMaChucVu);
+            if (string.IsNullOrEmpty(selectedMaTaiKhoan))
+            {
+                MessageBox.Show("Vui lòng chọn một tài khoản để sửa.");
+                return;
+            }
+            SuaTaiKhoanForm suaTaiKhoanForm = new SuaTaiKhoanForm(selectedMaTaiKhoan, selectedTenDangNhap, selectedMatKhau, selectedMaNhanVien);
             suaTaiKhoanForm.ShowDialog();
         }
 
@@ -107,7 +112,7 @@ namespace Main
                 selectedMaTaiKhoan = row.Cells[1].Value.ToString();
                 selectedTenDangNhap = row.Cells[2].Value.ToString();
                 selectedMatKhau = row.Cells[3].Value.ToString();
-                selectedMaChucVu = row.Cells[4].Value.ToString();
+                selectedMaNhanVien = row.Cells[4].Value.ToString();
             }
         }
 
@@ -128,7 +133,7 @@ namespace Main
             var result = MessageBox.Show("Bạn có chắc chắn muốn xóa tài khoản này?", "Xác Nhận", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
             if (result == DialogResult.Yes)
             {
-                string query1 = "DELETE FROM ChucVu WHERE maChucVu = '" + selectedMaChucVu + "';";
+                string query1 = "DELETE FROM NhanVien WHERE maNhanVien = '" + selectedMaNhanVien + "';";
                 string query2 = "DELETE FROM TaiKhoan WHERE maTaiKhoan = '" + selectedMaTaiKhoan + "'";
                 using (SqlConnection connection = new SqlConnection(Function.GetConnectionString()))
                 {
@@ -175,6 +180,17 @@ namespace Main
                 //refresh luôn
                 cậpNhậtToolStripMenuItem_Click(sender, e);
             }
+        }
+
+        private void trợGiúpToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            AboutForm aboutForm = new AboutForm();
+            aboutForm.Show();
+        }
+
+        private void thốngkêToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Function.ExportToExcel(dgvDanhSachTaiKhoan);
         }
     }
 }

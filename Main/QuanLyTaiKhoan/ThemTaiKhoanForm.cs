@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -46,14 +47,14 @@ namespace Main
             string tenTaiKhoan = txtTenTaiKhoan.Text.Trim();
             string matKhau = txtMatKhau.Text.Trim();
             string nhapLaiMatKhau = txtNhapLaiMatKhau.Text.Trim();
-            string maChucVu = cmbLoaiTaiKhoan_tenCV.SelectedItem.ToString();
+            string tenChucVu = cmbLoaiTaiKhoan_tenCV.SelectedItem.ToString();
 
 
             // Kiểm tra dữ liệu đầu vào
             if (string.IsNullOrEmpty(tenTaiKhoan) ||
             string.IsNullOrEmpty(matKhau) ||
             string.IsNullOrEmpty(nhapLaiMatKhau) ||
-            string.IsNullOrEmpty(maChucVu))
+            string.IsNullOrEmpty(tenChucVu))
             {
                 MessageBox.Show("Vui lòng điền đầy đủ thông tin.");
                 return;
@@ -65,7 +66,11 @@ namespace Main
                 return;
             }
 
-            string query = "insert into TaiKhoan values ( '" + ID + "', '" + tenTaiKhoan + "','" + matKhau + "','" + maChucVu + "')";
+            string myQuery = "select maNhanVien from NhanVien nv inner join ChucVu cv on nv.maChucVu = cv.maChucVu where tenChucVu = N'"+tenChucVu+"'";
+            DataTable data = new DataTable();
+            data = Function.GetDataQuery(myQuery);
+            string maNhanVien = data.Rows[0][0].ToString();
+            string query = "insert into TaiKhoan values ( '" + ID + "', '" + tenTaiKhoan + "','" + matKhau + "','" + maNhanVien + "')";
 
             Function.UpdateDataQuery(query);
 
@@ -140,6 +145,12 @@ namespace Main
         private void menuStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
         {
 
+        }
+
+        private void trợGiúpToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            AboutForm aboutForm = new AboutForm();
+            aboutForm.Show();
         }
     }
 }

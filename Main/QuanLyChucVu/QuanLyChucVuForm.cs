@@ -150,5 +150,32 @@ namespace Main
                 float.TryParse(row.Cells[3].Value.ToString(), out selectedHeSoChucVu);
             }
         }
+
+        private void trợGiúpToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            AboutForm aboutForm = new AboutForm();
+            aboutForm.Show();
+        }
+
+        private void thốngkêToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Function.ExportToExcel(dgvDanhSachChucVu);
+        }
+
+        private void txtTimCV_Enter(object sender, EventArgs e)
+        {
+            Function.Enter_text(txtTimCV, shadowText);
+        }
+
+        private void txtTimCV_Leave(object sender, EventArgs e)
+        {
+            Function.Leave(txtTimCV, shadowText);
+        }
+
+        private void toolStripMenuItem2_Click_1(object sender, EventArgs e)
+        {
+            ThemChucVuForm themChucVuForm = new ThemChucVuForm();
+            themChucVuForm.Show();
+        }
     }
 }

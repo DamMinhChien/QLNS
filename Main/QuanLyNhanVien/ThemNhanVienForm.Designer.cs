@@ -62,12 +62,15 @@
             this.hệThốngToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.đăngXuấtToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.thoátỨngDụngToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.thốngkêToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.trợGiúpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.pictureBox7 = new System.Windows.Forms.PictureBox();
             this.label6 = new System.Windows.Forms.Label();
             this.cmbPhongBan = new System.Windows.Forms.ComboBox();
             this.cmbChucVu = new System.Windows.Forms.ComboBox();
+            this.label12 = new System.Windows.Forms.Label();
+            this.label13 = new System.Windows.Forms.Label();
+            this.cmbMaChucVu = new System.Windows.Forms.ComboBox();
+            this.cmbMaPhongBan = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -430,11 +433,10 @@
             this.menuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.hệThốngToolStripMenuItem,
-            this.thốngkêToolStripMenuItem,
             this.trợGiúpToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(942, 28);
+            this.menuStrip1.Size = new System.Drawing.Size(963, 28);
             this.menuStrip1.TabIndex = 25;
             this.menuStrip1.Text = "menuStrip1";
             this.menuStrip1.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.menuStrip1_ItemClicked);
@@ -462,17 +464,12 @@
             this.thoátỨngDụngToolStripMenuItem.Text = "&Thoát ứng dụng";
             this.thoátỨngDụngToolStripMenuItem.Click += new System.EventHandler(this.thoátỨngDụngToolStripMenuItem_Click);
             // 
-            // thốngkêToolStripMenuItem
-            // 
-            this.thốngkêToolStripMenuItem.Name = "thốngkêToolStripMenuItem";
-            this.thốngkêToolStripMenuItem.Size = new System.Drawing.Size(84, 24);
-            this.thốngkêToolStripMenuItem.Text = "Thống &kê";
-            // 
             // trợGiúpToolStripMenuItem
             // 
             this.trợGiúpToolStripMenuItem.Name = "trợGiúpToolStripMenuItem";
-            this.trợGiúpToolStripMenuItem.Size = new System.Drawing.Size(78, 24);
-            this.trợGiúpToolStripMenuItem.Text = "&Trợ giúp";
+            this.trợGiúpToolStripMenuItem.Size = new System.Drawing.Size(64, 24);
+            this.trợGiúpToolStripMenuItem.Text = "&About";
+            this.trợGiúpToolStripMenuItem.Click += new System.EventHandler(this.trợGiúpToolStripMenuItem_Click);
             // 
             // pictureBox7
             // 
@@ -504,10 +501,10 @@
             this.cmbPhongBan.FormattingEnabled = true;
             this.cmbPhongBan.Location = new System.Drawing.Point(367, 461);
             this.cmbPhongBan.Name = "cmbPhongBan";
-            this.cmbPhongBan.Size = new System.Drawing.Size(487, 33);
+            this.cmbPhongBan.Size = new System.Drawing.Size(235, 33);
             this.cmbPhongBan.Sorted = true;
             this.cmbPhongBan.TabIndex = 5;
-            this.cmbPhongBan.SelectedIndexChanged += new System.EventHandler(this.cmbPhongBan_SelectedIndexChanged);
+            this.cmbPhongBan.SelectedIndexChanged += new System.EventHandler(this.cmbPhongBan_SelectedIndexChanged_1);
             // 
             // cmbChucVu
             // 
@@ -516,10 +513,58 @@
             this.cmbChucVu.FormattingEnabled = true;
             this.cmbChucVu.Location = new System.Drawing.Point(367, 395);
             this.cmbChucVu.Name = "cmbChucVu";
-            this.cmbChucVu.Size = new System.Drawing.Size(487, 33);
+            this.cmbChucVu.Size = new System.Drawing.Size(235, 33);
             this.cmbChucVu.Sorted = true;
             this.cmbChucVu.TabIndex = 5;
-            this.cmbChucVu.SelectedIndexChanged += new System.EventHandler(this.cmbPhongBan_SelectedIndexChanged);
+            this.cmbChucVu.SelectedIndexChanged += new System.EventHandler(this.cmbChucVu_SelectedIndexChanged);
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.label12.Location = new System.Drawing.Point(635, 395);
+            this.label12.Name = "label12";
+            this.label12.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.label12.Size = new System.Drawing.Size(46, 29);
+            this.label12.TabIndex = 29;
+            this.label12.Text = "Mã";
+            this.label12.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label13.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.label13.Location = new System.Drawing.Point(635, 461);
+            this.label13.Name = "label13";
+            this.label13.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.label13.Size = new System.Drawing.Size(46, 29);
+            this.label13.TabIndex = 29;
+            this.label13.Text = "Mã";
+            this.label13.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // cmbMaChucVu
+            // 
+            this.cmbMaChucVu.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbMaChucVu.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmbMaChucVu.FormattingEnabled = true;
+            this.cmbMaChucVu.Location = new System.Drawing.Point(687, 391);
+            this.cmbMaChucVu.Name = "cmbMaChucVu";
+            this.cmbMaChucVu.Size = new System.Drawing.Size(167, 33);
+            this.cmbMaChucVu.Sorted = true;
+            this.cmbMaChucVu.TabIndex = 5;
+            // 
+            // cmbMaPhongBan
+            // 
+            this.cmbMaPhongBan.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbMaPhongBan.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmbMaPhongBan.FormattingEnabled = true;
+            this.cmbMaPhongBan.Location = new System.Drawing.Point(687, 457);
+            this.cmbMaPhongBan.Name = "cmbMaPhongBan";
+            this.cmbMaPhongBan.Size = new System.Drawing.Size(167, 33);
+            this.cmbMaPhongBan.Sorted = true;
+            this.cmbMaPhongBan.TabIndex = 5;
             // 
             // ThemNhanVienForm
             // 
@@ -529,7 +574,11 @@
             this.AutoScroll = true;
             this.AutoSize = true;
             this.CancelButton = this.btnCancel;
-            this.ClientSize = new System.Drawing.Size(963, 493);
+            this.ClientSize = new System.Drawing.Size(984, 493);
+            this.Controls.Add(this.label13);
+            this.Controls.Add(this.label12);
+            this.Controls.Add(this.cmbMaPhongBan);
+            this.Controls.Add(this.cmbMaChucVu);
             this.Controls.Add(this.cmbChucVu);
             this.Controls.Add(this.cmbPhongBan);
             this.Controls.Add(this.pictureBox7);
@@ -622,11 +671,14 @@
         private System.Windows.Forms.ToolStripMenuItem hệThốngToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem đăngXuấtToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem thoátỨngDụngToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem thốngkêToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem trợGiúpToolStripMenuItem;
         private System.Windows.Forms.PictureBox pictureBox7;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.ComboBox cmbPhongBan;
         private System.Windows.Forms.ComboBox cmbChucVu;
+        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.ComboBox cmbMaChucVu;
+        private System.Windows.Forms.ComboBox cmbMaPhongBan;
     }
 }

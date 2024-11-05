@@ -104,8 +104,8 @@ namespace Main
             string email = txtEmail.Text.Trim();
             string soDienThoai = txtSDT.Text.Trim();
             string diaChi = txtDiaChi.Text.Trim();
-            string chucVu = cmbChucVu.SelectedItem.ToString();
-            string phongBan = cmbPhongBan.SelectedItem.ToString();
+            string maChucVu = cmbMaChucVu.SelectedItem.ToString();
+            string maPhongBan = cmbMaPhongBan.SelectedItem.ToString();
             // Khai báo biến heSoLuong kiểu float
             float luongCoBan;
             if (!float.TryParse(txtLuongCoBan.Text.Trim(), out luongCoBan))
@@ -119,14 +119,14 @@ namespace Main
             string.IsNullOrEmpty(soDienThoai) ||
             string.IsNullOrEmpty(diaChi) ||
             string.IsNullOrEmpty(email) ||
-            string.IsNullOrEmpty(chucVu) ||
-            string.IsNullOrEmpty(phongBan))
+            string.IsNullOrEmpty(maChucVu) ||
+            string.IsNullOrEmpty(maPhongBan))
             {
                 MessageBox.Show("Vui lòng điền đầy đủ thông tin.");
                 return;
             }
 
-            string query = "insert into NhanVien values ( '" +ID+ "', '" +tenNhanVien+ "','" +gioiTinh+ "', '" +formattedDate+ "', '" +soDienThoai+ "','" +diaChi+ "','" +email+ "', '" +luongCoBan+ "',(select maPhongBan from PhongBan where tenPhongBan = '" + phongBan + "') ,(select maChucVu from ChucVu where tenChucVu = '" + chucVu+"'))";
+            string query = "insert into NhanVien values ( '" +ID+ "', '" +tenNhanVien+ "','" +gioiTinh+ "', '" +formattedDate+ "', '" +soDienThoai+ "','" +diaChi+ "','" +email+ "', '" +luongCoBan+ "','"+maPhongBan+"' ,'"+maChucVu+"')";
 
             Function.UpdateDataQuery(query);
 
@@ -180,14 +180,63 @@ namespace Main
             Function.ExitApp();
         }
 
-        private void cmbPhongBan_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
 
         private void menuStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
         {
 
+        }
+
+        private void trợGiúpToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            AboutForm aboutForm = new AboutForm();
+            aboutForm.Show();
+        }
+
+        private void UpdateMaChucVu()
+        {
+            cmbMaChucVu.Items.Clear();
+            string tenChucVuCurrent = cmbChucVu.SelectedItem?.ToString().Trim();
+
+            // Kiểm tra xem có giá trị nào được chọn không
+            if (!string.IsNullOrEmpty(tenChucVuCurrent))
+            {
+                string query3 = "select maChucVu from ChucVu where tenChucVu = N'" + tenChucVuCurrent + "' ";
+                DataTable datatabe3 = Function.GetDataQuery(query3);
+                foreach (DataRow row in datatabe3.Rows)
+                {
+                    string maChucVu = row[0].ToString();
+                    cmbMaChucVu.Items.Add(maChucVu);
+                }
+
+            }
+        }
+        private void UpdateMaPhongBan()
+        {
+            cmbMaPhongBan.Items.Clear();
+            string tenPhongBanCurrent = cmbPhongBan.SelectedItem?.ToString().Trim();
+
+            // Kiểm tra xem có giá trị nào được chọn không
+            if (!string.IsNullOrEmpty(tenPhongBanCurrent))
+            {
+                string query3 = "select maPhongBan from PhongBan where tenPhongBan = N'" + tenPhongBanCurrent + "' ";
+                DataTable datatabe3 = Function.GetDataQuery(query3);
+                foreach (DataRow row in datatabe3.Rows)
+                {
+                    string maPhongBan = row[0].ToString();
+                    cmbMaPhongBan.Items.Add(maPhongBan);
+                }
+
+            }
+        }
+
+        private void cmbChucVu_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            UpdateMaChucVu();
+        }
+
+        private void cmbPhongBan_SelectedIndexChanged_1(object sender, EventArgs e)
+        {
+            UpdateMaPhongBan();
         }
     }
 }

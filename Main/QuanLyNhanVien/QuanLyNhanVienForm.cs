@@ -55,7 +55,7 @@ namespace Main
         private void picTimNV_Click(object sender, EventArgs e)
         {
             string search = txtTimNV.Text.Trim();
-            string query = "SELECT NV.maNhanVien, NV.hoTen, CV.tenChucVu, PB.tenPhongBan, NV.luongCoBan, NV.gioiTinh, NV.ngaySinh, NV.soDienThoai, NV.diaChi, NV.email FROM NhanVien NV JOIN PhongBan PB ON NV.maPhongBan = PB.maPhongBan join ChucVu CV on NV.maChucVu = CV.maChucVu where hoTen like '%" + search+"%'";
+            string query = "SELECT NV.maNhanVien, NV.hoTen, CV.tenChucVu, PB.tenPhongBan, NV.luongCoBan, NV.gioiTinh, NV.ngaySinh, NV.soDienThoai, NV.diaChi, NV.email FROM NhanVien NV JOIN PhongBan PB ON NV.maPhongBan = PB.maPhongBan join ChucVu CV on NV.maChucVu = CV.maChucVu where hoTen like N'%" +search+"%'";
             Function.LoadDataGridView(dvgDanhSachNhanVien, query);
         }
 
@@ -145,7 +145,7 @@ namespace Main
             var result = MessageBox.Show("Bạn có chắc chắn muốn xóa nhân viên này?", "Xác Nhận", MessageBoxButtons.YesNo,MessageBoxIcon.Warning);
             if (result == DialogResult.Yes) {
                 string query1 = "DELETE FROM NhanVien_ThongBao WHERE maNhanVien = '"+selectedMaNhanVien+"'";
-                string query2 = "DELETE FROM HopDongLaoDong WHERE maNhanVien = '"+selectedMaNhanVien+"';";
+                //string query2 = "DELETE FROM HopDongLaoDong WHERE maNhanVien = '"+selectedMaNhanVien+"';";
                 string query3 = "DELETE FROM ChamCong WHERE maNhanVien = '"+selectedMaNhanVien+"';";
                 string query4 = "DELETE FROM NhanVien WHERE maNhanVien = '"+selectedMaNhanVien+"';";
                 using (SqlConnection connection = new SqlConnection(Function.GetConnectionString()))
@@ -165,8 +165,8 @@ namespace Main
                                 command.ExecuteNonQuery();
 
                                 // Lệnh DELETE thứ hai
-                                command.CommandText = query2;
-                                command.ExecuteNonQuery();
+                                //command.CommandText = query2;
+                                //command.ExecuteNonQuery();
 
                                 // Lệnh DELETE thứ ba
                                 command.CommandText = query3;
@@ -201,6 +201,37 @@ namespace Main
                 //refresh luôn
                 cậpNhậtToolStripMenuItem_Click(sender, e);
             }
+        }
+
+        private void addToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            thêmToolStripMenuItem_Click(sender, e);
+        }
+
+        private void làmLạiToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void editToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            sửaToolStripMenuItem_Click(sender,e);
+        }
+
+        private void removeToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            xóaToolStripMenuItem_Click(sender,e );
+        }
+
+        private void thốngkêToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Function.ExportToExcel(dvgDanhSachNhanVien);
+        }
+
+        private void trợGiúpToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            AboutForm aboutForm = new AboutForm();
+            aboutForm.Show();
         }
     }
 }

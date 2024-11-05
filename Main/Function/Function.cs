@@ -8,12 +8,13 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Drawing;
+using Excel = Microsoft.Office.Interop.Excel;
 
 namespace Main
 {
     internal class Function
     {
-        private static string strCon = @"Data Source=localhost;Initial Catalog=QLNS;Integrated Security=True;";
+        private static string strCon = @"Data Source=localhost;Initial Catalog=QuanLyNhanSuNew;Integrated Security=True;";
 
         public string StrCon { get => strCon; }
 
@@ -78,6 +79,8 @@ namespace Main
             }
 
             RemoveDuplicateColumns(dgv);
+            Function.SoleRowColor(dgv);
+            dgv.Columns[0].AutoSizeMode = DataGridViewAutoSizeColumnMode.DisplayedCells;
         }
 
         internal static void UpdateDataQuery(String myQuery)
@@ -156,16 +159,65 @@ namespace Main
             return strCon;
         }
 
+        internal static void SoleRowColor(DataGridView dgv)
+        {
+            foreach (DataGridViewRow row in dgv.Rows)
+            {
+                if (row.Index %2 != 0)
+                {
+                    row.DefaultCellStyle.BackColor = Color.LightGray;
+                }
+            }
+        }
+
+        public static void ExportToExcel(DataGridView dgv)
+        {
+            // Khởi tạo hộp thoại lưu file
+            using (SaveFileDialog saveFileDialog = new SaveFileDialog())
+            {
+                saveFileDialog.Filter = "Excel Files|*.xls;*.xlsx";
+                saveFileDialog.Title = "Lưu file Excel";
+                saveFileDialog.FileName = "Dữ liệu"; // Tên mặc định
+
+                // Kiểm tra xem người dùng đã chọn đường dẫn hay không
+                if (saveFileDialog.ShowDialog() == DialogResult.OK)
+                {
+                    // Tạo ứng dụng Excel
+                    Excel.Application excelApp = new Excel.Application();
+                    Excel.Workbook workbook = excelApp.Workbooks.Add();
+                    Excel.Worksheet worksheet = (Excel.Worksheet)workbook.Sheets[1];
+
+                    // Xuất tiêu đề cột
+                    for (int i = 0; i < dgv.Columns.Count; i++)
+                    {
+                        worksheet.Cells[1, i + 1] = dgv.Columns[i].HeaderText;
+                    }
+
+                    // Xuất dữ liệu hàng
+                    for (int i = 0; i < dgv.Rows.Count; i++)
+                    {
+                        for (int j = 0; j < dgv.Columns.Count; j++)
+                        {
+                            worksheet.Cells[i + 2, j + 1] = dgv.Rows[i].Cells[j].Value?.ToString();
+                        }
+                    }
+
+                    // Lưu file Excel
+                    workbook.SaveAs(saveFileDialog.FileName);
+                    workbook.Close();
+                    excelApp.Quit();
+
+                    // Giải phóng tài nguyên
+                    System.Runtime.InteropServices.Marshal.ReleaseComObject(worksheet);
+                    System.Runtime.InteropServices.Marshal.ReleaseComObject(workbook);
+                    System.Runtime.InteropServices.Marshal.ReleaseComObject(excelApp);
+
+                    MessageBox.Show("Xuất dữ liệu thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+            }
+        }
+
         
-
-
-
-
-
-
-
-
-
 
     }
 }

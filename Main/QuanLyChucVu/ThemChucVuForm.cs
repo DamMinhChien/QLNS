@@ -100,5 +100,11 @@ namespace Main
         {
 
         }
+
+        private void trợGiúpToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            AboutForm aboutForm = new AboutForm();
+            aboutForm.Show();
+        }
     }
 }

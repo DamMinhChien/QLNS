@@ -83,6 +83,26 @@ namespace Main.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _1635595_2001 {
+            get {
+                object obj = ResourceManager.GetObject("1635595-2001", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap _4726010 {
+            get {
+                object obj = ResourceManager.GetObject("4726010", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap _6681221 {
             get {
                 object obj = ResourceManager.GetObject("6681221", resourceCulture);
@@ -113,6 +133,16 @@ namespace Main.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap a1 {
+            get {
+                object obj = ResourceManager.GetObject("a1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap ABC_2021_LOGO_svg {
             get {
                 object obj = ResourceManager.GetObject("ABC-2021-LOGO.svg", resourceCulture);
@@ -123,9 +153,61 @@ namespace Main.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap ABC_2021_LOGO1 {
+            get {
+                object obj = ResourceManager.GetObject("ABC-2021-LOGO1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap announcement_advertising_loudspeaker_volume_bullhorn_sound_loud_megaphone_icon_232065 {
+            get {
+                object obj = ResourceManager.GetObject("announcement_advertising_loudspeaker_volume_bullhorn_sound_loud_megaphone_icon_23" +
+                        "2065", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap announcement_advertising_loudspeaker_volume_bullhorn_sound_loud_megaphone_icon_2320651 {
+            get {
+                object obj = ResourceManager.GetObject("announcement_advertising_loudspeaker_volume_bullhorn_sound_loud_megaphone_icon_23" +
+                        "20651", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap b {
             get {
                 object obj = ResourceManager.GetObject("b", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap b1 {
+            get {
+                object obj = ResourceManager.GetObject("b1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap b2 {
+            get {
+                object obj = ResourceManager.GetObject("b2", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -153,9 +235,39 @@ namespace Main.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap c1 {
+            get {
+                object obj = ResourceManager.GetObject("c1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap downloadfolder_99367 {
+            get {
+                object obj = ResourceManager.GetObject("downloadfolder_99367", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap hierarchy_line_icon_outline_symbol_vector_illustration_concept_sign_2JPD185 {
             get {
                 object obj = ResourceManager.GetObject("hierarchy-line-icon-outline-symbol-vector-illustration-concept-sign-2JPD185", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap hierarchy_line_icon_outline_symbol_vector_illustration_concept_sign_2JPD1851 {
+            get {
+                object obj = ResourceManager.GetObject("hierarchy-line-icon-outline-symbol-vector-illustration-concept-sign-2JPD1851", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -206,6 +318,16 @@ namespace Main.Properties {
         internal static System.Drawing.Bitmap Roll_call {
             get {
                 object obj = ResourceManager.GetObject("Roll-call", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Roll_call1 {
+            get {
+                object obj = ResourceManager.GetObject("Roll-call1", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

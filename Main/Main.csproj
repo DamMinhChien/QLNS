@@ -33,8 +33,60 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="MaterialSkin, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\MaterialSkin.0.2.1\lib\MaterialSkin.dll</HintPath>
+    </Reference>
+    <Reference Include="MetroFramework, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a, processorArchitecture=MSIL">
+      <HintPath>..\packages\MetroModernUI.1.4.0.0\lib\net\MetroFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="MetroFramework.Design, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a, processorArchitecture=MSIL">
+      <HintPath>..\packages\MetroModernUI.1.4.0.0\lib\net\MetroFramework.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="MetroFramework.Fonts, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a, processorArchitecture=MSIL">
+      <HintPath>..\packages\MetroModernUI.1.4.0.0\lib\net\MetroFramework.Fonts.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Bcl.AsyncInterfaces, Version=7.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Bcl.AsyncInterfaces.7.0.0\lib\net462\Microsoft.Bcl.AsyncInterfaces.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=13.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.13.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="RestSharp, Version=110.2.0.0, Culture=neutral, PublicKeyToken=598062e77f915f75, processorArchitecture=MSIL">
+      <HintPath>..\packages\RestSharp.110.2.0\lib\net471\RestSharp.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
+    <Reference Include="System.Buffers, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Buffers.4.5.1\lib\net461\System.Buffers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.CodeDom, Version=8.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.CodeDom.8.0.0\lib\net462\System.CodeDom.dll</HintPath>
+    </Reference>
     <Reference Include="System.Core" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Memory, Version=4.0.1.2, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Memory.4.5.5\lib\net461\System.Memory.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Numerics" />
+    <Reference Include="System.Numerics.Vectors, Version=4.1.4.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Numerics.Vectors.4.5.0\lib\net46\System.Numerics.Vectors.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.CompilerServices.Unsafe, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Runtime.CompilerServices.Unsafe.6.0.0\lib\net461\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Text.Encodings.Web, Version=7.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Text.Encodings.Web.7.0.0\lib\net462\System.Text.Encodings.Web.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Text.Json, Version=7.0.0.2, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Text.Json.7.0.2\lib\net462\System.Text.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Threading.Tasks.Extensions, Version=4.2.0.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Threading.Tasks.Extensions.4.5.4\lib\net461\System.Threading.Tasks.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ValueTuple, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.ValueTuple.4.5.0\lib\net47\System.ValueTuple.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -46,17 +98,41 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Function\AutoResizer.cs" />
-    <Compile Include="ChamCongForm.cs">
+    <Compile Include="About\AboutForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ChamCongForm.Designer.cs">
+    <Compile Include="About\AboutForm.Designer.cs">
+      <DependentUpon>AboutForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ChamCong\ChamCongTP_Form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ChamCong\ChamCongTP_Form.Designer.cs">
+      <DependentUpon>ChamCongTP_Form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Login_NV\About_NV.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Login_NV\About_NV.Designer.cs">
+      <DependentUpon>About_NV.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Function\AutoResizer.cs" />
+    <Compile Include="ChamCong\ChamCongForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ChamCong\ChamCongForm.Designer.cs">
       <DependentUpon>ChamCongForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Login_Home_Forgot\HomeForm_TP.cs">
+    <Compile Include="Login_NV\Home_NV.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Login_Home_Forgot\HomeForm_TP.Designer.cs">
+    <Compile Include="Login_NV\Home_NV.Designer.cs">
+      <DependentUpon>Home_NV.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Login_TP\HomeForm_TP.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Login_TP\HomeForm_TP.Designer.cs">
       <DependentUpon>HomeForm_TP.cs</DependentUpon>
     </Compile>
     <Compile Include="Login_Home_Forgot\ForgotPassForm.cs">
@@ -77,6 +153,48 @@
     </Compile>
     <Compile Include="Login_Home_Forgot\HomeForm.Designer.cs">
       <DependentUpon>HomeForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Login_NV\NhanVienInf.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Login_NV\NhanVienInf.Designer.cs">
+      <DependentUpon>NhanVienInf.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Login_NV\NhanVien_sys.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Login_NV\NhanVien_sys.Designer.cs">
+      <DependentUpon>NhanVien_sys.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Login_TP\PhongBanSoanThongBaoForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Login_TP\PhongBanSoanThongBaoForm.Designer.cs">
+      <DependentUpon>PhongBanSoanThongBaoForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Login_TP\PhongBanXemThongBaoForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Login_TP\PhongBanXemThongBaoForm.Designer.cs">
+      <DependentUpon>PhongBanXemThongBaoForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Login_TP\PhongBanSuaThongBaoForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Login_TP\PhongBanSuaThongBaoForm.Designer.cs">
+      <DependentUpon>PhongBanSuaThongBaoForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Login_NV\NhanVien_TBCN.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Login_NV\NhanVien_TBCN.Designer.cs">
+      <DependentUpon>NhanVien_TBCN.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Login_NV\NhanVien_TBPB.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Login_NV\NhanVien_TBPB.Designer.cs">
+      <DependentUpon>NhanVien_TBPB.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -153,8 +271,74 @@
     <Compile Include="QuanLyChucVu\ThemChucVuForm.Designer.cs">
       <DependentUpon>ThemChucVuForm.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="ChamCongForm.resx">
+    <Compile Include="QuanLyThongBao\QuanLyThongBaoForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="QuanLyThongBao\QuanLyThongBaoForm.Designer.cs">
+      <DependentUpon>QuanLyThongBaoForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="QuanLyThongBao\ThongBao_NhanVienForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="QuanLyThongBao\ThongBao_NhanVienForm.Designer.cs">
+      <DependentUpon>ThongBao_NhanVienForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="QuanLyThongBao\ThongBao_PhongBanForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="QuanLyThongBao\ThongBao_PhongBanForm.Designer.cs">
+      <DependentUpon>ThongBao_PhongBanForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="QuanLyThongBao\ThemThongBaoNVForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="QuanLyThongBao\ThemThongBaoNVForm.Designer.cs">
+      <DependentUpon>ThemThongBaoNVForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="QuanLyThongBao\ThemThongBaoPBForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="QuanLyThongBao\ThemThongBaoPBForm.Designer.cs">
+      <DependentUpon>ThemThongBaoPBForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="QuanLyThongBao\SuaThongBaoNVForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="QuanLyThongBao\SuaThongBaoNVForm.Designer.cs">
+      <DependentUpon>SuaThongBaoNVForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="QuanLyThongBao\SuaThongBaoPBForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="QuanLyThongBao\SuaThongBaoPBForm.Designer.cs">
+      <DependentUpon>SuaThongBaoPBForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Login_TP\QuanLyThongBao_TP_Form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Login_TP\QuanLyThongBao_TP_Form.Designer.cs">
+      <DependentUpon>QuanLyThongBao_TP_Form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Login_TP\ThemThongBaoPhongBan_NhanVienForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Login_TP\ThemThongBaoPhongBan_NhanVienForm.Designer.cs">
+      <DependentUpon>ThemThongBaoPhongBan_NhanVienForm.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="About\AboutForm.resx">
+      <DependentUpon>AboutForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChamCong\ChamCongTP_Form.resx">
+      <DependentUpon>ChamCongTP_Form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Login_NV\About_NV.resx">
+      <DependentUpon>About_NV.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChamCong\ChamCongForm.resx">
       <DependentUpon>ChamCongForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Login_NV\Home_NV.resx">
+      <DependentUpon>Home_NV.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Login_Home_Forgot\ForgotPassForm.resx">
       <DependentUpon>ForgotPassForm.cs</DependentUpon>
@@ -162,11 +346,32 @@
     <EmbeddedResource Include="Login_Home_Forgot\HomeForm.resx">
       <DependentUpon>HomeForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Login_Home_Forgot\HomeForm_TP.resx">
+    <EmbeddedResource Include="Login_NV\NhanVien_TBCN.resx">
+      <DependentUpon>NhanVien_TBCN.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Login_NV\NhanVien_TBPB.resx">
+      <DependentUpon>NhanVien_TBPB.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Login_TP\HomeForm_TP.resx">
       <DependentUpon>HomeForm_TP.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Login_Home_Forgot\LoginForm.resx">
       <DependentUpon>LoginForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Login_NV\NhanVienInf.resx">
+      <DependentUpon>NhanVienInf.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Login_NV\NhanVien_sys.resx">
+      <DependentUpon>NhanVien_sys.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Login_TP\PhongBanSoanThongBaoForm.resx">
+      <DependentUpon>PhongBanSoanThongBaoForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Login_TP\PhongBanXemThongBaoForm.resx">
+      <DependentUpon>PhongBanXemThongBaoForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Login_TP\PhongBanSuaThongBaoForm.resx">
+      <DependentUpon>PhongBanSuaThongBaoForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -214,6 +419,34 @@
     <EmbeddedResource Include="QuanLyChucVu\ThemChucVuForm.resx">
       <DependentUpon>ThemChucVuForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="QuanLyThongBao\QuanLyThongBaoForm.resx">
+      <DependentUpon>QuanLyThongBaoForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="QuanLyThongBao\SuaThongBaoNVForm.resx">
+      <DependentUpon>SuaThongBaoNVForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="QuanLyThongBao\ThongBao_NhanVienForm.resx">
+      <DependentUpon>ThongBao_NhanVienForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="QuanLyThongBao\ThongBao_PhongBanForm.resx">
+      <DependentUpon>ThongBao_PhongBanForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="QuanLyThongBao\ThemThongBaoNVForm.resx">
+      <DependentUpon>ThemThongBaoNVForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="QuanLyThongBao\ThemThongBaoPBForm.resx">
+      <DependentUpon>ThemThongBaoPBForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="QuanLyThongBao\SuaThongBaoPBForm.resx">
+      <DependentUpon>SuaThongBaoPBForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Login_TP\QuanLyThongBao_TP_Form.resx">
+      <DependentUpon>QuanLyThongBao_TP_Form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Login_TP\ThemThongBaoPhongBan_NhanVienForm.resx">
+      <DependentUpon>ThemThongBaoPhongBan_NhanVienForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -295,6 +528,71 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\hierarchy-line-icon-outline-symbol-vector-illustration-concept-sign-2JPD185.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="Microsoft.Office.Core">
+      <Guid>{2DF8D04C-5BFA-101B-BDE5-00AA0044DE52}</Guid>
+      <VersionMajor>2</VersionMajor>
+      <VersionMinor>8</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="Microsoft.Office.Interop.Excel">
+      <Guid>{00020813-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>9</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="VBIDE">
+      <Guid>{0002E157-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>5</VersionMajor>
+      <VersionMinor>3</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\announcement_advertising_loudspeaker_volume_bullhorn_sound_loud_megaphone_icon_2320651.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\downloadfolder_99367.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\4726010.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\b1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1635595-2001.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\b2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\a1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Roll-call1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\hierarchy-line-icon-outline-symbol-vector-illustration-concept-sign-2JPD1851.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\announcement_advertising_loudspeaker_volume_bullhorn_sound_loud_megaphone_icon_2320652.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\c1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ABC-2021-LOGO.svg1.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

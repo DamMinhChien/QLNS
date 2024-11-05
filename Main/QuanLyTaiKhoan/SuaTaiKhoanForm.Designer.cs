@@ -34,7 +34,6 @@
             this.đăngXuấtToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.thoátỨngDụngToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.thốngkêToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.trợGiúpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -51,11 +50,15 @@
             this.cmbLoaiTaiKhoan_tenCV = new System.Windows.Forms.ComboBox();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.label6 = new System.Windows.Forms.Label();
+            this.cmbMaChucVu = new System.Windows.Forms.ComboBox();
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
+            this.label5 = new System.Windows.Forms.Label();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             this.SuspendLayout();
             // 
             // menuStrip1
@@ -63,11 +66,10 @@
             this.menuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.hệThốngToolStripMenuItem,
-            this.thốngkêToolStripMenuItem,
-            this.trợGiúpToolStripMenuItem});
+            this.thốngkêToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(942, 28);
+            this.menuStrip1.Size = new System.Drawing.Size(942, 30);
             this.menuStrip1.TabIndex = 3;
             this.menuStrip1.Text = "menuStrip1";
             this.menuStrip1.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.menuStrip1_ItemClicked);
@@ -78,7 +80,7 @@
             this.đăngXuấtToolStripMenuItem,
             this.thoátỨngDụngToolStripMenuItem});
             this.hệThốngToolStripMenuItem.Name = "hệThốngToolStripMenuItem";
-            this.hệThốngToolStripMenuItem.Size = new System.Drawing.Size(85, 24);
+            this.hệThốngToolStripMenuItem.Size = new System.Drawing.Size(85, 26);
             this.hệThốngToolStripMenuItem.Text = "&Hệ thống";
             // 
             // đăngXuấtToolStripMenuItem
@@ -96,14 +98,9 @@
             // thốngkêToolStripMenuItem
             // 
             this.thốngkêToolStripMenuItem.Name = "thốngkêToolStripMenuItem";
-            this.thốngkêToolStripMenuItem.Size = new System.Drawing.Size(84, 24);
-            this.thốngkêToolStripMenuItem.Text = "Thống &kê";
-            // 
-            // trợGiúpToolStripMenuItem
-            // 
-            this.trợGiúpToolStripMenuItem.Name = "trợGiúpToolStripMenuItem";
-            this.trợGiúpToolStripMenuItem.Size = new System.Drawing.Size(78, 24);
-            this.trợGiúpToolStripMenuItem.Text = "&Trợ giúp";
+            this.thốngkêToolStripMenuItem.Size = new System.Drawing.Size(64, 26);
+            this.thốngkêToolStripMenuItem.Text = "&About";
+            this.thốngkêToolStripMenuItem.Click += new System.EventHandler(this.thốngkêToolStripMenuItem_Click);
             // 
             // label2
             // 
@@ -221,7 +218,7 @@
             this.btnCancel.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnCancel.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.btnCancel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCancel.Location = new System.Drawing.Point(573, 417);
+            this.btnCancel.Location = new System.Drawing.Point(580, 470);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(109, 35);
             this.btnCancel.TabIndex = 31;
@@ -234,7 +231,7 @@
             this.btnClear.AutoSize = true;
             this.btnClear.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnClear.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnClear.Location = new System.Drawing.Point(415, 417);
+            this.btnClear.Location = new System.Drawing.Point(422, 470);
             this.btnClear.Name = "btnClear";
             this.btnClear.Size = new System.Drawing.Size(118, 35);
             this.btnClear.TabIndex = 32;
@@ -249,7 +246,7 @@
             this.btnUpdate.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnUpdate.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnUpdate.ForeColor = System.Drawing.Color.White;
-            this.btnUpdate.Location = new System.Drawing.Point(265, 417);
+            this.btnUpdate.Location = new System.Drawing.Point(272, 470);
             this.btnUpdate.Name = "btnUpdate";
             this.btnUpdate.Size = new System.Drawing.Size(109, 35);
             this.btnUpdate.TabIndex = 33;
@@ -267,6 +264,7 @@
             this.cmbLoaiTaiKhoan_tenCV.Size = new System.Drawing.Size(487, 33);
             this.cmbLoaiTaiKhoan_tenCV.Sorted = true;
             this.cmbLoaiTaiKhoan_tenCV.TabIndex = 42;
+            this.cmbLoaiTaiKhoan_tenCV.SelectedIndexChanged += new System.EventHandler(this.cmbLoaiTaiKhoan_tenCV_SelectedIndexChanged);
             // 
             // pictureBox5
             // 
@@ -291,13 +289,50 @@
             this.label6.Text = "Loại tài khoản";
             this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // cmbMaChucVu
+            // 
+            this.cmbMaChucVu.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbMaChucVu.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmbMaChucVu.FormattingEnabled = true;
+            this.cmbMaChucVu.Location = new System.Drawing.Point(371, 415);
+            this.cmbMaChucVu.Name = "cmbMaChucVu";
+            this.cmbMaChucVu.Size = new System.Drawing.Size(487, 33);
+            this.cmbMaChucVu.Sorted = true;
+            this.cmbMaChucVu.TabIndex = 45;
+            // 
+            // pictureBox4
+            // 
+            this.pictureBox4.Image = global::Main.Properties.Resources.Screenshot_2024_10_06_153752;
+            this.pictureBox4.Location = new System.Drawing.Point(70, 416);
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.Size = new System.Drawing.Size(35, 35);
+            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox4.TabIndex = 47;
+            this.pictureBox4.TabStop = false;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.label5.Location = new System.Drawing.Point(133, 419);
+            this.label5.Name = "label5";
+            this.label5.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.label5.Size = new System.Drawing.Size(132, 29);
+            this.label5.TabIndex = 46;
+            this.label5.Text = "Mã chức vụ";
+            this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // SuaTaiKhoanForm
             // 
             this.AcceptButton = this.btnUpdate;
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.CancelButton = this.btnCancel;
-            this.ClientSize = new System.Drawing.Size(942, 493);
+            this.ClientSize = new System.Drawing.Size(942, 532);
+            this.Controls.Add(this.cmbMaChucVu);
+            this.Controls.Add(this.pictureBox4);
+            this.Controls.Add(this.label5);
             this.Controls.Add(this.cmbLoaiTaiKhoan_tenCV);
             this.Controls.Add(this.pictureBox5);
             this.Controls.Add(this.label6);
@@ -326,6 +361,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -338,7 +374,6 @@
         private System.Windows.Forms.ToolStripMenuItem đăngXuấtToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem thoátỨngDụngToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem thốngkêToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem trợGiúpToolStripMenuItem;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label3;
@@ -355,5 +390,8 @@
         private System.Windows.Forms.ComboBox cmbLoaiTaiKhoan_tenCV;
         private System.Windows.Forms.PictureBox pictureBox5;
         private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.ComboBox cmbMaChucVu;
+        private System.Windows.Forms.PictureBox pictureBox4;
+        private System.Windows.Forms.Label label5;
     }
 }

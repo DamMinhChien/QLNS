@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.thốngkêToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.thoátỨngDụngToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.đăngXuấtToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.label2 = new System.Windows.Forms.Label();
@@ -51,17 +50,11 @@
             this.btnCancel = new System.Windows.Forms.Button();
             this.btnClear = new System.Windows.Forms.Button();
             this.btnUpdate = new System.Windows.Forms.Button();
-            this.cmbChucVu = new System.Windows.Forms.ComboBox();
-            this.cmbPhongBan = new System.Windows.Forms.ComboBox();
-            this.pictureBox7 = new System.Windows.Forms.PictureBox();
-            this.label6 = new System.Windows.Forms.Label();
             this.pictureBox10 = new System.Windows.Forms.PictureBox();
-            this.pictureBox8 = new System.Windows.Forms.PictureBox();
             this.pictureBox6 = new System.Windows.Forms.PictureBox();
             this.txtEmail = new System.Windows.Forms.TextBox();
             this.txtSDT = new System.Windows.Forms.TextBox();
             this.label11 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.pictureBox9 = new System.Windows.Forms.PictureBox();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
@@ -69,24 +62,28 @@
             this.label10 = new System.Windows.Forms.Label();
             this.txtDiaChi = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
+            this.label13 = new System.Windows.Forms.Label();
+            this.label12 = new System.Windows.Forms.Label();
+            this.cmbMaPhongBan = new System.Windows.Forms.ComboBox();
+            this.cmbMaChucVu = new System.Windows.Forms.ComboBox();
+            this.cmbChucVu = new System.Windows.Forms.ComboBox();
+            this.cmbPhongBan = new System.Windows.Forms.ComboBox();
+            this.pictureBox7 = new System.Windows.Forms.PictureBox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.pictureBox8 = new System.Windows.Forms.PictureBox();
+            this.label9 = new System.Windows.Forms.Label();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
             this.SuspendLayout();
-            // 
-            // thốngkêToolStripMenuItem
-            // 
-            this.thốngkêToolStripMenuItem.Name = "thốngkêToolStripMenuItem";
-            this.thốngkêToolStripMenuItem.Size = new System.Drawing.Size(84, 24);
-            this.thốngkêToolStripMenuItem.Text = "Thống &kê";
             // 
             // thoátỨngDụngToolStripMenuItem
             // 
@@ -125,15 +122,15 @@
             // trợGiúpToolStripMenuItem
             // 
             this.trợGiúpToolStripMenuItem.Name = "trợGiúpToolStripMenuItem";
-            this.trợGiúpToolStripMenuItem.Size = new System.Drawing.Size(78, 24);
-            this.trợGiúpToolStripMenuItem.Text = "&Trợ giúp";
+            this.trợGiúpToolStripMenuItem.Size = new System.Drawing.Size(64, 24);
+            this.trợGiúpToolStripMenuItem.Text = "&About";
+            this.trợGiúpToolStripMenuItem.Click += new System.EventHandler(this.trợGiúpToolStripMenuItem_Click);
             // 
             // menuStrip1
             // 
             this.menuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.hệThốngToolStripMenuItem,
-            this.thốngkêToolStripMenuItem,
             this.trợGiúpToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
@@ -330,51 +327,6 @@
             this.btnUpdate.UseVisualStyleBackColor = false;
             this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
             // 
-            // cmbChucVu
-            // 
-            this.cmbChucVu.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cmbChucVu.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cmbChucVu.FormattingEnabled = true;
-            this.cmbChucVu.Location = new System.Drawing.Point(376, 404);
-            this.cmbChucVu.Name = "cmbChucVu";
-            this.cmbChucVu.Size = new System.Drawing.Size(487, 33);
-            this.cmbChucVu.Sorted = true;
-            this.cmbChucVu.TabIndex = 66;
-            // 
-            // cmbPhongBan
-            // 
-            this.cmbPhongBan.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cmbPhongBan.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cmbPhongBan.FormattingEnabled = true;
-            this.cmbPhongBan.Location = new System.Drawing.Point(376, 470);
-            this.cmbPhongBan.Name = "cmbPhongBan";
-            this.cmbPhongBan.Size = new System.Drawing.Size(487, 33);
-            this.cmbPhongBan.Sorted = true;
-            this.cmbPhongBan.TabIndex = 67;
-            // 
-            // pictureBox7
-            // 
-            this.pictureBox7.Image = global::Main.Properties.Resources.Screenshot_2024_10_06_153752;
-            this.pictureBox7.Location = new System.Drawing.Point(75, 470);
-            this.pictureBox7.Name = "pictureBox7";
-            this.pictureBox7.Size = new System.Drawing.Size(35, 35);
-            this.pictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox7.TabIndex = 83;
-            this.pictureBox7.TabStop = false;
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.label6.Location = new System.Drawing.Point(138, 473);
-            this.label6.Name = "label6";
-            this.label6.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.label6.Size = new System.Drawing.Size(129, 29);
-            this.label6.TabIndex = 82;
-            this.label6.Text = "Phòng ban";
-            this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
             // pictureBox10
             // 
             this.pictureBox10.Image = global::Main.Properties.Resources._8220447;
@@ -384,16 +336,6 @@
             this.pictureBox10.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox10.TabIndex = 79;
             this.pictureBox10.TabStop = false;
-            // 
-            // pictureBox8
-            // 
-            this.pictureBox8.Image = global::Main.Properties.Resources._8220447;
-            this.pictureBox8.Location = new System.Drawing.Point(75, 404);
-            this.pictureBox8.Name = "pictureBox8";
-            this.pictureBox8.Size = new System.Drawing.Size(35, 35);
-            this.pictureBox8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox8.TabIndex = 80;
-            this.pictureBox8.TabStop = false;
             // 
             // pictureBox6
             // 
@@ -435,19 +377,6 @@
             this.label11.TabIndex = 76;
             this.label11.Text = "Email";
             this.label11.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.label9.Location = new System.Drawing.Point(138, 407);
-            this.label9.Name = "label9";
-            this.label9.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.label9.Size = new System.Drawing.Size(98, 29);
-            this.label9.TabIndex = 77;
-            this.label9.Text = "Chức vụ";
-            this.label9.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label8
             // 
@@ -526,6 +455,124 @@
             this.label7.Text = "Địa chỉ";
             this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label13.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.label13.Location = new System.Drawing.Point(644, 474);
+            this.label13.Name = "label13";
+            this.label13.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.label13.Size = new System.Drawing.Size(46, 29);
+            this.label13.TabIndex = 90;
+            this.label13.Text = "Mã";
+            this.label13.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.label12.Location = new System.Drawing.Point(644, 408);
+            this.label12.Name = "label12";
+            this.label12.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.label12.Size = new System.Drawing.Size(46, 29);
+            this.label12.TabIndex = 91;
+            this.label12.Text = "Mã";
+            this.label12.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // cmbMaPhongBan
+            // 
+            this.cmbMaPhongBan.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbMaPhongBan.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmbMaPhongBan.FormattingEnabled = true;
+            this.cmbMaPhongBan.Location = new System.Drawing.Point(696, 470);
+            this.cmbMaPhongBan.Name = "cmbMaPhongBan";
+            this.cmbMaPhongBan.Size = new System.Drawing.Size(167, 33);
+            this.cmbMaPhongBan.Sorted = true;
+            this.cmbMaPhongBan.TabIndex = 82;
+            // 
+            // cmbMaChucVu
+            // 
+            this.cmbMaChucVu.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbMaChucVu.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmbMaChucVu.FormattingEnabled = true;
+            this.cmbMaChucVu.Location = new System.Drawing.Point(696, 404);
+            this.cmbMaChucVu.Name = "cmbMaChucVu";
+            this.cmbMaChucVu.Size = new System.Drawing.Size(167, 33);
+            this.cmbMaChucVu.Sorted = true;
+            this.cmbMaChucVu.TabIndex = 83;
+            // 
+            // cmbChucVu
+            // 
+            this.cmbChucVu.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbChucVu.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmbChucVu.FormattingEnabled = true;
+            this.cmbChucVu.Location = new System.Drawing.Point(376, 408);
+            this.cmbChucVu.Name = "cmbChucVu";
+            this.cmbChucVu.Size = new System.Drawing.Size(235, 33);
+            this.cmbChucVu.Sorted = true;
+            this.cmbChucVu.TabIndex = 84;
+            this.cmbChucVu.SelectedIndexChanged += new System.EventHandler(this.cmbChucVu_SelectedIndexChanged);
+            // 
+            // cmbPhongBan
+            // 
+            this.cmbPhongBan.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbPhongBan.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmbPhongBan.FormattingEnabled = true;
+            this.cmbPhongBan.Location = new System.Drawing.Point(376, 474);
+            this.cmbPhongBan.Name = "cmbPhongBan";
+            this.cmbPhongBan.Size = new System.Drawing.Size(235, 33);
+            this.cmbPhongBan.Sorted = true;
+            this.cmbPhongBan.TabIndex = 85;
+            this.cmbPhongBan.SelectedIndexChanged += new System.EventHandler(this.cmbPhongBan_SelectedIndexChanged);
+            // 
+            // pictureBox7
+            // 
+            this.pictureBox7.Image = global::Main.Properties.Resources.Screenshot_2024_10_06_153752;
+            this.pictureBox7.Location = new System.Drawing.Point(75, 474);
+            this.pictureBox7.Name = "pictureBox7";
+            this.pictureBox7.Size = new System.Drawing.Size(35, 35);
+            this.pictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox7.TabIndex = 89;
+            this.pictureBox7.TabStop = false;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.label6.Location = new System.Drawing.Point(138, 477);
+            this.label6.Name = "label6";
+            this.label6.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.label6.Size = new System.Drawing.Size(129, 29);
+            this.label6.TabIndex = 88;
+            this.label6.Text = "Phòng ban";
+            this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // pictureBox8
+            // 
+            this.pictureBox8.Image = global::Main.Properties.Resources._8220447;
+            this.pictureBox8.Location = new System.Drawing.Point(75, 408);
+            this.pictureBox8.Name = "pictureBox8";
+            this.pictureBox8.Size = new System.Drawing.Size(35, 35);
+            this.pictureBox8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox8.TabIndex = 87;
+            this.pictureBox8.TabStop = false;
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.label9.Location = new System.Drawing.Point(138, 411);
+            this.label9.Name = "label9";
+            this.label9.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.label9.Size = new System.Drawing.Size(98, 29);
+            this.label9.TabIndex = 86;
+            this.label9.Text = "Chức vụ";
+            this.label9.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // SuaNhanVienForm
             // 
             this.AcceptButton = this.btnUpdate;
@@ -534,17 +581,21 @@
             this.AutoScroll = true;
             this.CancelButton = this.btnCancel;
             this.ClientSize = new System.Drawing.Size(963, 493);
+            this.Controls.Add(this.label13);
+            this.Controls.Add(this.label12);
+            this.Controls.Add(this.cmbMaPhongBan);
+            this.Controls.Add(this.cmbMaChucVu);
             this.Controls.Add(this.cmbChucVu);
             this.Controls.Add(this.cmbPhongBan);
             this.Controls.Add(this.pictureBox7);
             this.Controls.Add(this.label6);
-            this.Controls.Add(this.pictureBox10);
             this.Controls.Add(this.pictureBox8);
+            this.Controls.Add(this.label9);
+            this.Controls.Add(this.pictureBox10);
             this.Controls.Add(this.pictureBox6);
             this.Controls.Add(this.txtEmail);
             this.Controls.Add(this.txtSDT);
             this.Controls.Add(this.label11);
-            this.Controls.Add(this.label9);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.pictureBox9);
             this.Controls.Add(this.pictureBox5);
@@ -580,19 +631,18 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-        private System.Windows.Forms.ToolStripMenuItem thốngkêToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem thoátỨngDụngToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem đăngXuấtToolStripMenuItem;
         private System.Windows.Forms.Label label2;
@@ -615,17 +665,11 @@
         private System.Windows.Forms.Button btnCancel;
         private System.Windows.Forms.Button btnClear;
         private System.Windows.Forms.Button btnUpdate;
-        private System.Windows.Forms.ComboBox cmbChucVu;
-        private System.Windows.Forms.ComboBox cmbPhongBan;
-        private System.Windows.Forms.PictureBox pictureBox7;
-        private System.Windows.Forms.Label label6;
         private System.Windows.Forms.PictureBox pictureBox10;
-        private System.Windows.Forms.PictureBox pictureBox8;
         private System.Windows.Forms.PictureBox pictureBox6;
         private System.Windows.Forms.TextBox txtEmail;
         private System.Windows.Forms.TextBox txtSDT;
         private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.PictureBox pictureBox9;
         private System.Windows.Forms.PictureBox pictureBox5;
@@ -633,5 +677,15 @@
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.TextBox txtDiaChi;
         private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.ComboBox cmbMaPhongBan;
+        private System.Windows.Forms.ComboBox cmbMaChucVu;
+        private System.Windows.Forms.ComboBox cmbChucVu;
+        private System.Windows.Forms.ComboBox cmbPhongBan;
+        private System.Windows.Forms.PictureBox pictureBox7;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.PictureBox pictureBox8;
+        private System.Windows.Forms.Label label9;
     }
 }

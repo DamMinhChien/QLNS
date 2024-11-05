@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-//Xóa cái dòng này đi!
+
 namespace Main
 {
     public partial class QuanLyPhongBanForm : Form
@@ -46,7 +46,7 @@ namespace Main
         private void picTimPB_Click(object sender, EventArgs e)
         {
             string search = txtTimPB.Text.Trim();
-            string query = "SELECT PhongBan.maPhongBan, tenPhongBan, COUNT(NhanVien.hoTen) AS SoLuongNhanVien, heSoPhongBan FROM PhongBan left JOIN NhanVien ON PhongBan.maPhongBan = NhanVien.maPhongBan where tenPhongBan = '%" + search+ "%' GROUP BY PhongBan.maPhongBan, tenPhongBan, heSoPhongBan;";
+            string query = "SELECT PhongBan.maPhongBan, tenPhongBan, COUNT(NhanVien.hoTen) AS SoLuongNhanVien, heSoPhongBan FROM PhongBan left JOIN NhanVien ON PhongBan.maPhongBan = NhanVien.maPhongBan where tenPhongBan like '%" +search+ "%' GROUP BY PhongBan.maPhongBan, tenPhongBan, heSoPhongBan;";
             Function.LoadDataGridView(dgvDanhSachPhongBan, query);
         }
 
@@ -116,6 +116,17 @@ namespace Main
                 //refresh luôn
                 cậpNhậtToolStripMenuItem_Click(sender, e);
             }
+        }
+
+        private void trợGiúpToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            AboutForm aboutForm = new AboutForm();
+            aboutForm.Show();
+        }
+
+        private void thốngkêToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Function.ExportToExcel(dgvDanhSachPhongBan);
         }
     }
 }

@@ -103,5 +103,23 @@ namespace Main
             QuanLyChucVuForm quanLyChucVuForm = new QuanLyChucVuForm();
             quanLyChucVuForm.ShowDialog();
         }
+
+        private void trợGiúpToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            AboutForm aboutForm = new AboutForm();
+            aboutForm.Show();
+        }
+
+        private void picThongBao_Click(object sender, EventArgs e)
+        {
+            QuanLyThongBaoForm quanLyThongBaoForm = new QuanLyThongBaoForm();
+            quanLyThongBaoForm.Show();
+        }
+
+        private void lbllThongBao_Click(object sender, EventArgs e)
+        {
+            QuanLyThongBaoForm quanLyThongBaoForm = new QuanLyThongBaoForm();
+            quanLyThongBaoForm.Show();
+        }
     }
 }

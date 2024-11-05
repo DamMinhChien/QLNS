@@ -16,19 +16,19 @@ namespace Main
         private string maTaiKhoan;
         private string tenDangNhap;
         private string matKhau;
-        private string maChucVu;
+        private string maNhanVien;
         public SuaTaiKhoanForm()
         {
             InitializeComponent();
         }
 
-        public SuaTaiKhoanForm(string maTaiKhoan, string tenDangNhap, string matKhau, string maChucVu)
+        public SuaTaiKhoanForm(string maTaiKhoan, string tenDangNhap, string matKhau, string maNhanVien)
         {
             InitializeComponent();
             this.maTaiKhoan = maTaiKhoan;
             this.tenDangNhap = tenDangNhap;
             this.matKhau = matKhau;
-            this.maChucVu = maChucVu;
+            this.maNhanVien = maNhanVien;
         }
 
         private void textBox3_TextChanged(object sender, EventArgs e)
@@ -42,7 +42,7 @@ namespace Main
             txtAcc.Text = "";
             txtPass.Text = "";
             cmbLoaiTaiKhoan_tenCV.SelectedIndex = -1;
-
+            
         }
 
         private void SuaTaiKhoanForm_Load(object sender, EventArgs e)
@@ -50,8 +50,24 @@ namespace Main
             txtID.Text = maTaiKhoan;
             txtAcc.Text = tenDangNhap;
             txtPass.Text = matKhau;
-            cmbLoaiTaiKhoan_tenCV.SelectedItem = maChucVu;
+            string myQuery = "select tenChucVu from NhanVien nv inner join ChucVu cv on nv.maChucVu = cv.maChucVu where maNhanVien = '" + maNhanVien + "'";
+            DataTable data = new DataTable();
+            data = Function.GetDataQuery(myQuery);
+            string tenChucVu = data.Rows[0][0].ToString();
 
+            string query = "select distinct tenChucVu from ChucVu";
+            DataTable dataTable = Function.GetDataQuery(query);
+            // Xóa các item cũ trong ComboBox
+            cmbLoaiTaiKhoan_tenCV.Items.Clear();
+            // Duyệt qua từng hàng trong DataTable
+            foreach (DataRow row in dataTable.Rows)
+            {
+                // Lấy giá trị của cột hoTen
+                string hoTen = row[0].ToString();
+                // Thêm vào ComboBox
+                cmbLoaiTaiKhoan_tenCV.Items.Add(hoTen);
+            }
+            cmbLoaiTaiKhoan_tenCV.SelectedItem = tenChucVu;
         }
         // Kiểm tra mã tk đã tồn tại trong cơ sở dữ liệu
         private bool CheckIfEmployeeIdExists(string employeeId)
@@ -94,7 +110,7 @@ namespace Main
             string ID = txtID.Text;
             string tenDangNhapNew = txtAcc.Text;
             string matKhauNew = txtPass.Text;
-            string maChucVuNew = cmbLoaiTaiKhoan_tenCV.SelectedItem.ToString();
+            string maChucVuNew = cmbMaChucVu.SelectedItem.ToString();
 
             if (string.IsNullOrEmpty(ID) || string.IsNullOrEmpty(tenDangNhap) || string.IsNullOrEmpty(matKhauNew) || string.IsNullOrEmpty(maChucVuNew))
             {
@@ -112,8 +128,13 @@ namespace Main
                 MessageBox.Show("Tên đăng nhập đã tồn tại, vui lòng nhập lại.");
                 return;
             }
+            //Lay maNhanVien tu ten chuc vu
+            string myQuery = "select maNhanVien from NhanVien where maChucVu = '" + maChucVuNew + "'";
+            DataTable data = new DataTable();
+            data = Function.GetDataQuery(myQuery);
+            string maNhanVien = data.Rows[0][0].ToString();
 
-            string query = "update TaiKhoan set maTaiKhoan = '" + ID + "', tenDangNhap = '" + tenDangNhap + "' , matKhau = '" + matKhauNew + "', maChucVu = '" + maChucVuNew + "' where maTaiKhoan = '" + this.maTaiKhoan + "'";
+            string query = "update TaiKhoan set maTaiKhoan = '" + ID + "', tenDangNhap = '" + tenDangNhap + "' , matKhau = '" + matKhauNew + "', maNhanVien = '" + maNhanVien + "' where maTaiKhoan = '" + this.maTaiKhoan + "'";
 
             Function.UpdateDataQuery(query);
         }
@@ -121,6 +142,36 @@ namespace Main
         private void btnCancel_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void thốngkêToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            AboutForm aboutForm = new AboutForm();
+            aboutForm.Show();
+        }
+
+        private void cmbLoaiTaiKhoan_tenCV_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            UpdateMaCV();
+        }
+
+        private void UpdateMaCV()
+        {
+            cmbMaChucVu.Items.Clear();
+            string tenChucVuCurrent = cmbLoaiTaiKhoan_tenCV.SelectedItem?.ToString().Trim();
+
+            // Kiểm tra xem có giá trị nào được chọn không
+            if (!string.IsNullOrEmpty(tenChucVuCurrent))
+            {
+                string query3 = "select maChucVu from ChucVu where tenChucVu = N'" + tenChucVuCurrent + "' ";
+                DataTable datatabe3 = Function.GetDataQuery(query3);
+                foreach (DataRow row in datatabe3.Rows)
+                {
+                    string hoTen = row[0].ToString();
+                    cmbMaChucVu.Items.Add(hoTen);
+                }
+
+            }
         }
     }
 }

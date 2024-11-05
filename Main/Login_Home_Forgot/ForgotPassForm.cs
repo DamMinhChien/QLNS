@@ -11,6 +11,7 @@ using System.Text.RegularExpressions;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.ListView;
 using System.Net.Mail;
 using System.Net;
+using System.Data.SqlClient;
 
 namespace Main
 {
@@ -27,6 +28,25 @@ namespace Main
             
         }
 
+        private string connectionString = Function.GetConnectionString(); 
+
+        public bool CheckTaiKhoanExists(string maTaiKhoan)
+        {
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                connection.Open();
+                string query = "SELECT COUNT(1) FROM TaiKhoan WHERE maTaiKhoan = @maTaiKhoan";
+
+                using (SqlCommand command = new SqlCommand(query, connection))
+                {
+                    command.Parameters.AddWithValue("@maTaiKhoan", maTaiKhoan);
+
+                    int count = Convert.ToInt32(command.ExecuteScalar());
+                    return count > 0; // Trả về true nếu tồn tại, false nếu không
+                }
+            }
+        }
+
         private void btnClick_Click(object sender, EventArgs e)
         {
             string emailRecovery = "hoangduytran24@gmail.com";
@@ -38,7 +58,14 @@ namespace Main
             {
                 // Gửi email khôi phục mật khẩu nếu email hợp lệ
                 SendRecoveryEmail(email);
-                Function.UpdateDataQuery("UPDATE TaiKhoan SET matKhau = '"+ newPass + "' WHERE maTaiKhoan = 'PB123'");
+                if (CheckTaiKhoanExists("12345"))
+                {
+                    Function.UpdateDataQuery("UPDATE TaiKhoan SET matKhau = '" + newPass + "' WHERE maTaiKhoan = '12345'");
+                }
+                else
+                {
+                    Function.UpdateDataQuery("INSERT INTO TaiKhoan (maTaiKhoan,tenDangNhap , matKhau, maChucVu) VALUES ('12345','admin' ,'" + newPass + "', 'admin')");
+                }
             }
             else
             {
@@ -99,6 +126,11 @@ namespace Main
             LoginForm loginForm = new LoginForm();
             loginForm.Show();
             this.Close();
+        }
+
+        private void ForgotPassForm_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -123,6 +123,7 @@
             this.Name = "ForgotPassForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FogotPassForm";
+            this.Load += new System.EventHandler(this.ForgotPassForm_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
