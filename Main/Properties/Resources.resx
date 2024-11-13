@@ -118,6 +118,9 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="a11" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\a1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="hierarchy-line-icon-outline-symbol-vector-illustration-concept-sign-2JPD185" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\hierarchy-line-icon-outline-symbol-vector-illustration-concept-sign-2JPD185.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -126,6 +129,15 @@
   </data>
   <data name="1635595-2001" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\1635595-2001.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="82204471" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\8220447.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Screenshot 2024-10-06 153752" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Screenshot 2024-10-06 153752.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="4202011emailgmaillogomailsocialsocialmedia-115677_115624" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\4202011emailgmaillogomailsocialsocialmedia-115677_115624.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Undo_icon-icons.com_73701" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Undo_icon-icons.com_73701.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -139,8 +151,11 @@
   <data name="note-task-comment-message-edit-write_108613" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\note-task-comment-message-edit-write_1086131.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="c1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\c1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="date" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\date.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="announcement_advertising_loudspeaker_volume_bullhorn_sound_loud_megaphone_icon_232065" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\announcement_advertising_loudspeaker_volume_bullhorn_sound_loud_megaphone_icon_2320651.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="b1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\b1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -154,14 +169,17 @@
   <data name="announcement_advertising_loudspeaker_volume_bullhorn_sound_loud_megaphone_icon_2320651" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\announcement_advertising_loudspeaker_volume_bullhorn_sound_loud_megaphone_icon_2320652.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="a1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\a1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="business_construction_avatar_engineer_man_employee_person_worker_icon_262353" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\business_construction_avatar_engineer_man_employee_person_worker_icon_262353.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="repeat_update_refresh_reload_sync_icon_225556" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\repeat_update_refresh_reload_sync_icon_2255561.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="business_application_addmale_useradd_insert_add_user_client_2312" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\business_application_addmale_useradd_insert_add_user_client_23121.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="hierarchy-line-icon-outline-symbol-vector-illustration-concept-sign-2JPD1853" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\hierarchy-line-icon-outline-symbol-vector-illustration-concept-sign-2JPD185.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="b" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\b.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -175,8 +193,11 @@
   <data name="pngtree-avatar-icon-profile-icon-member-login-vector-isolated-png-image_1978396" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\pngtree-avatar-icon-profile-icon-member-login-vector-isolated-png-image_1978396.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Roll-call1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Roll-call1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="salary_marketing_income_financial_earn_money_is_work_icon_230480 (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\salary_marketing_income_financial_earn_money_is_work_icon_230480 (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="a12" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\a1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="downloadfolder_99367" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\downloadfolder_99367.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -184,8 +205,20 @@
   <data name="a" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\a.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="salary_marketing_income_financial_earn_money_is_work_icon_230480 (1)2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\salary_marketing_income_financial_earn_money_is_work_icon_230480 (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="Screenshot 2024-10-06 152651" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Screenshot 2024-10-06 152651.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="c1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\c1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="b2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\b2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="31_104880" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\31_104880.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="c" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\c.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -193,26 +226,47 @@
   <data name="1486504837-descending-filter-filtering-tool-funnel-sort_81363" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\1486504837-descending-filter-filtering-tool-funnel-sort_813631.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="ABC-2021-LOGO1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ABC-2021-LOGO.svg1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="security-protection-protect-key-password-login_108554" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\security-protection-protect-key-password-login_108554.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="31_1048801" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\31_104880.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="hierarchy-line-icon-outline-symbol-vector-illustration-concept-sign-2JPD1851" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\hierarchy-line-icon-outline-symbol-vector-illustration-concept-sign-2JPD1851.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="Roll-call" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Roll-call.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="searchmagnifierinterfacesymbol1_79893" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\searchmagnifierinterfacesymbol1_79893.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="b2" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\b2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="salary_marketing_income_financial_earn_money_is_work_icon_230480 (1)1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\salary_marketing_income_financial_earn_money_is_work_icon_230480 (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="announcement_advertising_loudspeaker_volume_bullhorn_sound_loud_megaphone_icon_232065" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\announcement_advertising_loudspeaker_volume_bullhorn_sound_loud_megaphone_icon_2320651.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="phone_blue_35145" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\phone_blue_35145.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="hierarchy-line-icon-outline-symbol-vector-illustration-concept-sign-2JPD1852" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\hierarchy-line-icon-outline-symbol-vector-illustration-concept-sign-2JPD185.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Roll-call1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Roll-call1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="8220447" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\8220447.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Screenshot 2024-10-06 153752" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Screenshot 2024-10-06 153752.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="a1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\a1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="hierarchy-line-icon-outline-symbol-vector-illustration-concept-sign-2JPD1851" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\hierarchy-line-icon-outline-symbol-vector-illustration-concept-sign-2JPD1851.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="sex" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\sex.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="hierarchy-line-icon-outline-symbol-vector-illustration-concept-sign-2JPD1854" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\hierarchy-line-icon-outline-symbol-vector-illustration-concept-sign-2JPD185.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="1635595-200" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\1635595-200.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -220,7 +274,7 @@
   <data name="Save_icon-icons.com_73702" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Save_icon-icons.com_737021.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="ABC-2021-LOGO1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\ABC-2021-LOGO.svg1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="business_construction_avatar_engineer_man_employee_person_worker_icon_2623531" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\business_construction_avatar_engineer_man_employee_person_worker_icon_262353.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

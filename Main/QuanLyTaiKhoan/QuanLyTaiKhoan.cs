@@ -13,8 +13,15 @@ namespace Main
 {
     public partial class QuanLyTaiKhoanForm : Form
     {
+        private string ID;
         public QuanLyTaiKhoanForm()
         {
+            InitializeComponent();
+        }
+
+        public QuanLyTaiKhoanForm(string ID)
+        {
+            this.ID = ID;
             InitializeComponent();
         }
 
@@ -123,6 +130,11 @@ namespace Main
 
         private void xóaToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            if(selectedMaTaiKhoan == ID)
+            {
+                MessageBox.Show("Không thể xóa tài khoản của chính mình!");
+                return;
+            }
             if (string.IsNullOrEmpty(selectedMaTaiKhoan))
             {
                 MessageBox.Show("Vui lòng chọn một tài khoản để xóa.");
@@ -133,8 +145,7 @@ namespace Main
             var result = MessageBox.Show("Bạn có chắc chắn muốn xóa tài khoản này?", "Xác Nhận", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
             if (result == DialogResult.Yes)
             {
-                string query1 = "DELETE FROM NhanVien WHERE maNhanVien = '" + selectedMaNhanVien + "';";
-                string query2 = "DELETE FROM TaiKhoan WHERE maTaiKhoan = '" + selectedMaTaiKhoan + "'";
+                string query1 = "DELETE FROM TaiKhoan WHERE maTaiKhoan = '" + selectedMaTaiKhoan + "'";
                 using (SqlConnection connection = new SqlConnection(Function.GetConnectionString()))
                 {
                     connection.Open();
@@ -150,12 +161,12 @@ namespace Main
                                 // Lệnh DELETE đầu tiên
                                 command.CommandText = query1;
                                 command.ExecuteNonQuery();
-
-                                // Lệnh DELETE thứ hai
-                                command.CommandText = query2;
                                 int rowsAffected = command.ExecuteNonQuery();
+                                // Lệnh DELETE thứ hai
+                                //command.CommandText = query2;
 
-                                if (rowsAffected > 0)
+
+                                if (rowsAffected >= 0)
                                 {
                                     MessageBox.Show("Xóa thành công!");
                                 }

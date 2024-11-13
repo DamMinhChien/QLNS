@@ -145,7 +145,7 @@ namespace Main
             var result = MessageBox.Show("Bạn có chắc chắn muốn xóa nhân viên này?", "Xác Nhận", MessageBoxButtons.YesNo,MessageBoxIcon.Warning);
             if (result == DialogResult.Yes) {
                 string query1 = "DELETE FROM NhanVien_ThongBao WHERE maNhanVien = '"+selectedMaNhanVien+"'";
-                //string query2 = "DELETE FROM HopDongLaoDong WHERE maNhanVien = '"+selectedMaNhanVien+"';";
+                string query2 = "DELETE FROM TaiKhoan WHERE maNhanVien = '"+selectedMaNhanVien+"';";
                 string query3 = "DELETE FROM ChamCong WHERE maNhanVien = '"+selectedMaNhanVien+"';";
                 string query4 = "DELETE FROM NhanVien WHERE maNhanVien = '"+selectedMaNhanVien+"';";
                 using (SqlConnection connection = new SqlConnection(Function.GetConnectionString()))
@@ -165,8 +165,8 @@ namespace Main
                                 command.ExecuteNonQuery();
 
                                 // Lệnh DELETE thứ hai
-                                //command.CommandText = query2;
-                                //command.ExecuteNonQuery();
+                                command.CommandText = query2;
+                                command.ExecuteNonQuery();
 
                                 // Lệnh DELETE thứ ba
                                 command.CommandText = query3;

@@ -13,11 +13,22 @@ namespace Main
     public partial class HomeForm : Form
     {
         private bool canChangePhongBan;
+        private string ID;
+        private string username;
+        private string password;
 
         public HomeForm()
         {
             InitializeComponent();
             canChangePhongBan = true;
+        }
+
+        public HomeForm(string username, string password)
+        {
+            InitializeComponent();
+            canChangePhongBan = true;
+            this.username = username;
+            this.password = password;
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -28,6 +39,7 @@ namespace Main
         private void HomeForm_Load(object sender, EventArgs e)
         {
             AutoResizer.Init(this);
+            GetMaTaiKhoan();
         }
 
         private void gprQuanLy_Enter(object sender, EventArgs e)
@@ -62,7 +74,7 @@ namespace Main
 
         private void picQuanLyNhanVien_Click(object sender, EventArgs e)
         {
-            QuanLyTaiKhoanForm quanLyTaiKhoan = new QuanLyTaiKhoanForm();
+            QuanLyTaiKhoanForm quanLyTaiKhoan = new QuanLyTaiKhoanForm(ID);
             quanLyTaiKhoan.ShowDialog();
         }
 
@@ -123,6 +135,19 @@ namespace Main
         {
             QuanLyThongBaoForm quanLyThongBaoForm = new QuanLyThongBaoForm();
             quanLyThongBaoForm.Show();
+        }
+        private void GetMaTaiKhoan()
+        {
+            string query = "select maTaiKhoan from TaiKhoan where tenDangNhap = '" + username + "' and matKhau = '" + password + "'";
+            DataTable dataTable = Function.GetDataQuery(query);
+            if (dataTable.Rows.Count > 0)  // Kiểm tra xem có hàng nào không
+            {
+                DataRow row = dataTable.Rows[0];  // Lấy hàng đầu tiên
+
+                // Lấy giá trị từ cột đầu tiên
+                string value = row[0].ToString();  // Hoặc row["SingleColumn"]
+                ID = value;
+            }
         }
     }
 }

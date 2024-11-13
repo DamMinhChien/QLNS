@@ -132,7 +132,7 @@
             this.txtPassword.Name = "txtPassword";
             this.txtPassword.PasswordChar = '*';
             this.txtPassword.Size = new System.Drawing.Size(410, 39);
-            this.txtPassword.TabIndex = 3;
+            this.txtPassword.TabIndex = 1;
             // 
             // txtUsername
             // 
@@ -142,7 +142,7 @@
             this.txtUsername.Location = new System.Drawing.Point(73, 12);
             this.txtUsername.Name = "txtUsername";
             this.txtUsername.Size = new System.Drawing.Size(410, 39);
-            this.txtUsername.TabIndex = 1;
+            this.txtUsername.TabIndex = 0;
             this.txtUsername.TextChanged += new System.EventHandler(this.txtUsername_TextChanged);
             // 
             // btnLogin
@@ -156,7 +156,7 @@
             this.btnLogin.Location = new System.Drawing.Point(0, 732);
             this.btnLogin.Name = "btnLogin";
             this.btnLogin.Size = new System.Drawing.Size(580, 67);
-            this.btnLogin.TabIndex = 3;
+            this.btnLogin.TabIndex = 2;
             this.btnLogin.Text = "Login";
             this.btnLogin.UseVisualStyleBackColor = false;
             this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click);
@@ -168,7 +168,7 @@
             this.panel4.Location = new System.Drawing.Point(0, 827);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(580, 51);
-            this.panel4.TabIndex = 4;
+            this.panel4.TabIndex = 3;
             // 
             // lblExit
             // 
@@ -192,7 +192,7 @@
             this.lblClear.Location = new System.Drawing.Point(349, 654);
             this.lblClear.Name = "lblClear";
             this.lblClear.Size = new System.Drawing.Size(194, 39);
-            this.lblClear.TabIndex = 2;
+            this.lblClear.TabIndex = 1;
             this.lblClear.Text = "Clear Field";
             this.lblClear.Click += new System.EventHandler(this.lblClear_Click);
             // 
@@ -205,7 +205,7 @@
             this.lblForget.Location = new System.Drawing.Point(27, 654);
             this.lblForget.Name = "lblForget";
             this.lblForget.Size = new System.Drawing.Size(289, 39);
-            this.lblForget.TabIndex = 5;
+            this.lblForget.TabIndex = 0;
             this.lblForget.Text = "Forgot password?";
             this.lblForget.Click += new System.EventHandler(this.lblForget_Click);
             // 

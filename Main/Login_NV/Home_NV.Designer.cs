@@ -58,58 +58,83 @@
             // 
             // btn_About
             // 
+            this.btn_About.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(179)))), ((int)(((byte)(255)))));
             this.btn_About.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btn_About.Font = new System.Drawing.Font("Century Gothic", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_About.ForeColor = System.Drawing.Color.White;
             this.btn_About.Location = new System.Drawing.Point(0, 505);
             this.btn_About.Name = "btn_About";
             this.btn_About.Size = new System.Drawing.Size(303, 88);
-            this.btn_About.TabIndex = 3;
+            this.btn_About.TabIndex = 4;
             this.btn_About.Text = "About";
-            this.btn_About.UseVisualStyleBackColor = true;
+            this.btn_About.UseVisualStyleBackColor = false;
             this.btn_About.Click += new System.EventHandler(this.btn_About_Click);
+            this.btn_About.MouseEnter += new System.EventHandler(this.btn_About_MouseEnter);
+            this.btn_About.MouseLeave += new System.EventHandler(this.btn_About_MouseLeave);
             // 
             // btn_Sys
             // 
+            this.btn_Sys.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(179)))), ((int)(((byte)(255)))));
             this.btn_Sys.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btn_Sys.Font = new System.Drawing.Font("Century Gothic", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Sys.ForeColor = System.Drawing.Color.White;
             this.btn_Sys.Location = new System.Drawing.Point(0, 417);
             this.btn_Sys.Name = "btn_Sys";
             this.btn_Sys.Size = new System.Drawing.Size(303, 88);
-            this.btn_Sys.TabIndex = 2;
+            this.btn_Sys.TabIndex = 3;
             this.btn_Sys.Text = "Hệ thống";
-            this.btn_Sys.UseVisualStyleBackColor = true;
+            this.btn_Sys.UseVisualStyleBackColor = false;
             this.btn_Sys.Click += new System.EventHandler(this.btn_Sys_Click);
+            this.btn_Sys.MouseEnter += new System.EventHandler(this.btn_Sys_MouseEnter);
+            this.btn_Sys.MouseLeave += new System.EventHandler(this.btn_Sys_MouseLeave);
             // 
             // btnThongBaoCaNhan
             // 
+            this.btnThongBaoCaNhan.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(179)))), ((int)(((byte)(255)))));
             this.btnThongBaoCaNhan.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnThongBaoCaNhan.Font = new System.Drawing.Font("Century Gothic", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnThongBaoCaNhan.ForeColor = System.Drawing.Color.White;
             this.btnThongBaoCaNhan.Location = new System.Drawing.Point(0, 329);
             this.btnThongBaoCaNhan.Name = "btnThongBaoCaNhan";
             this.btnThongBaoCaNhan.Size = new System.Drawing.Size(303, 88);
-            this.btnThongBaoCaNhan.TabIndex = 4;
+            this.btnThongBaoCaNhan.TabIndex = 2;
             this.btnThongBaoCaNhan.Text = "Thông báo cá nhân";
-            this.btnThongBaoCaNhan.UseVisualStyleBackColor = true;
+            this.btnThongBaoCaNhan.UseVisualStyleBackColor = false;
             this.btnThongBaoCaNhan.Click += new System.EventHandler(this.btnThongBaoCaNhan_Click);
+            this.btnThongBaoCaNhan.MouseEnter += new System.EventHandler(this.btnThongBaoCaNhan_MouseEnter);
+            this.btnThongBaoCaNhan.MouseLeave += new System.EventHandler(this.btnThongBaoCaNhan_MouseLeave);
             // 
             // btnThongBaoPhongBan
             // 
+            this.btnThongBaoPhongBan.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(179)))), ((int)(((byte)(255)))));
             this.btnThongBaoPhongBan.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnThongBaoPhongBan.Font = new System.Drawing.Font("Century Gothic", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnThongBaoPhongBan.ForeColor = System.Drawing.Color.White;
             this.btnThongBaoPhongBan.Location = new System.Drawing.Point(0, 241);
             this.btnThongBaoPhongBan.Name = "btnThongBaoPhongBan";
             this.btnThongBaoPhongBan.Size = new System.Drawing.Size(303, 88);
-            this.btnThongBaoPhongBan.TabIndex = 5;
+            this.btnThongBaoPhongBan.TabIndex = 1;
             this.btnThongBaoPhongBan.Text = "Thông báo phòng ban";
-            this.btnThongBaoPhongBan.UseVisualStyleBackColor = true;
+            this.btnThongBaoPhongBan.UseVisualStyleBackColor = false;
             this.btnThongBaoPhongBan.Click += new System.EventHandler(this.btnThongBaoPhongBan_Click);
+            this.btnThongBaoPhongBan.MouseEnter += new System.EventHandler(this.btnThongBaoPhongBan_MouseEnter);
+            this.btnThongBaoPhongBan.MouseLeave += new System.EventHandler(this.btnThongBaoPhongBan_MouseLeave);
             // 
             // btnInf
             // 
+            this.btnInf.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(179)))), ((int)(((byte)(255)))));
             this.btnInf.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnInf.Font = new System.Drawing.Font("Century Gothic", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnInf.ForeColor = System.Drawing.Color.White;
             this.btnInf.Location = new System.Drawing.Point(0, 153);
             this.btnInf.Name = "btnInf";
             this.btnInf.Size = new System.Drawing.Size(303, 88);
-            this.btnInf.TabIndex = 1;
+            this.btnInf.TabIndex = 0;
             this.btnInf.Text = "Thông tin";
-            this.btnInf.UseVisualStyleBackColor = true;
+            this.btnInf.UseVisualStyleBackColor = false;
             this.btnInf.Click += new System.EventHandler(this.button1_Click);
+            this.btnInf.MouseEnter += new System.EventHandler(this.btnInf_MouseEnter_1);
+            this.btnInf.MouseLeave += new System.EventHandler(this.btnInf_MouseLeave);
             // 
             // panel3
             // 
@@ -145,7 +170,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(50)))), ((int)(((byte)(130)))));
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
             this.ClientSize = new System.Drawing.Size(1239, 612);
             this.Controls.Add(this.panel_Body);
             this.Controls.Add(this.panel1);

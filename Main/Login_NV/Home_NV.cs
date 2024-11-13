@@ -5,6 +5,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -72,9 +73,7 @@ namespace Main
 
         private void Home_NV_Load(object sender, EventArgs e)
         {
-            string query = "select maNhanVien ,hoTen from NhanVien nv " +
-                "inner join ChucVu cv on nv.maChucVu = cv.maChucVu inner join PhongBan pb on pb.maPhongBan = nv.maPhongBan" +
-                " inner join TaiKhoan tk on cv.maChucVu = tk.maChucVu where tenDangNhap = '" + username + "' and matKhau = '" + password + "'";
+            string query = "select maNhanVien ,hoTen from NhanVien nv inner join TaiKhoan tk on tk.maNhanVien = nv.maNhanVien where tenDangNhap = '" + username + "' and matKhau = '" + password + "'";
 
             OpenChildForm(new NhanVienInf(username,password));
         }
@@ -105,6 +104,69 @@ namespace Main
         private void btnThongBaoCaNhan_Click(object sender, EventArgs e)
         {
             OpenChildForm(new NhanVien_TBCN(maNhanVien));
+        }
+        private void EnterFormat(Button button)
+        {
+            button.BackColor = ColorTranslator.FromHtml("#FFC107");
+            button.ForeColor = ColorTranslator.FromHtml("#343A40");
+            button.Font = new Font(button.Font.FontFamily, 13, button.Font.Style);
+        }
+
+        private void LeaveFormat(Button button)
+        {
+            button.BackColor = ColorTranslator.FromHtml("#66B3FF");
+            button.ForeColor = ColorTranslator.FromHtml("#FFFFFF");
+            button.Font = new Font(button.Font.FontFamily, 11, button.Font.Style);
+        }
+
+        private void btnInf_MouseEnter_1(object sender, EventArgs e)
+        {
+            EnterFormat(btnInf);
+        }
+
+        private void btnInf_MouseLeave(object sender, EventArgs e)
+        {
+            LeaveFormat(btnInf);
+        }
+
+        private void btnThongBaoPhongBan_MouseEnter(object sender, EventArgs e)
+        {
+            EnterFormat(btnThongBaoPhongBan);
+        }
+
+        private void btnThongBaoPhongBan_MouseLeave(object sender, EventArgs e)
+        {
+            LeaveFormat(btnThongBaoPhongBan);
+        }
+
+        private void btnThongBaoCaNhan_MouseEnter(object sender, EventArgs e)
+        {
+            EnterFormat(btnThongBaoCaNhan);
+        }
+
+        private void btnThongBaoCaNhan_MouseLeave(object sender, EventArgs e)
+        {
+            LeaveFormat(btnThongBaoCaNhan);
+        }
+
+        private void btn_Sys_MouseEnter(object sender, EventArgs e)
+        {
+            EnterFormat(btn_Sys);
+        }
+
+        private void btn_Sys_MouseLeave(object sender, EventArgs e)
+        {
+            LeaveFormat(btn_Sys);
+        }
+
+        private void btn_About_MouseEnter(object sender, EventArgs e)
+        {
+            EnterFormat(btn_About);
+        }
+
+        private void btn_About_MouseLeave(object sender, EventArgs e)
+        {
+            LeaveFormat(btn_About);
         }
     }
 }

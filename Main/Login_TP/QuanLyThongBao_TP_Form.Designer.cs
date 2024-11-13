@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(QuanLyThongBao_TP_Form));
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.hệThốngToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.đăngXuấtToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -126,26 +127,36 @@
             // btnNhanVien
             // 
             this.btnNhanVien.AutoSize = true;
+            this.btnNhanVien.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(179)))), ((int)(((byte)(255)))));
             this.btnNhanVien.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnNhanVien.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnNhanVien.ForeColor = System.Drawing.Color.White;
             this.btnNhanVien.Location = new System.Drawing.Point(0, 194);
             this.btnNhanVien.Name = "btnNhanVien";
             this.btnNhanVien.Size = new System.Drawing.Size(200, 194);
             this.btnNhanVien.TabIndex = 4;
             this.btnNhanVien.Text = "Nhân viên";
-            this.btnNhanVien.UseVisualStyleBackColor = true;
+            this.btnNhanVien.UseVisualStyleBackColor = false;
             this.btnNhanVien.Click += new System.EventHandler(this.btnNhanVien_Click);
+            this.btnNhanVien.MouseEnter += new System.EventHandler(this.btnNhanVien_MouseEnter);
+            this.btnNhanVien.MouseLeave += new System.EventHandler(this.btnNhanVien_MouseLeave);
             // 
             // btnPhongBan
             // 
             this.btnPhongBan.AutoSize = true;
+            this.btnPhongBan.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(179)))), ((int)(((byte)(255)))));
             this.btnPhongBan.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnPhongBan.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPhongBan.ForeColor = System.Drawing.Color.White;
             this.btnPhongBan.Location = new System.Drawing.Point(0, 0);
             this.btnPhongBan.Name = "btnPhongBan";
             this.btnPhongBan.Size = new System.Drawing.Size(200, 194);
             this.btnPhongBan.TabIndex = 3;
             this.btnPhongBan.Text = "Phòng ban";
-            this.btnPhongBan.UseVisualStyleBackColor = true;
+            this.btnPhongBan.UseVisualStyleBackColor = false;
             this.btnPhongBan.Click += new System.EventHandler(this.btnPhongBan_Click_1);
+            this.btnPhongBan.MouseEnter += new System.EventHandler(this.btnPhongBan_MouseEnter);
+            this.btnPhongBan.MouseLeave += new System.EventHandler(this.btnPhongBan_MouseLeave);
             // 
             // panel_Body
             // 
@@ -410,6 +421,7 @@
             this.ClientSize = new System.Drawing.Size(1154, 626);
             this.Controls.Add(this.menuStrip1);
             this.Controls.Add(this.splitContainer1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "QuanLyThongBao_TP_Form";
             this.Text = "Quản lý thông báo";
             this.Load += new System.EventHandler(this.QuanLyThongBao_TP_Form_Load);

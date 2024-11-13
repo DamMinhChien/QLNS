@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.Common;
 using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
@@ -41,7 +42,8 @@ namespace Main
         {
             lblTieuDe.Text = "Bảng chấm công tháng " + (cmbMonth.SelectedIndex +1) + "/" + dtpYear.Value.Year;
             LoadAttendanceData();
-            
+            dgvChamCong.Focus();
+            this.KeyPreview = true;
         }
 
         private string GenerateUniqueID(SqlConnection connection)
@@ -195,6 +197,12 @@ namespace Main
                 DataTable attendanceTable = new DataTable();
                 adapterAttendance.Fill(attendanceTable);
 
+                //Căn giữa các cell ngày
+                foreach (DataGridViewColumn column in dgvChamCong.Columns)
+                {
+                    column.DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
+                    column.HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleCenter;
+                }
                 foreach (DataRow empRow in employeeTable.Rows)
                 {
                     int countP = 0;

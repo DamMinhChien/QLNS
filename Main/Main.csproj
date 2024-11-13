@@ -612,5 +612,29 @@
   <ItemGroup>
     <None Include="Resources\ABC-2021-LOGO.svg1.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sex.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\date.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\salary_marketing_income_financial_earn_money_is_work_icon_230480 %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\phone_blue_35145.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\31_104880.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\4202011emailgmaillogomailsocialsocialmedia-115677_115624.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\security-protection-protect-key-password-login_108554.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\business_construction_avatar_engineer_man_employee_person_worker_icon_262353.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

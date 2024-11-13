@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SuaThongBaoPBForm));
             this.metroContextMenu1 = new MetroFramework.Controls.MetroContextMenu(this.components);
             this.btnAdd = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
@@ -289,6 +290,7 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.btnCancel);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "SuaThongBaoPBForm";
             this.Text = "Sửa thông báo phòng ban";
             this.Load += new System.EventHandler(this.SuaThongBaoPBForm_Load);

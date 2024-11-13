@@ -194,5 +194,25 @@ namespace Main
             AboutForm aboutForm = new AboutForm();
             aboutForm.Show();
         }
+
+        private void btnPhongBan_MouseEnter(object sender, EventArgs e)
+        {
+            Function.EnterFormat(btnPhongBan);
+        }
+
+        private void btnPhongBan_MouseLeave(object sender, EventArgs e)
+        {
+            Function.LeaveFormat(btnPhongBan);
+        }
+
+        private void btnNhanVien_MouseEnter(object sender, EventArgs e)
+        {
+            Function.EnterFormat(btnNhanVien);
+        }
+
+        private void btnNhanVien_MouseLeave(object sender, EventArgs e)
+        {
+            Function.LeaveFormat(btnNhanVien);
+        }
     }
 }

@@ -140,7 +140,7 @@
             this.pnlQuanLyPhongBan.Location = new System.Drawing.Point(568, 90);
             this.pnlQuanLyPhongBan.Name = "pnlQuanLyPhongBan";
             this.pnlQuanLyPhongBan.Size = new System.Drawing.Size(234, 261);
-            this.pnlQuanLyPhongBan.TabIndex = 4;
+            this.pnlQuanLyPhongBan.TabIndex = 1;
             // 
             // lblQuanLyChamCong
             // 
@@ -160,7 +160,7 @@
             this.pnlQuanLyChamCong.Location = new System.Drawing.Point(250, 383);
             this.pnlQuanLyChamCong.Name = "pnlQuanLyChamCong";
             this.pnlQuanLyChamCong.Size = new System.Drawing.Size(234, 261);
-            this.pnlQuanLyChamCong.TabIndex = 3;
+            this.pnlQuanLyChamCong.TabIndex = 2;
             // 
             // trợGiúpToolStripMenuItem
             // 
@@ -223,7 +223,7 @@
             this.pnlQuanLyNhanVien.Location = new System.Drawing.Point(250, 90);
             this.pnlQuanLyNhanVien.Name = "pnlQuanLyNhanVien";
             this.pnlQuanLyNhanVien.Size = new System.Drawing.Size(234, 261);
-            this.pnlQuanLyNhanVien.TabIndex = 4;
+            this.pnlQuanLyNhanVien.TabIndex = 0;
             // 
             // gprQuanLy
             // 
@@ -246,7 +246,7 @@
             this.pnlThongBao.Location = new System.Drawing.Point(568, 383);
             this.pnlThongBao.Name = "pnlThongBao";
             this.pnlThongBao.Size = new System.Drawing.Size(234, 261);
-            this.pnlThongBao.TabIndex = 6;
+            this.pnlThongBao.TabIndex = 3;
             // 
             // lbllThongBao
             // 

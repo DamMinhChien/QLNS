@@ -38,31 +38,29 @@
             this.lblTen = new System.Windows.Forms.Label();
             this.lblGT = new System.Windows.Forms.Label();
             this.lblNS = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.lblDC = new System.Windows.Forms.Label();
             this.lblLuong = new System.Windows.Forms.Label();
-            this.pictureBox5 = new System.Windows.Forms.PictureBox();
-            this.pictureBox9 = new System.Windows.Forms.PictureBox();
             this.lblSdt = new System.Windows.Forms.Label();
             this.lblCV = new System.Windows.Forms.Label();
             this.lblEmail = new System.Windows.Forms.Label();
-            this.pictureBox6 = new System.Windows.Forms.PictureBox();
-            this.pictureBox8 = new System.Windows.Forms.PictureBox();
-            this.pictureBox10 = new System.Windows.Forms.PictureBox();
             this.lblPB = new System.Windows.Forms.Label();
-            this.pictureBox7 = new System.Windows.Forms.PictureBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
+            this.pictureBox11 = new System.Windows.Forms.PictureBox();
+            this.pictureBox12 = new System.Windows.Forms.PictureBox();
+            this.pictureBox13 = new System.Windows.Forms.PictureBox();
+            this.pictureBox14 = new System.Windows.Forms.PictureBox();
+            this.pictureBox16 = new System.Windows.Forms.PictureBox();
+            this.pictureBox17 = new System.Windows.Forms.PictureBox();
             this.contextMenuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox12)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox13)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox14)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox16)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox17)).BeginInit();
             this.SuspendLayout();
             // 
             // updateToolStripMenuItem
@@ -124,12 +122,12 @@
             // lblTen
             // 
             this.lblTen.AutoSize = true;
-            this.lblTen.Font = new System.Drawing.Font("Century Gothic", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTen.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTen.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.lblTen.Location = new System.Drawing.Point(211, 153);
+            this.lblTen.Location = new System.Drawing.Point(175, 58);
             this.lblTen.Name = "lblTen";
             this.lblTen.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.lblTen.Size = new System.Drawing.Size(172, 27);
+            this.lblTen.Size = new System.Drawing.Size(218, 37);
             this.lblTen.TabIndex = 0;
             this.lblTen.Text = "Tên nhân viên";
             this.lblTen.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -139,7 +137,7 @@
             this.lblGT.AutoSize = true;
             this.lblGT.Font = new System.Drawing.Font("Century Gothic", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblGT.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.lblGT.Location = new System.Drawing.Point(613, 150);
+            this.lblGT.Location = new System.Drawing.Point(613, 191);
             this.lblGT.Name = "lblGT";
             this.lblGT.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.lblGT.Size = new System.Drawing.Size(103, 27);
@@ -152,7 +150,7 @@
             this.lblNS.AutoSize = true;
             this.lblNS.Font = new System.Drawing.Font("Century Gothic", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblNS.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.lblNS.Location = new System.Drawing.Point(211, 225);
+            this.lblNS.Location = new System.Drawing.Point(234, 196);
             this.lblNS.Name = "lblNS";
             this.lblNS.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.lblNS.Size = new System.Drawing.Size(122, 27);
@@ -160,42 +158,12 @@
             this.lblNS.Text = "Ngày sinh";
             this.lblNS.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::Main.Properties.Resources.Screenshot_2024_10_06_153752;
-            this.pictureBox1.Location = new System.Drawing.Point(148, 150);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(35, 35);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 95;
-            this.pictureBox1.TabStop = false;
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Image = global::Main.Properties.Resources.Screenshot_2024_10_06_153825;
-            this.pictureBox2.Location = new System.Drawing.Point(550, 147);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(35, 35);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox2.TabIndex = 94;
-            this.pictureBox2.TabStop = false;
-            // 
-            // pictureBox3
-            // 
-            this.pictureBox3.Image = global::Main.Properties.Resources.Screenshot_2024_10_06_153825;
-            this.pictureBox3.Location = new System.Drawing.Point(148, 222);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(35, 35);
-            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox3.TabIndex = 93;
-            this.pictureBox3.TabStop = false;
-            // 
             // lblDC
             // 
             this.lblDC.AutoSize = true;
             this.lblDC.Font = new System.Drawing.Font("Century Gothic", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblDC.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.lblDC.Location = new System.Drawing.Point(211, 426);
+            this.lblDC.Location = new System.Drawing.Point(234, 410);
             this.lblDC.Name = "lblDC";
             this.lblDC.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.lblDC.Size = new System.Drawing.Size(89, 27);
@@ -208,7 +176,7 @@
             this.lblLuong.AutoSize = true;
             this.lblLuong.Font = new System.Drawing.Font("Century Gothic", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblLuong.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.lblLuong.Location = new System.Drawing.Point(613, 296);
+            this.lblLuong.Location = new System.Drawing.Point(613, 337);
             this.lblLuong.Name = "lblLuong";
             this.lblLuong.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.lblLuong.Size = new System.Drawing.Size(152, 27);
@@ -216,32 +184,12 @@
             this.lblLuong.Text = "Lương cơ bản";
             this.lblLuong.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // pictureBox5
-            // 
-            this.pictureBox5.Image = global::Main.Properties.Resources.Screenshot_2024_10_06_153752;
-            this.pictureBox5.Location = new System.Drawing.Point(148, 423);
-            this.pictureBox5.Name = "pictureBox5";
-            this.pictureBox5.Size = new System.Drawing.Size(35, 35);
-            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox5.TabIndex = 111;
-            this.pictureBox5.TabStop = false;
-            // 
-            // pictureBox9
-            // 
-            this.pictureBox9.Image = global::Main.Properties.Resources.Screenshot_2024_10_06_153752;
-            this.pictureBox9.Location = new System.Drawing.Point(550, 293);
-            this.pictureBox9.Name = "pictureBox9";
-            this.pictureBox9.Size = new System.Drawing.Size(35, 35);
-            this.pictureBox9.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox9.TabIndex = 110;
-            this.pictureBox9.TabStop = false;
-            // 
             // lblSdt
             // 
             this.lblSdt.AutoSize = true;
             this.lblSdt.Font = new System.Drawing.Font("Century Gothic", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblSdt.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.lblSdt.Location = new System.Drawing.Point(613, 370);
+            this.lblSdt.Location = new System.Drawing.Point(613, 410);
             this.lblSdt.Name = "lblSdt";
             this.lblSdt.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.lblSdt.Size = new System.Drawing.Size(146, 27);
@@ -254,7 +202,7 @@
             this.lblCV.AutoSize = true;
             this.lblCV.Font = new System.Drawing.Font("Century Gothic", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCV.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.lblCV.Location = new System.Drawing.Point(211, 291);
+            this.lblCV.Location = new System.Drawing.Point(234, 270);
             this.lblCV.Name = "lblCV";
             this.lblCV.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.lblCV.Size = new System.Drawing.Size(103, 27);
@@ -267,7 +215,7 @@
             this.lblEmail.AutoSize = true;
             this.lblEmail.Font = new System.Drawing.Font("Century Gothic", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblEmail.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.lblEmail.Location = new System.Drawing.Point(613, 222);
+            this.lblEmail.Location = new System.Drawing.Point(613, 264);
             this.lblEmail.Name = "lblEmail";
             this.lblEmail.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.lblEmail.Size = new System.Drawing.Size(74, 27);
@@ -275,42 +223,12 @@
             this.lblEmail.Text = "Email";
             this.lblEmail.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // pictureBox6
-            // 
-            this.pictureBox6.Image = global::Main.Properties.Resources._8220447;
-            this.pictureBox6.Location = new System.Drawing.Point(550, 367);
-            this.pictureBox6.Name = "pictureBox6";
-            this.pictureBox6.Size = new System.Drawing.Size(35, 35);
-            this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox6.TabIndex = 117;
-            this.pictureBox6.TabStop = false;
-            // 
-            // pictureBox8
-            // 
-            this.pictureBox8.Image = global::Main.Properties.Resources._8220447;
-            this.pictureBox8.Location = new System.Drawing.Point(148, 288);
-            this.pictureBox8.Name = "pictureBox8";
-            this.pictureBox8.Size = new System.Drawing.Size(35, 35);
-            this.pictureBox8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox8.TabIndex = 116;
-            this.pictureBox8.TabStop = false;
-            // 
-            // pictureBox10
-            // 
-            this.pictureBox10.Image = global::Main.Properties.Resources._8220447;
-            this.pictureBox10.Location = new System.Drawing.Point(550, 219);
-            this.pictureBox10.Name = "pictureBox10";
-            this.pictureBox10.Size = new System.Drawing.Size(35, 35);
-            this.pictureBox10.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox10.TabIndex = 115;
-            this.pictureBox10.TabStop = false;
-            // 
             // lblPB
             // 
             this.lblPB.AutoSize = true;
             this.lblPB.Font = new System.Drawing.Font("Century Gothic", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblPB.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.lblPB.Location = new System.Drawing.Point(211, 357);
+            this.lblPB.Location = new System.Drawing.Point(234, 337);
             this.lblPB.Name = "lblPB";
             this.lblPB.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.lblPB.Size = new System.Drawing.Size(136, 27);
@@ -318,36 +236,105 @@
             this.lblPB.Text = "Phòng ban";
             this.lblPB.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // pictureBox7
+            // pictureBox1
             // 
-            this.pictureBox7.Image = global::Main.Properties.Resources.Screenshot_2024_10_06_153752;
-            this.pictureBox7.Location = new System.Drawing.Point(148, 354);
-            this.pictureBox7.Name = "pictureBox7";
-            this.pictureBox7.Size = new System.Drawing.Size(35, 35);
-            this.pictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox7.TabIndex = 119;
-            this.pictureBox7.TabStop = false;
+            this.pictureBox1.Image = global::Main.Properties.Resources.a11;
+            this.pictureBox1.Location = new System.Drawing.Point(171, 331);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(35, 35);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 156;
+            this.pictureBox1.TabStop = false;
+            // 
+            // pictureBox4
+            // 
+            this.pictureBox4.Image = global::Main.Properties.Resources.hierarchy_line_icon_outline_symbol_vector_illustration_concept_sign_2JPD1852;
+            this.pictureBox4.Location = new System.Drawing.Point(171, 267);
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.Size = new System.Drawing.Size(35, 35);
+            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox4.TabIndex = 155;
+            this.pictureBox4.TabStop = false;
+            // 
+            // pictureBox11
+            // 
+            this.pictureBox11.Image = global::Main.Properties.Resources._4202011emailgmaillogomailsocialsocialmedia_115677_115624;
+            this.pictureBox11.Location = new System.Drawing.Point(550, 262);
+            this.pictureBox11.Name = "pictureBox11";
+            this.pictureBox11.Size = new System.Drawing.Size(35, 35);
+            this.pictureBox11.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox11.TabIndex = 153;
+            this.pictureBox11.TabStop = false;
+            // 
+            // pictureBox12
+            // 
+            this.pictureBox12.Image = global::Main.Properties.Resources.phone_blue_35145;
+            this.pictureBox12.Location = new System.Drawing.Point(550, 410);
+            this.pictureBox12.Name = "pictureBox12";
+            this.pictureBox12.Size = new System.Drawing.Size(35, 35);
+            this.pictureBox12.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox12.TabIndex = 154;
+            this.pictureBox12.TabStop = false;
+            // 
+            // pictureBox13
+            // 
+            this.pictureBox13.Image = global::Main.Properties.Resources.salary_marketing_income_financial_earn_money_is_work_icon_230480__1_;
+            this.pictureBox13.Location = new System.Drawing.Point(550, 336);
+            this.pictureBox13.Name = "pictureBox13";
+            this.pictureBox13.Size = new System.Drawing.Size(35, 35);
+            this.pictureBox13.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox13.TabIndex = 151;
+            this.pictureBox13.TabStop = false;
+            // 
+            // pictureBox14
+            // 
+            this.pictureBox14.Image = global::Main.Properties.Resources._31_1048801;
+            this.pictureBox14.Location = new System.Drawing.Point(171, 401);
+            this.pictureBox14.Name = "pictureBox14";
+            this.pictureBox14.Size = new System.Drawing.Size(35, 35);
+            this.pictureBox14.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox14.TabIndex = 152;
+            this.pictureBox14.TabStop = false;
+            // 
+            // pictureBox16
+            // 
+            this.pictureBox16.Image = global::Main.Properties.Resources.date;
+            this.pictureBox16.Location = new System.Drawing.Point(171, 196);
+            this.pictureBox16.Name = "pictureBox16";
+            this.pictureBox16.Size = new System.Drawing.Size(35, 35);
+            this.pictureBox16.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox16.TabIndex = 147;
+            this.pictureBox16.TabStop = false;
+            // 
+            // pictureBox17
+            // 
+            this.pictureBox17.Image = global::Main.Properties.Resources.sex;
+            this.pictureBox17.Location = new System.Drawing.Point(550, 188);
+            this.pictureBox17.Name = "pictureBox17";
+            this.pictureBox17.Size = new System.Drawing.Size(35, 35);
+            this.pictureBox17.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox17.TabIndex = 148;
+            this.pictureBox17.TabStop = false;
             // 
             // NhanVienInf
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(900, 609);
-            this.Controls.Add(this.pictureBox7);
+            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.pictureBox4);
+            this.Controls.Add(this.pictureBox11);
+            this.Controls.Add(this.pictureBox12);
+            this.Controls.Add(this.pictureBox13);
+            this.Controls.Add(this.pictureBox14);
+            this.Controls.Add(this.pictureBox16);
+            this.Controls.Add(this.pictureBox17);
             this.Controls.Add(this.lblPB);
-            this.Controls.Add(this.pictureBox10);
-            this.Controls.Add(this.pictureBox8);
-            this.Controls.Add(this.pictureBox6);
             this.Controls.Add(this.lblEmail);
             this.Controls.Add(this.lblCV);
             this.Controls.Add(this.lblSdt);
-            this.Controls.Add(this.pictureBox9);
-            this.Controls.Add(this.pictureBox5);
             this.Controls.Add(this.lblLuong);
             this.Controls.Add(this.lblDC);
-            this.Controls.Add(this.pictureBox3);
-            this.Controls.Add(this.pictureBox2);
-            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.lblNS);
             this.Controls.Add(this.lblGT);
             this.Controls.Add(this.lblTen);
@@ -358,14 +345,13 @@
             this.Load += new System.EventHandler(this.NhanVienInf_Load);
             this.contextMenuStrip1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox12)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox13)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox14)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox16)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox17)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -381,20 +367,19 @@
         private System.Windows.Forms.Label lblTen;
         private System.Windows.Forms.Label lblGT;
         private System.Windows.Forms.Label lblNS;
-        private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.PictureBox pictureBox2;
-        private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.Label lblDC;
         private System.Windows.Forms.Label lblLuong;
-        private System.Windows.Forms.PictureBox pictureBox5;
-        private System.Windows.Forms.PictureBox pictureBox9;
         private System.Windows.Forms.Label lblSdt;
         private System.Windows.Forms.Label lblCV;
         private System.Windows.Forms.Label lblEmail;
-        private System.Windows.Forms.PictureBox pictureBox6;
-        private System.Windows.Forms.PictureBox pictureBox8;
-        private System.Windows.Forms.PictureBox pictureBox10;
         private System.Windows.Forms.Label lblPB;
-        private System.Windows.Forms.PictureBox pictureBox7;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox pictureBox4;
+        private System.Windows.Forms.PictureBox pictureBox11;
+        private System.Windows.Forms.PictureBox pictureBox12;
+        private System.Windows.Forms.PictureBox pictureBox13;
+        private System.Windows.Forms.PictureBox pictureBox14;
+        private System.Windows.Forms.PictureBox pictureBox16;
+        private System.Windows.Forms.PictureBox pictureBox17;
     }
 }

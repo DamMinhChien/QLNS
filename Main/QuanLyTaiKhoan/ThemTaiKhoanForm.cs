@@ -17,6 +17,8 @@ namespace Main
     public partial class ThemTaiKhoanForm : Form
     {
         private string ID;
+        private string username;
+        private string password;
 
         public string ID1 { get => ID; set => ID = value; }
         public ThemTaiKhoanForm()
@@ -47,14 +49,14 @@ namespace Main
             string tenTaiKhoan = txtTenTaiKhoan.Text.Trim();
             string matKhau = txtMatKhau.Text.Trim();
             string nhapLaiMatKhau = txtNhapLaiMatKhau.Text.Trim();
-            string tenChucVu = cmbLoaiTaiKhoan_tenCV.SelectedItem.ToString();
+            string maNhanVien = cmbMaNV.SelectedItem?.ToString();
 
 
             // Kiểm tra dữ liệu đầu vào
             if (string.IsNullOrEmpty(tenTaiKhoan) ||
             string.IsNullOrEmpty(matKhau) ||
             string.IsNullOrEmpty(nhapLaiMatKhau) ||
-            string.IsNullOrEmpty(tenChucVu))
+            string.IsNullOrEmpty(maNhanVien))
             {
                 MessageBox.Show("Vui lòng điền đầy đủ thông tin.");
                 return;
@@ -66,10 +68,26 @@ namespace Main
                 return;
             }
 
-            string myQuery = "select maNhanVien from NhanVien nv inner join ChucVu cv on nv.maChucVu = cv.maChucVu where tenChucVu = N'"+tenChucVu+"'";
-            DataTable data = new DataTable();
-            data = Function.GetDataQuery(myQuery);
-            string maNhanVien = data.Rows[0][0].ToString();
+            //if (!IsMaNhanVienExist())
+            //{
+            //    DialogResult result = MessageBox.Show("Nhân viên này chưa tồn tại, bạn có muốn thêm nhân viên mới không","Thông báo",MessageBoxButtons.YesNo);
+            //    if(result == DialogResult.Yes)
+            //    {
+                    
+            //        ThemNhanVienForm themNhanVienForm = new ThemNhanVienForm();
+            //        themNhanVienForm.ShowDialog();
+            //        // Đăng ký sự kiện
+            //        themNhanVienForm.OnNhanVienAdded += (maNV, tenNV) =>
+            //        {
+            //            // Cập nhật ComboBox khi form ThemNhanVien đóng
+            //            this.cmbMaNV.Items.Add(maNV); // Thêm mã nhân viên
+            //            this.cmbLoaiTaiKhoan_tenCV.Items.Add(tenNV); // Thêm tên nhân viên
+            //        };
+            //        cmbLoaiTaiKhoan_tenCV.SelectedValue = themNhanVienForm.GetTenNhanVien();
+            //        cmbMaNV.SelectedValue = themNhanVienForm.GetID();
+            //    }
+                
+            //}
             string query = "insert into TaiKhoan values ( '" + ID + "', '" + tenTaiKhoan + "','" + matKhau + "','" + maNhanVien + "')";
 
             Function.UpdateDataQuery(query);
@@ -113,11 +131,68 @@ namespace Main
         {
 
         }
+        private bool IsMaNhanVienExist()
+        {
+            if (kiemTraCoDungUsername_pass())
+            {
+                string query = "select maNhanVien from TaiKhoan tk where tenDangNhap = '" + username+ "' and matKhau = '" + password+"' ";
+                DataTable dataTable = new DataTable();
+                dataTable = Function.GetDataQuery(query);
+                string maNhanVien = dataTable.Rows[0][0].ToString();
 
+                if(maNhanVien == cmbMaNV.SelectedItem?.ToString())
+                {
+                    return true;
+                }
+            }
+            return false;
+        }
+        private bool kiemTraCoDungUsername_pass()
+        {
+            using (SqlConnection conn = new SqlConnection(Function.GetConnectionString()))
+            {
+                string query = "SELECT COUNT(*) FROM TaiKhoan WHERE tenDangNhap = @username AND matKhau = @password";
+                SqlCommand cmd = new SqlCommand(query, conn);
+                cmd.Parameters.AddWithValue("@username", username);
+                cmd.Parameters.AddWithValue("@password", password);
+
+                conn.Open();
+
+                int count = (int)cmd.ExecuteScalar();
+
+                if (count > 0)
+                {
+                    return true;
+                }
+                else
+                {
+                    return false;
+                }
+            }
+        }
+        private void UpdateMaNhanVien()
+        {
+            cmbMaNV.Items.Clear();
+            string tenNhanVienCurrent = cmbLoaiTaiKhoan_tenCV.SelectedItem?.ToString().Trim();
+
+            // Kiểm tra xem có giá trị nào được chọn không
+            if (!string.IsNullOrEmpty(tenNhanVienCurrent))
+            {
+                string query3 = "select maNhanVien from NhanVien where hoTen = N'" + tenNhanVienCurrent + "' ";
+                DataTable datatabe3 = Function.GetDataQuery(query3);
+                foreach (DataRow row in datatabe3.Rows)
+                {
+                    string maNhanVien = row[0].ToString();
+                    cmbMaNV.Items.Add(maNhanVien);
+                }
+
+            }
+        }
         private void ThemTaiKhoanForm_Load(object sender, EventArgs e)
         {
+            
             txtID.Text = this.ID;
-            string query = "select distinct tenChucVu from ChucVu";
+            string query = "select distinct hoTen from NhanVien";
             DataTable dataTable = Function.GetDataQuery(query);
             // Xóa các item cũ trong ComboBox
             cmbLoaiTaiKhoan_tenCV.Items.Clear();
@@ -125,13 +200,12 @@ namespace Main
             // Duyệt qua từng hàng trong DataTable
             foreach (DataRow row in dataTable.Rows)
             {
-                // Lấy giá trị của cột tenChucVu
-                string chucVu = row[0].ToString();
+                // Lấy giá trị của cột hoTen
+                string hoTen = row[0].ToString();
                 // Thêm vào ComboBox
-                cmbLoaiTaiKhoan_tenCV.Items.Add(chucVu);
+                cmbLoaiTaiKhoan_tenCV.Items.Add(hoTen);
             }
-            ThemNhanVienForm themNhanVienForm = new ThemNhanVienForm();
-            themNhanVienForm.ShowDialog();
+            
         }
 
         private void đăngXuấtToolStripMenuItem_Click(object sender, EventArgs e)
@@ -153,6 +227,43 @@ namespace Main
         {
             AboutForm aboutForm = new AboutForm();
             aboutForm.Show();
+        }
+
+        private void btnCheck_Click(object sender, EventArgs e)
+        {
+
+        }
+        private void cmbLoaiTaiKhoan_tenCV_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            UpdateMaNhanVien();
+        }
+
+        private void txtTenTaiKhoan_Leave(object sender, EventArgs e)
+        {
+            this.username = txtTenTaiKhoan.Text.Trim();
+        }
+
+        private void txtMatKhau_Leave(object sender, EventArgs e)
+        {
+            this.password = txtMatKhau.Text.Trim();
+        }
+
+        private void lblTaoMoi_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            ThemNhanVienForm themNhanVienForm = new ThemNhanVienForm();
+            themNhanVienForm.FormClosed += ThemNhanVienForm_FormClosed;
+            themNhanVienForm.ShowDialog();
+            
+             
+            cmbLoaiTaiKhoan_tenCV.SelectedValue = themNhanVienForm.GetTenNhanVien();
+            cmbMaNV.SelectedValue = themNhanVienForm.GetID();
+        }
+
+        private void ThemNhanVienForm_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            ThemTaiKhoanForm themTaiKhoanForm = new ThemTaiKhoanForm();
+            themTaiKhoanForm.ShowDialog();
         }
     }
 }

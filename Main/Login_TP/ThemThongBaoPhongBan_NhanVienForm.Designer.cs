@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ThemThongBaoPhongBan_NhanVienForm));
             this.cmbID = new System.Windows.Forms.ComboBox();
             this.cmbTen = new System.Windows.Forms.ComboBox();
             this.label5 = new System.Windows.Forms.Label();
@@ -73,7 +74,7 @@
             this.cmbID.Name = "cmbID";
             this.cmbID.Size = new System.Drawing.Size(111, 33);
             this.cmbID.Sorted = true;
-            this.cmbID.TabIndex = 83;
+            this.cmbID.TabIndex = 7;
             // 
             // cmbTen
             // 
@@ -84,7 +85,7 @@
             this.cmbTen.Name = "cmbTen";
             this.cmbTen.Size = new System.Drawing.Size(207, 33);
             this.cmbTen.Sorted = true;
-            this.cmbTen.TabIndex = 82;
+            this.cmbTen.TabIndex = 6;
             this.cmbTen.SelectedIndexChanged += new System.EventHandler(this.cmbTen_SelectedIndexChanged);
             // 
             // label5
@@ -96,7 +97,7 @@
             this.label5.Name = "label5";
             this.label5.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.label5.Size = new System.Drawing.Size(36, 29);
-            this.label5.TabIndex = 78;
+            this.label5.TabIndex = 3;
             this.label5.Text = "ID";
             this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
@@ -109,7 +110,7 @@
             this.label1.Name = "label1";
             this.label1.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.label1.Size = new System.Drawing.Size(83, 29);
-            this.label1.TabIndex = 72;
+            this.label1.TabIndex = 2;
             this.label1.Text = "Họ tên";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
@@ -122,7 +123,7 @@
             this.label6.Name = "label6";
             this.label6.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.label6.Size = new System.Drawing.Size(129, 29);
-            this.label6.TabIndex = 81;
+            this.label6.TabIndex = 0;
             this.label6.Text = "Phòng ban";
             this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
@@ -135,7 +136,7 @@
             this.cmbChucVu.Name = "cmbChucVu";
             this.cmbChucVu.Size = new System.Drawing.Size(207, 33);
             this.cmbChucVu.Sorted = true;
-            this.cmbChucVu.TabIndex = 68;
+            this.cmbChucVu.TabIndex = 5;
             this.cmbChucVu.SelectedIndexChanged += new System.EventHandler(this.cmbChucVu_SelectedIndexChanged);
             // 
             // label9
@@ -147,7 +148,7 @@
             this.label9.Name = "label9";
             this.label9.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.label9.Size = new System.Drawing.Size(98, 29);
-            this.label9.TabIndex = 77;
+            this.label9.TabIndex = 1;
             this.label9.Text = "Chức vụ";
             this.label9.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
@@ -156,7 +157,7 @@
             this.lblLink.Location = new System.Drawing.Point(123, 43);
             this.lblLink.Name = "lblLink";
             this.lblLink.Size = new System.Drawing.Size(203, 50);
-            this.lblLink.TabIndex = 47;
+            this.lblLink.TabIndex = 0;
             // 
             // picPDF
             // 
@@ -178,7 +179,7 @@
             this.btnUpLoad.Location = new System.Drawing.Point(118, 118);
             this.btnUpLoad.Name = "btnUpLoad";
             this.btnUpLoad.Size = new System.Drawing.Size(109, 35);
-            this.btnUpLoad.TabIndex = 45;
+            this.btnUpLoad.TabIndex = 1;
             this.btnUpLoad.Text = "Tải lên";
             this.btnUpLoad.UseVisualStyleBackColor = false;
             this.btnUpLoad.Click += new System.EventHandler(this.btnUpLoad_Click);
@@ -217,7 +218,7 @@
             this.txtTieuDe.Location = new System.Drawing.Point(255, 20);
             this.txtTieuDe.Name = "txtTieuDe";
             this.txtTieuDe.Size = new System.Drawing.Size(501, 34);
-            this.txtTieuDe.TabIndex = 77;
+            this.txtTieuDe.TabIndex = 0;
             // 
             // panel4
             // 
@@ -238,7 +239,7 @@
             this.txtNoiDung.Multiline = true;
             this.txtNoiDung.Name = "txtNoiDung";
             this.txtNoiDung.Size = new System.Drawing.Size(778, 373);
-            this.txtNoiDung.TabIndex = 78;
+            this.txtNoiDung.TabIndex = 0;
             // 
             // groupBox1
             // 
@@ -267,7 +268,7 @@
             this.txtPhongBan.Name = "txtPhongBan";
             this.txtPhongBan.ReadOnly = true;
             this.txtPhongBan.Size = new System.Drawing.Size(202, 34);
-            this.txtPhongBan.TabIndex = 77;
+            this.txtPhongBan.TabIndex = 4;
             // 
             // groupBox2
             // 
@@ -328,7 +329,7 @@
             this.btnAdd.Location = new System.Drawing.Point(435, 588);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Size = new System.Drawing.Size(109, 35);
-            this.btnAdd.TabIndex = 65;
+            this.btnAdd.TabIndex = 0;
             this.btnAdd.Text = "Gửi";
             this.btnAdd.UseVisualStyleBackColor = false;
             this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
@@ -353,7 +354,7 @@
             this.btnCancel.Location = new System.Drawing.Point(590, 588);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(109, 35);
-            this.btnCancel.TabIndex = 67;
+            this.btnCancel.TabIndex = 1;
             this.btnCancel.Text = "Hủy bỏ";
             this.btnCancel.UseVisualStyleBackColor = true;
             this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
@@ -367,6 +368,7 @@
             this.Controls.Add(this.btnAdd);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.btnCancel);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "ThemThongBaoPhongBan_NhanVienForm";
             this.Text = "Soạn thông báo tới nhân viên";
             this.Load += new System.EventHandler(this.ThemThongBaoPhongBan_NhanVienForm_Load);

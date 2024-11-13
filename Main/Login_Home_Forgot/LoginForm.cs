@@ -63,7 +63,7 @@ namespace Main
                     // Xác định vai trò người dùng và hiển thị form tương ứng
                     if (maChucVu.StartsWith("ad"))
                     {
-                        new HomeForm().Show();
+                        new HomeForm(userName, passWord).Show();
                     }
                     else if (maChucVu.StartsWith("TP"))
                     {

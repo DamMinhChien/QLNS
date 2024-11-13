@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SuaNhanVienTP_Form));
             this.label12 = new System.Windows.Forms.Label();
             this.cmbMaChucVu = new System.Windows.Forms.ComboBox();
             this.cmbChucVu = new System.Windows.Forms.ComboBox();
@@ -95,7 +96,7 @@
             this.cmbMaChucVu.Name = "cmbMaChucVu";
             this.cmbMaChucVu.Size = new System.Drawing.Size(167, 33);
             this.cmbMaChucVu.Sorted = true;
-            this.cmbMaChucVu.TabIndex = 123;
+            this.cmbMaChucVu.TabIndex = 6;
             // 
             // cmbChucVu
             // 
@@ -106,7 +107,7 @@
             this.cmbChucVu.Name = "cmbChucVu";
             this.cmbChucVu.Size = new System.Drawing.Size(235, 33);
             this.cmbChucVu.Sorted = true;
-            this.cmbChucVu.TabIndex = 124;
+            this.cmbChucVu.TabIndex = 5;
             this.cmbChucVu.SelectedIndexChanged += new System.EventHandler(this.cmbChucVu_SelectedIndexChanged);
             // 
             // label9
@@ -129,7 +130,7 @@
             this.txtEmail.Location = new System.Drawing.Point(379, 698);
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.Size = new System.Drawing.Size(487, 34);
-            this.txtEmail.TabIndex = 112;
+            this.txtEmail.TabIndex = 10;
             // 
             // txtSDT
             // 
@@ -138,7 +139,7 @@
             this.txtSDT.Location = new System.Drawing.Point(379, 557);
             this.txtSDT.Name = "txtSDT";
             this.txtSDT.Size = new System.Drawing.Size(487, 34);
-            this.txtSDT.TabIndex = 110;
+            this.txtSDT.TabIndex = 8;
             // 
             // label11
             // 
@@ -173,7 +174,7 @@
             this.txtLuongCoBan.Location = new System.Drawing.Point(379, 479);
             this.txtLuongCoBan.Name = "txtLuongCoBan";
             this.txtLuongCoBan.Size = new System.Drawing.Size(487, 34);
-            this.txtLuongCoBan.TabIndex = 113;
+            this.txtLuongCoBan.TabIndex = 7;
             // 
             // label10
             // 
@@ -195,7 +196,7 @@
             this.txtDiaChi.Location = new System.Drawing.Point(379, 629);
             this.txtDiaChi.Name = "txtDiaChi";
             this.txtDiaChi.Size = new System.Drawing.Size(487, 34);
-            this.txtDiaChi.TabIndex = 111;
+            this.txtDiaChi.TabIndex = 9;
             // 
             // label7
             // 
@@ -219,7 +220,7 @@
             this.btnCancel.Location = new System.Drawing.Point(571, 773);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(109, 35);
-            this.btnCancel.TabIndex = 107;
+            this.btnCancel.TabIndex = 13;
             this.btnCancel.Text = "Hủy bỏ";
             this.btnCancel.UseVisualStyleBackColor = true;
             this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
@@ -232,7 +233,7 @@
             this.btnClear.Location = new System.Drawing.Point(419, 773);
             this.btnClear.Name = "btnClear";
             this.btnClear.Size = new System.Drawing.Size(118, 35);
-            this.btnClear.TabIndex = 108;
+            this.btnClear.TabIndex = 12;
             this.btnClear.Text = "Xóa nhanh";
             this.btnClear.UseVisualStyleBackColor = true;
             this.btnClear.Click += new System.EventHandler(this.btnClear_Click);
@@ -247,7 +248,7 @@
             this.btnUpdate.Location = new System.Drawing.Point(275, 773);
             this.btnUpdate.Name = "btnUpdate";
             this.btnUpdate.Size = new System.Drawing.Size(109, 35);
-            this.btnUpdate.TabIndex = 109;
+            this.btnUpdate.TabIndex = 11;
             this.btnUpdate.Text = "Cập nhật";
             this.btnUpdate.UseVisualStyleBackColor = false;
             this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
@@ -260,7 +261,7 @@
             this.dtpNgaySinh.Location = new System.Drawing.Point(379, 343);
             this.dtpNgaySinh.Name = "dtpNgaySinh";
             this.dtpNgaySinh.Size = new System.Drawing.Size(322, 30);
-            this.dtpNgaySinh.TabIndex = 97;
+            this.dtpNgaySinh.TabIndex = 4;
             // 
             // rbtNu
             // 
@@ -270,7 +271,7 @@
             this.rbtNu.Location = new System.Drawing.Point(515, 271);
             this.rbtNu.Name = "rbtNu";
             this.rbtNu.Size = new System.Drawing.Size(65, 33);
-            this.rbtNu.TabIndex = 96;
+            this.rbtNu.TabIndex = 3;
             this.rbtNu.TabStop = true;
             this.rbtNu.Text = "Nữ";
             this.rbtNu.UseVisualStyleBackColor = true;
@@ -283,7 +284,7 @@
             this.rbtNam.Location = new System.Drawing.Point(379, 271);
             this.rbtNam.Name = "rbtNam";
             this.rbtNam.Size = new System.Drawing.Size(85, 33);
-            this.rbtNam.TabIndex = 95;
+            this.rbtNam.TabIndex = 2;
             this.rbtNam.TabStop = true;
             this.rbtNam.Text = "Nam";
             this.rbtNam.UseVisualStyleBackColor = true;
@@ -296,7 +297,7 @@
             this.txtID.Name = "txtID";
             this.txtID.ReadOnly = true;
             this.txtID.Size = new System.Drawing.Size(169, 34);
-            this.txtID.TabIndex = 104;
+            this.txtID.TabIndex = 0;
             // 
             // label5
             // 
@@ -331,7 +332,7 @@
             this.txtHoTen.Location = new System.Drawing.Point(379, 199);
             this.txtHoTen.Name = "txtHoTen";
             this.txtHoTen.Size = new System.Drawing.Size(487, 34);
-            this.txtHoTen.TabIndex = 94;
+            this.txtHoTen.TabIndex = 1;
             // 
             // label3
             // 
@@ -374,7 +375,7 @@
             // 
             // pictureBox8
             // 
-            this.pictureBox8.Image = global::Main.Properties.Resources._8220447;
+            this.pictureBox8.Image = global::Main.Properties.Resources.hierarchy_line_icon_outline_symbol_vector_illustration_concept_sign_2JPD1852;
             this.pictureBox8.Location = new System.Drawing.Point(78, 412);
             this.pictureBox8.Name = "pictureBox8";
             this.pictureBox8.Size = new System.Drawing.Size(35, 35);
@@ -384,7 +385,7 @@
             // 
             // pictureBox10
             // 
-            this.pictureBox10.Image = global::Main.Properties.Resources._8220447;
+            this.pictureBox10.Image = global::Main.Properties.Resources._4202011emailgmaillogomailsocialsocialmedia_115677_115624;
             this.pictureBox10.Location = new System.Drawing.Point(78, 697);
             this.pictureBox10.Name = "pictureBox10";
             this.pictureBox10.Size = new System.Drawing.Size(35, 35);
@@ -394,7 +395,7 @@
             // 
             // pictureBox6
             // 
-            this.pictureBox6.Image = global::Main.Properties.Resources._8220447;
+            this.pictureBox6.Image = global::Main.Properties.Resources.phone_blue_35145;
             this.pictureBox6.Location = new System.Drawing.Point(78, 556);
             this.pictureBox6.Name = "pictureBox6";
             this.pictureBox6.Size = new System.Drawing.Size(35, 35);
@@ -404,7 +405,7 @@
             // 
             // pictureBox9
             // 
-            this.pictureBox9.Image = global::Main.Properties.Resources.Screenshot_2024_10_06_153752;
+            this.pictureBox9.Image = global::Main.Properties.Resources.salary_marketing_income_financial_earn_money_is_work_icon_230480__1_;
             this.pictureBox9.Location = new System.Drawing.Point(78, 478);
             this.pictureBox9.Name = "pictureBox9";
             this.pictureBox9.Size = new System.Drawing.Size(35, 35);
@@ -414,7 +415,7 @@
             // 
             // pictureBox5
             // 
-            this.pictureBox5.Image = global::Main.Properties.Resources.Screenshot_2024_10_06_153752;
+            this.pictureBox5.Image = global::Main.Properties.Resources._31_1048801;
             this.pictureBox5.Location = new System.Drawing.Point(78, 628);
             this.pictureBox5.Name = "pictureBox5";
             this.pictureBox5.Size = new System.Drawing.Size(35, 35);
@@ -434,7 +435,7 @@
             // 
             // pictureBox3
             // 
-            this.pictureBox3.Image = global::Main.Properties.Resources.Screenshot_2024_10_06_153825;
+            this.pictureBox3.Image = global::Main.Properties.Resources.date;
             this.pictureBox3.Location = new System.Drawing.Point(78, 340);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(35, 35);
@@ -444,7 +445,7 @@
             // 
             // pictureBox2
             // 
-            this.pictureBox2.Image = global::Main.Properties.Resources.Screenshot_2024_10_06_153825;
+            this.pictureBox2.Image = global::Main.Properties.Resources.sex;
             this.pictureBox2.Location = new System.Drawing.Point(78, 268);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(35, 35);
@@ -501,6 +502,7 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "SuaNhanVienTP_Form";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Sửa thông tin nhân viên";

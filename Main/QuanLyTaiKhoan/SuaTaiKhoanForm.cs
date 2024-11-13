@@ -42,7 +42,7 @@ namespace Main
             txtAcc.Text = "";
             txtPass.Text = "";
             cmbLoaiTaiKhoan_tenCV.SelectedIndex = -1;
-            
+            cmbMaNV.SelectedIndex = -1;
         }
 
         private void SuaTaiKhoanForm_Load(object sender, EventArgs e)
@@ -50,15 +50,11 @@ namespace Main
             txtID.Text = maTaiKhoan;
             txtAcc.Text = tenDangNhap;
             txtPass.Text = matKhau;
-            string myQuery = "select tenChucVu from NhanVien nv inner join ChucVu cv on nv.maChucVu = cv.maChucVu where maNhanVien = '" + maNhanVien + "'";
-            DataTable data = new DataTable();
-            data = Function.GetDataQuery(myQuery);
-            string tenChucVu = data.Rows[0][0].ToString();
-
-            string query = "select distinct tenChucVu from ChucVu";
+            string query = "select distinct hoTen from NhanVien";
             DataTable dataTable = Function.GetDataQuery(query);
             // Xóa các item cũ trong ComboBox
             cmbLoaiTaiKhoan_tenCV.Items.Clear();
+
             // Duyệt qua từng hàng trong DataTable
             foreach (DataRow row in dataTable.Rows)
             {
@@ -67,7 +63,6 @@ namespace Main
                 // Thêm vào ComboBox
                 cmbLoaiTaiKhoan_tenCV.Items.Add(hoTen);
             }
-            cmbLoaiTaiKhoan_tenCV.SelectedItem = tenChucVu;
         }
         // Kiểm tra mã tk đã tồn tại trong cơ sở dữ liệu
         private bool CheckIfEmployeeIdExists(string employeeId)
@@ -110,31 +105,21 @@ namespace Main
             string ID = txtID.Text;
             string tenDangNhapNew = txtAcc.Text;
             string matKhauNew = txtPass.Text;
-            string maChucVuNew = cmbMaChucVu.SelectedItem.ToString();
+            string tenNhanVienNew = cmbLoaiTaiKhoan_tenCV.SelectedItem?.ToString();
+            string maNhanVienNew = cmbMaNV.SelectedItem?.ToString();
 
-            if (string.IsNullOrEmpty(ID) || string.IsNullOrEmpty(tenDangNhap) || string.IsNullOrEmpty(matKhauNew) || string.IsNullOrEmpty(maChucVuNew))
+            if (string.IsNullOrEmpty(ID) || string.IsNullOrEmpty(tenDangNhap) || string.IsNullOrEmpty(matKhauNew) || string.IsNullOrEmpty(maNhanVienNew))
             {
                 MessageBox.Show("Vui lòng nhập dầy đủ thông tin.");
                 return;
             }
             if (!CheckIfEmployeeIdExists(ID))
             {
-                MessageBox.Show("Không tìm thấy mã phòng ban, vui lòng nhập lại.");
+                MessageBox.Show("Không tìm thấy mã nhân viên, vui lòng nhập lại.");
                 return;
             }
 
-            if (CheckIfAccExists(tenDangNhapNew))
-            {
-                MessageBox.Show("Tên đăng nhập đã tồn tại, vui lòng nhập lại.");
-                return;
-            }
-            //Lay maNhanVien tu ten chuc vu
-            string myQuery = "select maNhanVien from NhanVien where maChucVu = '" + maChucVuNew + "'";
-            DataTable data = new DataTable();
-            data = Function.GetDataQuery(myQuery);
-            string maNhanVien = data.Rows[0][0].ToString();
-
-            string query = "update TaiKhoan set maTaiKhoan = '" + ID + "', tenDangNhap = '" + tenDangNhap + "' , matKhau = '" + matKhauNew + "', maNhanVien = '" + maNhanVien + "' where maTaiKhoan = '" + this.maTaiKhoan + "'";
+            string query = "update TaiKhoan set maTaiKhoan = '" + ID + "', tenDangNhap = '" + tenDangNhapNew + "' , matKhau = '" + matKhauNew + "', maNhanVien = '" + maNhanVien + "' where maTaiKhoan = '" + this.maTaiKhoan + "'";
 
             Function.UpdateDataQuery(query);
         }
@@ -152,23 +137,23 @@ namespace Main
 
         private void cmbLoaiTaiKhoan_tenCV_SelectedIndexChanged(object sender, EventArgs e)
         {
-            UpdateMaCV();
+            UpdateMaNhanVien();
         }
 
-        private void UpdateMaCV()
+        private void UpdateMaNhanVien()
         {
-            cmbMaChucVu.Items.Clear();
-            string tenChucVuCurrent = cmbLoaiTaiKhoan_tenCV.SelectedItem?.ToString().Trim();
+            cmbMaNV.Items.Clear();
+            string tenNhanVienCurrent = cmbLoaiTaiKhoan_tenCV.SelectedItem?.ToString().Trim();
 
             // Kiểm tra xem có giá trị nào được chọn không
-            if (!string.IsNullOrEmpty(tenChucVuCurrent))
+            if (!string.IsNullOrEmpty(tenNhanVienCurrent))
             {
-                string query3 = "select maChucVu from ChucVu where tenChucVu = N'" + tenChucVuCurrent + "' ";
+                string query3 = "select maNhanVien from NhanVien where hoTen = N'" + tenNhanVienCurrent + "' ";
                 DataTable datatabe3 = Function.GetDataQuery(query3);
                 foreach (DataRow row in datatabe3.Rows)
                 {
-                    string hoTen = row[0].ToString();
-                    cmbMaChucVu.Items.Add(hoTen);
+                    string maNhanVien = row[0].ToString();
+                    cmbMaNV.Items.Add(maNhanVien);
                 }
 
             }

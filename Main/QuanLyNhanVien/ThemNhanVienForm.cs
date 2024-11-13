@@ -13,8 +13,16 @@ namespace Main
 {
     public partial class ThemNhanVienForm : Form
     {
-        private string ID;
+        public event Action<string, string> OnNhanVienAdded; // Thêm sự kiện
 
+        private string ID;
+        private string selectedMaNhanVien;
+        private string selectedTenNhanVien;
+
+        public string GetID()
+        {
+            return this.ID;
+        }
         public string ID1 { get => ID; set => ID = value; }
 
         public ThemNhanVienForm()
@@ -114,6 +122,9 @@ namespace Main
                 return; // Ngừng thực hiện nếu không chuyển đổi thành công
             }
 
+            selectedMaNhanVien = ID;
+            selectedTenNhanVien = tenNhanVien;
+
             // Kiểm tra dữ liệu đầu vào
             if (string.IsNullOrEmpty(tenNhanVien) ||
             string.IsNullOrEmpty(soDienThoai) ||
@@ -131,6 +142,7 @@ namespace Main
             Function.UpdateDataQuery(query);
 
             this.ID = GenerateRandomEmployeeId();
+            OnNhanVienAdded?.Invoke(ID, tenNhanVien); // Gọi sự kiện
         }
 
         private void ThemNhanVienForm_Load(object sender, EventArgs e)
@@ -237,6 +249,15 @@ namespace Main
         private void cmbPhongBan_SelectedIndexChanged_1(object sender, EventArgs e)
         {
             UpdateMaPhongBan();
+        }
+
+        private string GetMaNhanVien()
+        {
+            return selectedMaNhanVien;
+        }
+        internal string GetTenNhanVien()
+        {
+            return selectedTenNhanVien;
         }
     }
 }

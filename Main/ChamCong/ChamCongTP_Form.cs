@@ -141,6 +141,13 @@ namespace Main
                 DataTable attendanceTable = new DataTable();
                 adapterAttendance.Fill(attendanceTable);
 
+                //Căn giữa các cell ngày
+                foreach (DataGridViewColumn column in dgvChamCong.Columns)
+                {
+                    column.DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
+                    column.HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleCenter;
+                }
+
                 foreach (DataRow empRow in employeeTable.Rows)
                 {
                     int countP = 0;

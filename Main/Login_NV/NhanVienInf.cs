@@ -45,7 +45,7 @@ namespace Main
             DataTable data = Function.GetDataQuery(query);
             DataRow row = data.Rows[0];
 
-            lblTen.Text = row["hoTen"].ToString();
+            lblTen.Text = "Xin chào " + row["hoTen"].ToString() +" !";
             lblEmail.Text = row["email"].ToString();
             lblCV.Text = row["tenChucVu"].ToString();
             lblDC.Text = row["diaChi"].ToString();

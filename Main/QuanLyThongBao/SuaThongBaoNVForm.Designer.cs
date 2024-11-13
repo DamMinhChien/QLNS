@@ -29,10 +29,12 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SuaThongBaoNVForm));
             this.label1 = new System.Windows.Forms.Label();
             this.lblLink = new System.Windows.Forms.Label();
             this.btnUpLoad = new System.Windows.Forms.Button();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.picPDF = new System.Windows.Forms.PictureBox();
             this.label3 = new System.Windows.Forms.Label();
             this.txtTieuDe = new System.Windows.Forms.TextBox();
             this.panel4 = new System.Windows.Forms.Panel();
@@ -48,8 +50,8 @@
             this.label2 = new System.Windows.Forms.Label();
             this.btnCancel = new System.Windows.Forms.Button();
             this.metroContextMenu1 = new MetroFramework.Controls.MetroContextMenu(this.components);
-            this.picPDF = new System.Windows.Forms.PictureBox();
             this.groupBox3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picPDF)).BeginInit();
             this.panel4.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -57,7 +59,6 @@
             this.panel3.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.picPDF)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -107,6 +108,17 @@
             this.groupBox3.TabIndex = 1;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Đính kèm têp";
+            // 
+            // picPDF
+            // 
+            this.picPDF.Image = global::Main.Properties.Resources._4726010;
+            this.picPDF.Location = new System.Drawing.Point(31, 43);
+            this.picPDF.Name = "picPDF";
+            this.picPDF.Size = new System.Drawing.Size(62, 50);
+            this.picPDF.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.picPDF.TabIndex = 46;
+            this.picPDF.TabStop = false;
+            this.picPDF.Visible = false;
             // 
             // label3
             // 
@@ -269,17 +281,6 @@
             this.metroContextMenu1.Name = "metroContextMenu1";
             this.metroContextMenu1.Size = new System.Drawing.Size(61, 4);
             // 
-            // picPDF
-            // 
-            this.picPDF.Image = global::Main.Properties.Resources._4726010;
-            this.picPDF.Location = new System.Drawing.Point(31, 43);
-            this.picPDF.Name = "picPDF";
-            this.picPDF.Size = new System.Drawing.Size(62, 50);
-            this.picPDF.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.picPDF.TabIndex = 46;
-            this.picPDF.TabStop = false;
-            this.picPDF.Visible = false;
-            // 
             // SuaThongBaoNVForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -289,11 +290,13 @@
             this.Controls.Add(this.btnAdd);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.btnCancel);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "SuaThongBaoNVForm";
             this.Text = "Sửa thông báo nhân viên";
             this.Load += new System.EventHandler(this.SuaThongBaoNVForm_Load);
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picPDF)).EndInit();
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
             this.groupBox1.ResumeLayout(false);
@@ -304,7 +307,6 @@
             this.panel3.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.picPDF)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

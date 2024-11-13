@@ -217,7 +217,19 @@ namespace Main
             }
         }
 
-        
+        internal static void EnterFormat(Button button)
+        {
+            button.BackColor = ColorTranslator.FromHtml("#FFC107");
+            button.ForeColor = ColorTranslator.FromHtml("#343A40");
+            button.Font = new Font(button.Font.FontFamily, 13, button.Font.Style);
+        }
+
+        internal static void LeaveFormat(Button button)
+        {
+            button.BackColor = ColorTranslator.FromHtml("#66B3FF");
+            button.ForeColor = ColorTranslator.FromHtml("#FFFFFF");
+            button.Font = new Font(button.Font.FontFamily, 11, button.Font.Style);
+        }
 
     }
 }

@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(PhongBanSuaThongBaoForm));
             this.picPDF = new System.Windows.Forms.PictureBox();
             this.btnAdd = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
@@ -78,7 +79,7 @@
             this.btnAdd.Location = new System.Drawing.Point(428, 572);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Size = new System.Drawing.Size(109, 35);
-            this.btnAdd.TabIndex = 69;
+            this.btnAdd.TabIndex = 0;
             this.btnAdd.Text = "Cập nhật";
             this.btnAdd.UseVisualStyleBackColor = false;
             this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
@@ -116,7 +117,7 @@
             this.groupBox3.Location = new System.Drawing.Point(0, 274);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Size = new System.Drawing.Size(360, 202);
-            this.groupBox3.TabIndex = 1;
+            this.groupBox3.TabIndex = 0;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Đính kèm têp";
             // 
@@ -125,7 +126,7 @@
             this.lblLink.Location = new System.Drawing.Point(123, 43);
             this.lblLink.Name = "lblLink";
             this.lblLink.Size = new System.Drawing.Size(203, 50);
-            this.lblLink.TabIndex = 47;
+            this.lblLink.TabIndex = 0;
             // 
             // btnUpLoad
             // 
@@ -136,7 +137,7 @@
             this.btnUpLoad.Location = new System.Drawing.Point(118, 118);
             this.btnUpLoad.Name = "btnUpLoad";
             this.btnUpLoad.Size = new System.Drawing.Size(109, 35);
-            this.btnUpLoad.TabIndex = 45;
+            this.btnUpLoad.TabIndex = 1;
             this.btnUpLoad.Text = "Tải lên";
             this.btnUpLoad.UseVisualStyleBackColor = false;
             this.btnUpLoad.Click += new System.EventHandler(this.btnUpLoad_Click);
@@ -162,7 +163,7 @@
             this.txtHoTen.Name = "txtHoTen";
             this.txtHoTen.ReadOnly = true;
             this.txtHoTen.Size = new System.Drawing.Size(202, 34);
-            this.txtHoTen.TabIndex = 77;
+            this.txtHoTen.TabIndex = 0;
             // 
             // label1
             // 
@@ -173,7 +174,7 @@
             this.label1.Name = "label1";
             this.label1.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.label1.Size = new System.Drawing.Size(83, 29);
-            this.label1.TabIndex = 72;
+            this.label1.TabIndex = 1;
             this.label1.Text = "Họ tên";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
@@ -226,7 +227,7 @@
             this.txtNoiDung.Multiline = true;
             this.txtNoiDung.Name = "txtNoiDung";
             this.txtNoiDung.Size = new System.Drawing.Size(778, 373);
-            this.txtNoiDung.TabIndex = 78;
+            this.txtNoiDung.TabIndex = 0;
             // 
             // panel4
             // 
@@ -258,7 +259,7 @@
             this.txtTieuDe.Location = new System.Drawing.Point(255, 20);
             this.txtTieuDe.Name = "txtTieuDe";
             this.txtTieuDe.Size = new System.Drawing.Size(501, 34);
-            this.txtTieuDe.TabIndex = 77;
+            this.txtTieuDe.TabIndex = 0;
             // 
             // btnCancel
             // 
@@ -267,7 +268,7 @@
             this.btnCancel.Location = new System.Drawing.Point(583, 572);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(109, 35);
-            this.btnCancel.TabIndex = 71;
+            this.btnCancel.TabIndex = 1;
             this.btnCancel.Text = "Hủy bỏ";
             this.btnCancel.UseVisualStyleBackColor = true;
             this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
@@ -281,6 +282,7 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.btnCancel);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "PhongBanSuaThongBaoForm";
             this.Text = "Chỉnh sửa thông báo tới nhân viên";
             this.Load += new System.EventHandler(this.PhongBanSuaThongBaoForm_Load);
