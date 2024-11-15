@@ -54,7 +54,7 @@
             this.btnCancel.Location = new System.Drawing.Point(479, 389);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(109, 35);
-            this.btnCancel.TabIndex = 3;
+            this.btnCancel.TabIndex = 4;
             this.btnCancel.Text = "Hủy bỏ";
             this.btnCancel.UseVisualStyleBackColor = true;
             // 
@@ -67,7 +67,7 @@
             this.btnAdd.Location = new System.Drawing.Point(329, 389);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Size = new System.Drawing.Size(109, 35);
-            this.btnAdd.TabIndex = 2;
+            this.btnAdd.TabIndex = 3;
             this.btnAdd.Text = "Thêm mới";
             this.btnAdd.UseVisualStyleBackColor = false;
             this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
@@ -150,7 +150,7 @@
             this.txtHeSoPhongBan.Location = new System.Drawing.Point(370, 314);
             this.txtHeSoPhongBan.Name = "txtHeSoPhongBan";
             this.txtHeSoPhongBan.Size = new System.Drawing.Size(487, 34);
-            this.txtHeSoPhongBan.TabIndex = 1;
+            this.txtHeSoPhongBan.TabIndex = 2;
             this.txtHeSoPhongBan.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // pictureBox10

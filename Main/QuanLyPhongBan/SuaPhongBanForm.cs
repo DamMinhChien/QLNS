@@ -83,7 +83,7 @@ namespace Main
                 return;
             }
 
-            string query = "update PhongBan set maPhongBan = '"+ID+"', tenPhongBan = '"+tenPhongBanNew+ "', heSoPhongBan = '" + heSoPhongBanNew+ "' where maPhongBan = '"+this.maPhongBan+"'";
+            string query = "update PhongBan set maPhongBan = '"+ID+"', tenPhongBan = N'"+tenPhongBanNew+ "', heSoPhongBan = '" + heSoPhongBanNew+ "' where maPhongBan = '"+this.maPhongBan+"'";
 
             Function.UpdateDataQuery(query);
 

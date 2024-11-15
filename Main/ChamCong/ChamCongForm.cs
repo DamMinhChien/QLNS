@@ -100,7 +100,7 @@ namespace Main
 
 
                                 // Chỉ lưu nếu status là "x"
-                                if (status == "x")
+                                if (status == "x" || status == "P")
                                 {
                                     // Tạo một mã chấm công ngẫu nhiên duy nhất
                                     string maChamCong = GenerateUniqueID(connection);
@@ -234,10 +234,8 @@ namespace Main
                         dgvChamCong.Rows[rowIndex].Cells[$"Day{i}"].Value = status;
 
                         if (status == "x") totalDays++;
-                        else if (status == "P")
-                        {
-                            countP++; // Đếm số ngày "p"
-                        }
+                        if (status == "P") countP++;
+
                         // Kiểm tra số lượng "p"
                         if (countP > 2)
                         {

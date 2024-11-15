@@ -6,6 +6,7 @@ using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -112,8 +113,8 @@ namespace Main
             string email = txtEmail.Text.Trim();
             string soDienThoai = txtSDT.Text.Trim();
             string diaChi = txtDiaChi.Text.Trim();
-            string maChucVu = cmbMaChucVu.SelectedItem.ToString();
-            string maPhongBan = cmbMaPhongBan.SelectedItem.ToString();
+            string maChucVu = cmbMaChucVu.SelectedItem?.ToString();
+            string maPhongBan = cmbMaPhongBan.SelectedItem?.ToString();
             // Khai báo biến heSoLuong kiểu float
             float luongCoBan;
             if (!float.TryParse(txtLuongCoBan.Text.Trim(), out luongCoBan))
@@ -121,7 +122,26 @@ namespace Main
                 MessageBox.Show("Vui lòng nhập một giá trị hợp lệ cho hệ số lương.");
                 return; // Ngừng thực hiện nếu không chuyển đổi thành công
             }
+            // Kiểm tra email
+            string emailPattern = @"^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$";
+            bool isEmailValid = Regex.IsMatch(email, emailPattern);
 
+            // Kiểm tra số điện thoại
+            string phonePattern = @"^(\+84|0)[1-9][0-9]{8,9}$";
+            bool isPhoneValid = Regex.IsMatch(soDienThoai, phonePattern);
+
+            // Xuất kết quả kiểm tra
+            if (!isEmailValid)
+            {
+                MessageBox.Show("Email không hợp lệ.");
+                return;
+            }
+
+            if (!isPhoneValid)
+            {
+                MessageBox.Show("Số điện thoại không hợp lệ.");
+                return;
+            }
             selectedMaNhanVien = ID;
             selectedTenNhanVien = tenNhanVien;
 
@@ -137,14 +157,55 @@ namespace Main
                 return;
             }
 
-            string query = "insert into NhanVien values ( '" +ID+ "', '" +tenNhanVien+ "','" +gioiTinh+ "', '" +formattedDate+ "', '" +soDienThoai+ "','" +diaChi+ "','" +email+ "', '" +luongCoBan+ "','"+maPhongBan+"' ,'"+maChucVu+"')";
+            string query = "insert into NhanVien values ( '" +ID+ "', N'" +tenNhanVien+ "',N'" +gioiTinh+ "', '" +formattedDate+ "', '" +soDienThoai+ "',N'" +diaChi+ "','" +email+ "', '" +luongCoBan+ "','"+maPhongBan+"' ,'"+maChucVu+"')";
 
             Function.UpdateDataQuery(query);
+            DateTime currentDate = new DateTime(DateTime.Now.Year, DateTime.Now.Month, DateTime.Now.Day);
+            string maChamCong;
+            using (SqlConnection connection = new SqlConnection(Function.GetConnectionString()))
+            {
+                connection.Open();
+                maChamCong = GenerateUniqueMaChamCong(connection);
+
+                // Thêm vào bảng chấm công
+                string query1 = "INSERT INTO ChamCong (maChamCong, ngayChamCong, maNhanVien, status) VALUES (@maChamCong, @ngayChamCong, @ID, @status)";
+
+                using (SqlCommand command = new SqlCommand(query1, connection))
+                {
+                    command.Parameters.AddWithValue("@maChamCong", maChamCong);
+                    command.Parameters.AddWithValue("@ngayChamCong", currentDate); // Truyền kiểu DateTime
+                    command.Parameters.AddWithValue("@ID", ID);
+                    command.Parameters.AddWithValue("@status", DBNull.Value); 
+
+                    command.ExecuteNonQuery();
+                }
+            }
 
             this.ID = GenerateRandomEmployeeId();
             OnNhanVienAdded?.Invoke(ID, tenNhanVien); // Gọi sự kiện
         }
+        private string GenerateUniqueMaChamCong(SqlConnection connection)
+        {
+            Random random = new Random();
+            string newID;
 
+            do
+            {
+                newID = "CC" + random.Next(10000000, 99999999).ToString(); // Tạo ID mới
+            } while (ID_ChamCong_Exists(newID, connection));
+
+            return newID;
+        }
+
+        private bool ID_ChamCong_Exists(string id, SqlConnection connection)
+        {
+            string query = "SELECT COUNT(1) FROM ChamCong WHERE maChamCong = @AttendanceID";
+            using (SqlCommand cmd = new SqlCommand(query, connection))
+            {
+                cmd.Parameters.AddWithValue("@AttendanceID", id);
+                return (int)cmd.ExecuteScalar() > 0;
+            }
+        }
         private void ThemNhanVienForm_Load(object sender, EventArgs e)
         {
             txtID.Text = this.ID;

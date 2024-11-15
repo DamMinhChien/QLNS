@@ -75,7 +75,7 @@
             this.trợGiúpToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(942, 28);
+            this.menuStrip1.Size = new System.Drawing.Size(942, 30);
             this.menuStrip1.TabIndex = 1;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -85,7 +85,7 @@
             this.đăngXuấtToolStripMenuItem,
             this.thoátỨngDụngToolStripMenuItem});
             this.hệThốngToolStripMenuItem.Name = "hệThốngToolStripMenuItem";
-            this.hệThốngToolStripMenuItem.Size = new System.Drawing.Size(85, 24);
+            this.hệThốngToolStripMenuItem.Size = new System.Drawing.Size(85, 26);
             this.hệThốngToolStripMenuItem.Text = "&Hệ thống";
             // 
             // đăngXuấtToolStripMenuItem
@@ -105,21 +105,21 @@
             // thốngkêToolStripMenuItem
             // 
             this.thốngkêToolStripMenuItem.Name = "thốngkêToolStripMenuItem";
-            this.thốngkêToolStripMenuItem.Size = new System.Drawing.Size(78, 24);
+            this.thốngkêToolStripMenuItem.Size = new System.Drawing.Size(78, 26);
             this.thốngkêToolStripMenuItem.Text = "Xuất &file";
             this.thốngkêToolStripMenuItem.Click += new System.EventHandler(this.thốngkêToolStripMenuItem_Click);
             // 
             // trợGiúpToolStripMenuItem
             // 
             this.trợGiúpToolStripMenuItem.Name = "trợGiúpToolStripMenuItem";
-            this.trợGiúpToolStripMenuItem.Size = new System.Drawing.Size(64, 24);
+            this.trợGiúpToolStripMenuItem.Size = new System.Drawing.Size(64, 26);
             this.trợGiúpToolStripMenuItem.Text = "&About";
             this.trợGiúpToolStripMenuItem.Click += new System.EventHandler(this.trợGiúpToolStripMenuItem_Click);
             // 
             // splitContainer1
             // 
             this.splitContainer1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.splitContainer1.Location = new System.Drawing.Point(0, 28);
+            this.splitContainer1.Location = new System.Drawing.Point(0, 30);
             this.splitContainer1.Name = "splitContainer1";
             this.splitContainer1.Orientation = System.Windows.Forms.Orientation.Horizontal;
             // 
@@ -135,8 +135,8 @@
             // 
             this.splitContainer1.Panel2.Controls.Add(this.statusStrip1);
             this.splitContainer1.Panel2.Controls.Add(this.dgvDanhSachTaiKhoan);
-            this.splitContainer1.Size = new System.Drawing.Size(942, 465);
-            this.splitContainer1.SplitterDistance = 145;
+            this.splitContainer1.Size = new System.Drawing.Size(942, 463);
+            this.splitContainer1.SplitterDistance = 144;
             this.splitContainer1.TabIndex = 2;
             // 
             // picTimTK
@@ -229,11 +229,12 @@
             this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripStatusLabel1,
             this.toolStripProgressBar1});
-            this.statusStrip1.Location = new System.Drawing.Point(0, 290);
+            this.statusStrip1.Location = new System.Drawing.Point(0, 289);
             this.statusStrip1.Name = "statusStrip1";
             this.statusStrip1.Size = new System.Drawing.Size(942, 26);
             this.statusStrip1.TabIndex = 1;
             this.statusStrip1.Text = "statusStrip1";
+            this.statusStrip1.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.statusStrip1_ItemClicked);
             // 
             // toolStripStatusLabel1
             // 
@@ -281,7 +282,7 @@
             this.addToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.N)));
             this.addToolStripMenuItem.Size = new System.Drawing.Size(168, 26);
             this.addToolStripMenuItem.Text = "Add";
-            this.addToolStripMenuItem.Click += new System.EventHandler(this.cậpNhậtToolStripMenuItem_Click);
+            this.addToolStripMenuItem.Click += new System.EventHandler(this.addToolStripMenuItem_Click);
             // 
             // editToolStripMenuItem
             // 

@@ -37,9 +37,16 @@
             this.panel3 = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel_Body = new System.Windows.Forms.Panel();
+            this.panel_title = new System.Windows.Forms.Panel();
+            this.lblSys = new System.Windows.Forms.Label();
+            this.lblTen = new System.Windows.Forms.Label();
+            this.lblPB = new System.Windows.Forms.Label();
+            this.lblCN = new System.Windows.Forms.Label();
+            this.lblAbout = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.panel_title.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -69,6 +76,7 @@
             this.btn_About.Text = "About";
             this.btn_About.UseVisualStyleBackColor = false;
             this.btn_About.Click += new System.EventHandler(this.btn_About_Click);
+            this.btn_About.Leave += new System.EventHandler(this.btn_About_Leave);
             this.btn_About.MouseEnter += new System.EventHandler(this.btn_About_MouseEnter);
             this.btn_About.MouseLeave += new System.EventHandler(this.btn_About_MouseLeave);
             // 
@@ -85,6 +93,7 @@
             this.btn_Sys.Text = "Hệ thống";
             this.btn_Sys.UseVisualStyleBackColor = false;
             this.btn_Sys.Click += new System.EventHandler(this.btn_Sys_Click);
+            this.btn_Sys.Leave += new System.EventHandler(this.btn_Sys_Leave);
             this.btn_Sys.MouseEnter += new System.EventHandler(this.btn_Sys_MouseEnter);
             this.btn_Sys.MouseLeave += new System.EventHandler(this.btn_Sys_MouseLeave);
             // 
@@ -101,6 +110,7 @@
             this.btnThongBaoCaNhan.Text = "Thông báo cá nhân";
             this.btnThongBaoCaNhan.UseVisualStyleBackColor = false;
             this.btnThongBaoCaNhan.Click += new System.EventHandler(this.btnThongBaoCaNhan_Click);
+            this.btnThongBaoCaNhan.Leave += new System.EventHandler(this.btnThongBaoCaNhan_Leave);
             this.btnThongBaoCaNhan.MouseEnter += new System.EventHandler(this.btnThongBaoCaNhan_MouseEnter);
             this.btnThongBaoCaNhan.MouseLeave += new System.EventHandler(this.btnThongBaoCaNhan_MouseLeave);
             // 
@@ -117,6 +127,7 @@
             this.btnThongBaoPhongBan.Text = "Thông báo phòng ban";
             this.btnThongBaoPhongBan.UseVisualStyleBackColor = false;
             this.btnThongBaoPhongBan.Click += new System.EventHandler(this.btnThongBaoPhongBan_Click);
+            this.btnThongBaoPhongBan.Leave += new System.EventHandler(this.btnThongBaoPhongBan_Leave);
             this.btnThongBaoPhongBan.MouseEnter += new System.EventHandler(this.btnThongBaoPhongBan_MouseEnter);
             this.btnThongBaoPhongBan.MouseLeave += new System.EventHandler(this.btnThongBaoPhongBan_MouseLeave);
             // 
@@ -133,6 +144,7 @@
             this.btnInf.Text = "Thông tin";
             this.btnInf.UseVisualStyleBackColor = false;
             this.btnInf.Click += new System.EventHandler(this.button1_Click);
+            this.btnInf.Leave += new System.EventHandler(this.btnInf_Leave);
             this.btnInf.MouseEnter += new System.EventHandler(this.btnInf_MouseEnter_1);
             this.btnInf.MouseLeave += new System.EventHandler(this.btnInf_MouseLeave);
             // 
@@ -160,11 +172,95 @@
             // panel_Body
             // 
             this.panel_Body.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel_Body.Location = new System.Drawing.Point(312, 9);
+            this.panel_Body.Location = new System.Drawing.Point(312, 162);
             this.panel_Body.Name = "panel_Body";
-            this.panel_Body.Size = new System.Drawing.Size(918, 594);
+            this.panel_Body.Size = new System.Drawing.Size(918, 441);
             this.panel_Body.TabIndex = 1;
             this.panel_Body.Paint += new System.Windows.Forms.PaintEventHandler(this.panel_Body_Paint);
+            // 
+            // panel_title
+            // 
+            this.panel_title.Controls.Add(this.lblAbout);
+            this.panel_title.Controls.Add(this.lblCN);
+            this.panel_title.Controls.Add(this.lblPB);
+            this.panel_title.Controls.Add(this.lblTen);
+            this.panel_title.Controls.Add(this.lblSys);
+            this.panel_title.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel_title.Location = new System.Drawing.Point(312, 9);
+            this.panel_title.Name = "panel_title";
+            this.panel_title.Size = new System.Drawing.Size(918, 153);
+            this.panel_title.TabIndex = 2;
+            this.panel_title.Paint += new System.Windows.Forms.PaintEventHandler(this.panel_title_Paint);
+            // 
+            // lblSys
+            // 
+            this.lblSys.AutoSize = true;
+            this.lblSys.Font = new System.Drawing.Font("Century Gothic", 25.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblSys.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.lblSys.Location = new System.Drawing.Point(359, 52);
+            this.lblSys.Name = "lblSys";
+            this.lblSys.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.lblSys.Size = new System.Drawing.Size(200, 49);
+            this.lblSys.TabIndex = 3;
+            this.lblSys.Text = "Hệ thống";
+            this.lblSys.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblSys.Visible = false;
+            // 
+            // lblTen
+            // 
+            this.lblTen.AutoSize = true;
+            this.lblTen.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTen.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.lblTen.Location = new System.Drawing.Point(281, 64);
+            this.lblTen.Name = "lblTen";
+            this.lblTen.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.lblTen.Size = new System.Drawing.Size(218, 37);
+            this.lblTen.TabIndex = 4;
+            this.lblTen.Text = "Tên nhân viên";
+            this.lblTen.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblTen.Visible = false;
+            // 
+            // lblPB
+            // 
+            this.lblPB.AutoSize = true;
+            this.lblPB.Font = new System.Drawing.Font("Century Gothic", 25.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPB.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.lblPB.Location = new System.Drawing.Point(124, 52);
+            this.lblPB.Name = "lblPB";
+            this.lblPB.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.lblPB.Size = new System.Drawing.Size(404, 49);
+            this.lblPB.TabIndex = 5;
+            this.lblPB.Text = "Thông báo phòng ";
+            this.lblPB.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblPB.Visible = false;
+            // 
+            // lblCN
+            // 
+            this.lblCN.AutoSize = true;
+            this.lblCN.Font = new System.Drawing.Font("Century Gothic", 25.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCN.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.lblCN.Location = new System.Drawing.Point(244, 52);
+            this.lblCN.Name = "lblCN";
+            this.lblCN.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.lblCN.Size = new System.Drawing.Size(430, 49);
+            this.lblCN.TabIndex = 6;
+            this.lblCN.Text = "Thông báo cá nhân";
+            this.lblCN.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblCN.Visible = false;
+            // 
+            // lblAbout
+            // 
+            this.lblAbout.AutoSize = true;
+            this.lblAbout.Font = new System.Drawing.Font("Century Gothic", 25.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblAbout.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.lblAbout.Location = new System.Drawing.Point(379, 54);
+            this.lblAbout.Name = "lblAbout";
+            this.lblAbout.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.lblAbout.Size = new System.Drawing.Size(149, 49);
+            this.lblAbout.TabIndex = 7;
+            this.lblAbout.Text = "About";
+            this.lblAbout.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblAbout.Visible = false;
             // 
             // Home_NV
             // 
@@ -173,6 +269,7 @@
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
             this.ClientSize = new System.Drawing.Size(1239, 612);
             this.Controls.Add(this.panel_Body);
+            this.Controls.Add(this.panel_title);
             this.Controls.Add(this.panel1);
             this.Font = new System.Drawing.Font("Century Gothic", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -184,6 +281,8 @@
             this.panel1.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.panel_title.ResumeLayout(false);
+            this.panel_title.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -199,5 +298,11 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button btnThongBaoPhongBan;
         private System.Windows.Forms.Button btnThongBaoCaNhan;
+        private System.Windows.Forms.Panel panel_title;
+        private System.Windows.Forms.Label lblSys;
+        private System.Windows.Forms.Label lblTen;
+        private System.Windows.Forms.Label lblPB;
+        private System.Windows.Forms.Label lblCN;
+        private System.Windows.Forms.Label lblAbout;
     }
 }

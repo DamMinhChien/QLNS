@@ -109,9 +109,9 @@ namespace Main
                 MessageBox.Show("Vui lòng nhập đầy đủ thông tin!", "Thông báo");
                 return;
             }
-            string query1 = "insert into ThongBao values ('" +idTB+ "',N'" + tieuDe + "', N'" + noiDung + "', '" + ngayDang + "', '" + fileDinhKem + "')";
+            string query1 = "INSERT INTO ThongBao (maThongBao, tieuDe, noiDung, ngayDang, fileDinhKem) " +
+                "VALUES ('" + idTB + "', N'" + tieuDe + "', N'" + noiDung + "', '" + ngayDang.ToString("yyyy-MM-dd HH:mm:ss") + "', '" + fileDinhKem + "')";
             Function.UpdateDataQuery(query1);
-
             string query2 = "insert into PhongBan_ThongBao values ('" +idPB+ "', '" +idTB+ "')";
             Function.UpdateDataQuery(query2);
         }

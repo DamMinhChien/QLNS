@@ -34,6 +34,7 @@
             // 
             // dgvTB_PB
             // 
+            this.dgvTB_PB.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.DisplayedCells;
             this.dgvTB_PB.BackgroundColor = System.Drawing.Color.White;
             this.dgvTB_PB.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvTB_PB.Dock = System.Windows.Forms.DockStyle.Fill;

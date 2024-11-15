@@ -122,6 +122,10 @@ namespace Main
         private void picTimTK_Click(object sender, EventArgs e)
         {
             string search = txtTimTB.Text.Trim();
+            if (string.IsNullOrEmpty(search) || txtTimTB.Font.Style.HasFlag(FontStyle.Italic))
+            {
+                return;
+            }
             if (currentButton == "NV")
             {
                 string query = "select tb.maThongBao, nv.hoTen,tieuDe, noiDung,ngayDang, fileDinhKem from ThongBao tb inner join NhanVien_ThongBao nv_tb on tb.maThongBao = nv_tb.maThongBao inner join NhanVien nv on nv.maNhanVien = nv_tb.maNhanVien where tieuDe like N'%" +search+ "%'";
@@ -155,9 +159,15 @@ namespace Main
         private string selectedFieDinhKem;
         private void sửaToolStripMenuItem_Click(object sender, EventArgs e)
         {
+
             if (currentButton == "NV")
             {
                 selectedMaThongBao = ((ThongBao_NhanVienForm)currentFormChild).getSelectedMaThongBao();
+                if (string.IsNullOrEmpty(selectedMaThongBao))
+                {
+                    MessageBox.Show("Vui lòng chọn một thông báo để sửa.");
+                    return;
+                }
                 selectedHoTen = ((ThongBao_NhanVienForm)currentFormChild).getSelectedHoTen();
                 selectedTieuDe = ((ThongBao_NhanVienForm)currentFormChild).getSelectedTieuDe();
                 selectedNoiDung = ((ThongBao_NhanVienForm)currentFormChild).getSelectedNoiDung();
@@ -169,6 +179,11 @@ namespace Main
             if (currentButton == "PB")
             {
                 selectedMaThongBao = ((ThongBao_PhongBanForm)currentFormChild).getSelectedMaThongBao();
+                if (string.IsNullOrEmpty(selectedMaThongBao))
+                {
+                    MessageBox.Show("Vui lòng chọn một thông báo để sửa.");
+                    return;
+                }
                 selectedTenPhongBan = ((ThongBao_PhongBanForm)currentFormChild).getSelectedHoTen();
                 selectedTieuDe = ((ThongBao_PhongBanForm)currentFormChild).getSelectedTieuDe();
                 selectedNoiDung = ((ThongBao_PhongBanForm)currentFormChild).getSelectedNoiDung();
@@ -216,6 +231,51 @@ namespace Main
         private void thoátỨngDụngToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Function.ExitApp();
+        }
+
+        private void toolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            thêmToolStripMenuItem_Click(sender, e);
+        }
+
+        private void toolStripMenuItem2_Click(object sender, EventArgs e)
+        {
+            sửaToolStripMenuItem_Click(sender, e);
+        }
+
+        private void toolStripMenuItem3_Click(object sender, EventArgs e)
+        {
+            xóaToolStripMenuItem_Click(sender, e);
+        }
+
+        private void toolStripMenuItem5_Click(object sender, EventArgs e)
+        {
+            lưuToolStripMenuItem_Click(sender,e);
+        }
+
+        private void toolStripMenuItem4_Click(object sender, EventArgs e)
+        {
+            cậpNhậtToolStripMenuItem_Click(sender,e);
+        }
+
+        private void btnPhongBan_MouseEnter(object sender, EventArgs e)
+        {
+            Function.EnterFormat(btnPhongBan);
+        }
+
+        private void btnPhongBan_MouseLeave(object sender, EventArgs e)
+        {
+            Function.LeaveFormat(btnPhongBan);
+        }
+
+        private void btnNhanVien_MouseEnter(object sender, EventArgs e)
+        {
+            Function.EnterFormat(btnNhanVien);
+        }
+
+        private void btnNhanVien_MouseLeave(object sender, EventArgs e)
+        {
+            Function.LeaveFormat(btnNhanVien);
         }
     }
 }

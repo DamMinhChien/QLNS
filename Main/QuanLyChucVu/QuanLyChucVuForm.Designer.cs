@@ -42,7 +42,6 @@
             this.toolStripMenuItem3 = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem4 = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem7 = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripMenuItem10 = new System.Windows.Forms.ToolStripMenuItem();
             this.picTimCV = new System.Windows.Forms.PictureBox();
             this.label2 = new System.Windows.Forms.Label();
             this.txtTimCV = new System.Windows.Forms.TextBox();
@@ -67,6 +66,7 @@
             this.updateToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.quanLyNhanSuDataSet = new Main.QuanLyNhanSuDataSet();
             this.quanLyNhanSuDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.addToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
@@ -163,8 +163,7 @@
             this.toolStripMenuItem2,
             this.toolStripMenuItem3,
             this.toolStripMenuItem4,
-            this.toolStripMenuItem7,
-            this.toolStripMenuItem10});
+            this.toolStripMenuItem7});
             this.menuStrip3.Location = new System.Drawing.Point(0, 28);
             this.menuStrip3.Name = "menuStrip3";
             this.menuStrip3.Size = new System.Drawing.Size(942, 28);
@@ -206,14 +205,6 @@
             this.toolStripMenuItem7.Size = new System.Drawing.Size(102, 24);
             this.toolStripMenuItem7.Text = "Cập nhật";
             this.toolStripMenuItem7.Click += new System.EventHandler(this.toolStripMenuItem7_Click);
-            // 
-            // toolStripMenuItem10
-            // 
-            this.toolStripMenuItem10.Image = global::Main.Properties.Resources.Save_icon_icons_com_73702;
-            this.toolStripMenuItem10.Name = "toolStripMenuItem10";
-            this.toolStripMenuItem10.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.S)));
-            this.toolStripMenuItem10.Size = new System.Drawing.Size(67, 24);
-            this.toolStripMenuItem10.Text = "Lưu";
             // 
             // picTimCV
             // 
@@ -387,18 +378,19 @@
             // 
             this.contextMenuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.addToolStripMenuItem,
             this.editToolStripMenuItem,
             this.removeToolStripMenuItem,
             this.updateToolStripMenuItem});
             this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(169, 82);
+            this.contextMenuStrip1.Size = new System.Drawing.Size(215, 136);
             // 
             // editToolStripMenuItem
             // 
             this.editToolStripMenuItem.Image = global::Main.Properties.Resources.note_task_comment_message_edit_write_108613;
             this.editToolStripMenuItem.Name = "editToolStripMenuItem";
             this.editToolStripMenuItem.ShortcutKeys = System.Windows.Forms.Keys.F2;
-            this.editToolStripMenuItem.Size = new System.Drawing.Size(168, 26);
+            this.editToolStripMenuItem.Size = new System.Drawing.Size(214, 26);
             this.editToolStripMenuItem.Text = "Edit";
             this.editToolStripMenuItem.Click += new System.EventHandler(this.toolStripMenuItem3_Click);
             // 
@@ -407,7 +399,7 @@
             this.removeToolStripMenuItem.Image = global::Main.Properties.Resources.trash_can_115312;
             this.removeToolStripMenuItem.Name = "removeToolStripMenuItem";
             this.removeToolStripMenuItem.ShortcutKeys = System.Windows.Forms.Keys.Delete;
-            this.removeToolStripMenuItem.Size = new System.Drawing.Size(168, 26);
+            this.removeToolStripMenuItem.Size = new System.Drawing.Size(214, 26);
             this.removeToolStripMenuItem.Text = "Remove";
             this.removeToolStripMenuItem.Click += new System.EventHandler(this.toolStripMenuItem4_Click);
             // 
@@ -416,7 +408,7 @@
             this.updateToolStripMenuItem.Image = global::Main.Properties.Resources.repeat_update_refresh_reload_sync_icon_225556;
             this.updateToolStripMenuItem.Name = "updateToolStripMenuItem";
             this.updateToolStripMenuItem.ShortcutKeys = System.Windows.Forms.Keys.F5;
-            this.updateToolStripMenuItem.Size = new System.Drawing.Size(168, 26);
+            this.updateToolStripMenuItem.Size = new System.Drawing.Size(214, 26);
             this.updateToolStripMenuItem.Text = "Update";
             this.updateToolStripMenuItem.Click += new System.EventHandler(this.toolStripMenuItem7_Click);
             // 
@@ -429,6 +421,15 @@
             // 
             this.quanLyNhanSuDataSetBindingSource.DataSource = this.quanLyNhanSuDataSet;
             this.quanLyNhanSuDataSetBindingSource.Position = 0;
+            // 
+            // addToolStripMenuItem
+            // 
+            this.addToolStripMenuItem.Image = global::Main.Properties.Resources.business_application_addmale_useradd_insert_add_user_client_2312;
+            this.addToolStripMenuItem.Name = "addToolStripMenuItem";
+            this.addToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.N)));
+            this.addToolStripMenuItem.Size = new System.Drawing.Size(214, 26);
+            this.addToolStripMenuItem.Text = "Add";
+            this.addToolStripMenuItem.Click += new System.EventHandler(this.addToolStripMenuItem_Click);
             // 
             // QuanLyChucVuForm
             // 
@@ -499,11 +500,11 @@
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem3;
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem4;
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem7;
-        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem10;
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
         private System.Windows.Forms.ToolStripMenuItem editToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem removeToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem updateToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem2;
+        private System.Windows.Forms.ToolStripMenuItem addToolStripMenuItem;
     }
 }

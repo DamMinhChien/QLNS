@@ -7,6 +7,7 @@ using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.ListView;
@@ -51,7 +52,16 @@ namespace Main
             string nhapLaiMatKhau = txtNhapLaiMatKhau.Text.Trim();
             string maNhanVien = cmbMaNV.SelectedItem?.ToString();
 
+            string passwordPattern = @"^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[\W_]).{8,}$";
 
+            bool isValidPassword = Regex.IsMatch(matKhau, passwordPattern);
+
+            if (!isValidPassword)
+            {
+                MessageBox.Show("Mật khẩu không hợp lệ. Mật khẩu phải có ít nhất 8 ký tự, ít nhất 1 chữ hoa, 1 chữ thường, 1 số và 1 ký tự đặc biệt.",
+                                "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
             // Kiểm tra dữ liệu đầu vào
             if (string.IsNullOrEmpty(tenTaiKhoan) ||
             string.IsNullOrEmpty(matKhau) ||

@@ -345,6 +345,16 @@ namespace Main.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap downloadfolder_993671 {
+            get {
+                object obj = ResourceManager.GetObject("downloadfolder_993671", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap hierarchy_line_icon_outline_symbol_vector_illustration_concept_sign_2JPD185 {
             get {
                 object obj = ResourceManager.GetObject("hierarchy-line-icon-outline-symbol-vector-illustration-concept-sign-2JPD185", resourceCulture);

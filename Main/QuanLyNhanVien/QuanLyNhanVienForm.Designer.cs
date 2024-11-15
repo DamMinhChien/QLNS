@@ -185,7 +185,7 @@
             // 
             // dvgDanhSachNhanVien
             // 
-            this.dvgDanhSachNhanVien.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dvgDanhSachNhanVien.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
             this.dvgDanhSachNhanVien.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
             this.dvgDanhSachNhanVien.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dvgDanhSachNhanVien.ContextMenuStrip = this.contextMenuStrip1;
@@ -284,14 +284,14 @@
             // đăngXuấtToolStripMenuItem
             // 
             this.đăngXuấtToolStripMenuItem.Name = "đăngXuấtToolStripMenuItem";
-            this.đăngXuấtToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.đăngXuấtToolStripMenuItem.Size = new System.Drawing.Size(198, 26);
             this.đăngXuấtToolStripMenuItem.Text = "&Đăng xuất";
             this.đăngXuấtToolStripMenuItem.Click += new System.EventHandler(this.đăngXuấtToolStripMenuItem_Click_1);
             // 
             // thoátỨngDụngToolStripMenuItem
             // 
             this.thoátỨngDụngToolStripMenuItem.Name = "thoátỨngDụngToolStripMenuItem";
-            this.thoátỨngDụngToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.thoátỨngDụngToolStripMenuItem.Size = new System.Drawing.Size(198, 26);
             this.thoátỨngDụngToolStripMenuItem.Text = "&Thoát ứng dụng";
             this.thoátỨngDụngToolStripMenuItem.Click += new System.EventHandler(this.thoátỨngDụngToolStripMenuItem_Click);
             // 

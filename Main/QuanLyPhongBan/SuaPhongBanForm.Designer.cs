@@ -55,7 +55,7 @@
             this.btnClear.Location = new System.Drawing.Point(414, 393);
             this.btnClear.Name = "btnClear";
             this.btnClear.Size = new System.Drawing.Size(118, 35);
-            this.btnClear.TabIndex = 29;
+            this.btnClear.TabIndex = 4;
             this.btnClear.Text = "Xóa nhanh";
             this.btnClear.UseVisualStyleBackColor = true;
             this.btnClear.Click += new System.EventHandler(this.btnClear_Click);
@@ -70,7 +70,7 @@
             this.btnUpdate.Location = new System.Drawing.Point(264, 393);
             this.btnUpdate.Name = "btnUpdate";
             this.btnUpdate.Size = new System.Drawing.Size(109, 35);
-            this.btnUpdate.TabIndex = 30;
+            this.btnUpdate.TabIndex = 3;
             this.btnUpdate.Text = "Cập nhật";
             this.btnUpdate.UseVisualStyleBackColor = false;
             this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
@@ -82,7 +82,7 @@
             this.txtID.Location = new System.Drawing.Point(378, 160);
             this.txtID.Name = "txtID";
             this.txtID.Size = new System.Drawing.Size(487, 34);
-            this.txtID.TabIndex = 23;
+            this.txtID.TabIndex = 0;
             // 
             // label4
             // 
@@ -104,7 +104,7 @@
             this.txtTenPB.Location = new System.Drawing.Point(378, 234);
             this.txtTenPB.Name = "txtTenPB";
             this.txtTenPB.Size = new System.Drawing.Size(487, 34);
-            this.txtTenPB.TabIndex = 25;
+            this.txtTenPB.TabIndex = 1;
             // 
             // label2
             // 
@@ -141,7 +141,7 @@
             this.btnCancel.Location = new System.Drawing.Point(572, 393);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(109, 35);
-            this.btnCancel.TabIndex = 29;
+            this.btnCancel.TabIndex = 5;
             this.btnCancel.Text = "Hủy bỏ";
             this.btnCancel.UseVisualStyleBackColor = true;
             this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
@@ -153,7 +153,7 @@
             this.txtHeSoPhongBan.Location = new System.Drawing.Point(378, 306);
             this.txtHeSoPhongBan.Name = "txtHeSoPhongBan";
             this.txtHeSoPhongBan.Size = new System.Drawing.Size(487, 34);
-            this.txtHeSoPhongBan.TabIndex = 31;
+            this.txtHeSoPhongBan.TabIndex = 2;
             // 
             // label3
             // 

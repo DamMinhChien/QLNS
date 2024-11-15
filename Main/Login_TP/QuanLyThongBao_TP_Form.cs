@@ -66,6 +66,9 @@ namespace Main
             currentButton = "NV";
             OpenChildForm(new PhongBanSoanThongBaoForm(maPhongBan));
             refresh_Click(sender, e);
+            menuStrip3.Visible = true;
+            panel_Body.ContextMenuStrip = contextMenuStrip1;
+            contextMenuStrip1.Enabled = true;
         }
 
 
@@ -94,20 +97,21 @@ namespace Main
         private void picTimTK_Click(object sender, EventArgs e)
         {
             string search = txtTimTB.Text.Trim();
-            if (!string.IsNullOrEmpty(search))
+            if (string.IsNullOrEmpty(search) || txtTimTB.Font.Style.HasFlag(FontStyle.Italic))
             {
-                if (currentButton == "NV")
-                {
-                    string query1 = "select tb.maThongBao, nv.hoTen,tieuDe, noiDung,ngayDang, fileDinhKem from ThongBao tb inner join NhanVien_ThongBao nv_tb on tb.maThongBao = nv_tb.maThongBao inner join NhanVien nv on nv.maNhanVien = nv_tb.maNhanVien where tieuDe like N'%" + search + "%'";
-                    // Sử dụng query để lấy dữ liệu và hiển thị kết quả trên form con ThongBao_NhanVienForm
-                    ((ThongBao_NhanVienForm)currentFormChild).LoadData(query1);
-                }
-                if (currentButton == "PB")
-                {
-                    string query2 = "select tb.maThongBao,tieuDe, noiDung,ngayDang, fileDinhKem from ThongBao tb inner join PhongBan_ThongBao pb_tb on tb.maThongBao = pb_tb.maThongBao inner join PhongBan pb on pb.maPhongBan = pb_tb.maPhongBan where tieuDe like N'%" + search + "%'";
-                    // Sử dụng query để lấy dữ liệu và hiển thị kết quả trên form con ThongBao_PhongBanForm
-                    ((ThongBao_PhongBanForm)currentFormChild).LoadData(query2);
-                }
+                return;
+            }
+            if (currentButton == "NV")
+            {
+                string query1 = "select tb.maThongBao, nv.hoTen,tieuDe, noiDung,ngayDang, fileDinhKem from ThongBao tb inner join NhanVien_ThongBao nv_tb on tb.maThongBao = nv_tb.maThongBao inner join NhanVien nv on nv.maNhanVien = nv_tb.maNhanVien where tieuDe like N'%" + search + "%'";
+                // Sử dụng query để lấy dữ liệu và hiển thị kết quả trên form con ThongBao_NhanVienForm
+                ((ThongBao_NhanVienForm)currentFormChild).LoadData(query1);
+            }
+            if (currentButton == "PB")
+            {
+                string query2 = "select tb.maThongBao,tieuDe, noiDung,ngayDang, fileDinhKem from ThongBao tb inner join PhongBan_ThongBao pb_tb on tb.maThongBao = pb_tb.maThongBao inner join PhongBan pb on pb.maPhongBan = pb_tb.maPhongBan where tieuDe like N'%" + search + "%'";
+                // Sử dụng query để lấy dữ liệu và hiển thị kết quả trên form con ThongBao_PhongBanForm
+                ((ThongBao_PhongBanForm)currentFormChild).LoadData(query2);
             }
         }
 
@@ -116,6 +120,8 @@ namespace Main
             currentButton = "PB";
             OpenChildForm(new PhongBanXemThongBaoForm(maPhongBan));
             refresh_Click(sender, e);
+            menuStrip3.Visible = false;
+            panel_Body.ContextMenuStrip = contextMenuStrip2;
         }
 
         private void toolStripMenuItem4_Click(object sender, EventArgs e)
@@ -170,6 +176,11 @@ namespace Main
             if (currentButton == "NV")
             {
                 selectedMaThongBao = ((PhongBanSoanThongBaoForm)currentFormChild).getSelectedMaThongBao();
+                if (string.IsNullOrEmpty(selectedMaThongBao))
+                {
+                    MessageBox.Show("Vui lòng chọn một thông báo để sửa.");
+                    return;
+                }
                 selectedHoTen = ((PhongBanSoanThongBaoForm)currentFormChild).getSelectedHoTen();
                 selectedTieuDe = ((PhongBanSoanThongBaoForm)currentFormChild).getSelectedTieuDe();
                 selectedNoiDung = ((PhongBanSoanThongBaoForm)currentFormChild).getSelectedNoiDung();
@@ -182,6 +193,11 @@ namespace Main
 
         private void toolStripMenuItem3_Click(object sender, EventArgs e)
         {
+            if (string.IsNullOrEmpty(selectedMaThongBao))
+            {
+                MessageBox.Show("Vui lòng chọn một thông báo để xóa.");
+                return;
+            }
             if (currentButton == "NV")
             {
                 ((PhongBanSoanThongBaoForm)currentFormChild).deleteRow();
@@ -213,6 +229,66 @@ namespace Main
         private void btnNhanVien_MouseLeave(object sender, EventArgs e)
         {
             Function.LeaveFormat(btnNhanVien);
+        }
+
+        private void toolStripMenuItem6_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void toolStripMenuItem7_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void toolStripMenuItem8_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void toolStripMenuItem9_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void addToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            toolStripMenuItem1_Click(sender, e);
+        }
+
+        private void editToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            toolStripMenuItem2_Click(sender, e);
+        }
+
+        private void removeToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            toolStripMenuItem3_Click(sender, e);
+        }
+
+        private void toolStripMenuItem8_Click_1(object sender, EventArgs e)
+        {
+            toolStripMenuItem4_Click(sender, e);
+        }
+
+        private void updateToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            refresh_Click(sender, e);
+        }
+
+        private void menuStrip2_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
+        {
+
+        }
+
+        private void toolStripMenuItem10_Click(object sender, EventArgs e)
+        {
+            refresh_Click(sender,e);
+        }
+
+        private void toolStripMenuItem9_Click_1(object sender, EventArgs e)
+        {
+            toolStripMenuItem4_Click(sender, e);
         }
     }
 }

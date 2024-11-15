@@ -34,6 +34,10 @@ namespace Main
         private void picTimCV_Click(object sender, EventArgs e)
         {
             string search = txtTimCV.Text.Trim();
+            if (string.IsNullOrEmpty(search) || txtTimCV.Font.Style.HasFlag(FontStyle.Italic))
+            {
+                return;
+            }
             string query = "select * from ChucVu where tenChucVu like '%"+search+"%'";
             Function.LoadDataGridView(dgvDanhSachChucVu, query);
         }
@@ -128,7 +132,7 @@ namespace Main
         {
             if (string.IsNullOrEmpty(selectedMaChucVu))
             {
-                MessageBox.Show("Vui lòng chọn một chức vụ để xóa.");
+                MessageBox.Show("Vui lòng chọn một chức vụ để sửa.");
                 return;
             }
 
@@ -136,7 +140,7 @@ namespace Main
                 selectedMaChucVu,
                 selectedTenChucVu,
                 selectedHeSoChucVu
-                );
+            );
             suaChucVuForm.ShowDialog();
         }
 
@@ -176,6 +180,11 @@ namespace Main
         {
             ThemChucVuForm themChucVuForm = new ThemChucVuForm();
             themChucVuForm.Show();
+        }
+
+        private void addToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            toolStripMenuItem2_Click_1(sender, e);
         }
     }
 }

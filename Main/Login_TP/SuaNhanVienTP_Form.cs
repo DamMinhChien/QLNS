@@ -5,6 +5,7 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -103,7 +104,26 @@ namespace Main
                 MessageBox.Show("Vui lòng nhập một giá trị hợp lệ cho hệ số lương.");
                 return; // Ngừng thực hiện nếu không chuyển đổi thành công
             }
+            // Kiểm tra email
+            string emailPattern = @"^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$";
+            bool isEmailValid = Regex.IsMatch(email, emailPattern);
 
+            // Kiểm tra số điện thoại
+            string phonePattern = @"^(\+84|0)[1-9][0-9]{8,9}$";
+            bool isPhoneValid = Regex.IsMatch(soDienThoai, phonePattern);
+
+            // Xuất kết quả kiểm tra
+            if (!isEmailValid)
+            {
+                MessageBox.Show("Email không hợp lệ.");
+                return;
+            }
+
+            if (!isPhoneValid)
+            {
+                MessageBox.Show("Số điện thoại không hợp lệ.");
+                return;
+            }
             // Kiểm tra dữ liệu đầu vào
             if (string.IsNullOrEmpty(ID) ||
             string.IsNullOrEmpty(tenNhanVien) ||
@@ -119,7 +139,7 @@ namespace Main
                 return;
             }
 
-            string query = "update NhanVien set maNhanVien = '" + ID + "', hoTen = '" + tenNhanVien + "', gioiTinh = '" + gioiTinh + "', ngaySinh =  '" + formattedDate + "', soDienThoai =  '" + soDienThoai + "', diaChi = '" + diaChi + "', email = '" + email + "', luongCoBan =  '" + luongCoBan + "',maPhongBan = '" + maPhongBan + "' , maChucVu = '" + maChucVu + "' where maNhanVien = '" + this.maNhanVien + "' ";
+            string query = "update NhanVien set maNhanVien = '" + ID + "', hoTen = N'" + tenNhanVien + "', gioiTinh = N'" + gioiTinh + "', ngaySinh =  '" + formattedDate + "', soDienThoai =  '" + soDienThoai + "', diaChi = N'" + diaChi + "', email = '" + email + "', luongCoBan =  '" + luongCoBan + "',maPhongBan = '" + maPhongBan + "' , maChucVu = '" + maChucVu + "' where maNhanVien = '" + this.maNhanVien + "' ";
 
             Function.UpdateDataQuery(query);
         }

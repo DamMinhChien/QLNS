@@ -152,32 +152,36 @@
             this.updateToolStripMenuItem.Image = global::Main.Properties.Resources.repeat_update_refresh_reload_sync_icon_225556;
             this.updateToolStripMenuItem.Name = "updateToolStripMenuItem";
             this.updateToolStripMenuItem.ShortcutKeys = System.Windows.Forms.Keys.F5;
-            this.updateToolStripMenuItem.Size = new System.Drawing.Size(168, 26);
+            this.updateToolStripMenuItem.Size = new System.Drawing.Size(214, 26);
             this.updateToolStripMenuItem.Text = "Update";
+            this.updateToolStripMenuItem.Click += new System.EventHandler(this.updateToolStripMenuItem_Click);
             // 
             // removeToolStripMenuItem
             // 
             this.removeToolStripMenuItem.Image = global::Main.Properties.Resources.trash_can_115312;
             this.removeToolStripMenuItem.Name = "removeToolStripMenuItem";
             this.removeToolStripMenuItem.ShortcutKeys = System.Windows.Forms.Keys.Delete;
-            this.removeToolStripMenuItem.Size = new System.Drawing.Size(168, 26);
+            this.removeToolStripMenuItem.Size = new System.Drawing.Size(214, 26);
             this.removeToolStripMenuItem.Text = "Remove";
+            this.removeToolStripMenuItem.Click += new System.EventHandler(this.removeToolStripMenuItem_Click);
             // 
             // editToolStripMenuItem
             // 
             this.editToolStripMenuItem.Image = global::Main.Properties.Resources.note_task_comment_message_edit_write_108613;
             this.editToolStripMenuItem.Name = "editToolStripMenuItem";
             this.editToolStripMenuItem.ShortcutKeys = System.Windows.Forms.Keys.F2;
-            this.editToolStripMenuItem.Size = new System.Drawing.Size(168, 26);
+            this.editToolStripMenuItem.Size = new System.Drawing.Size(214, 26);
             this.editToolStripMenuItem.Text = "Edit";
+            this.editToolStripMenuItem.Click += new System.EventHandler(this.editToolStripMenuItem_Click);
             // 
             // addToolStripMenuItem
             // 
             this.addToolStripMenuItem.Image = global::Main.Properties.Resources.business_application_addmale_useradd_insert_add_user_client_2312;
             this.addToolStripMenuItem.Name = "addToolStripMenuItem";
             this.addToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.N)));
-            this.addToolStripMenuItem.Size = new System.Drawing.Size(168, 26);
+            this.addToolStripMenuItem.Size = new System.Drawing.Size(214, 26);
             this.addToolStripMenuItem.Text = "Add";
+            this.addToolStripMenuItem.Click += new System.EventHandler(this.addToolStripMenuItem_Click);
             // 
             // dvgDanhSachNhanVien
             // 
@@ -205,7 +209,7 @@
             this.removeToolStripMenuItem,
             this.updateToolStripMenuItem});
             this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(169, 108);
+            this.contextMenuStrip1.Size = new System.Drawing.Size(215, 136);
             // 
             // groupBox1
             // 

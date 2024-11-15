@@ -65,6 +65,10 @@ namespace Main
         private void picTimNV_Click(object sender, EventArgs e)
         {
             string search = txtTimNV.Text.Trim();
+            if (string.IsNullOrEmpty(search) || txtTimNV.Font.Style.HasFlag(FontStyle.Italic))
+            {
+                return;
+            }
             string query = "SELECT NV.maNhanVien, NV.hoTen, CV.tenChucVu, PB.tenPhongBan, NV.luongCoBan, NV.gioiTinh, NV.ngaySinh, NV.soDienThoai, NV.diaChi, NV.email FROM NhanVien NV JOIN PhongBan PB ON NV.maPhongBan = PB.maPhongBan join ChucVu CV on NV.maChucVu = CV.maChucVu where hoTen like N'%" + search + "%' and pb.maPhongBan = '"+maPhongBan+"'";
             Function.LoadDataGridView(dvgDanhSachNhanVien, query);
         }
@@ -114,18 +118,23 @@ namespace Main
 
         private void toolStripMenuItem2_Click(object sender, EventArgs e)
         {
+            if (string.IsNullOrEmpty(selectedMaNhanVien))
+            {
+                MessageBox.Show("Vui lòng chọn một nhân viên để sửa.");
+                return;
+            }
             SuaNhanVienTP_Form suaNhanVienForm = new SuaNhanVienTP_Form(
-        selectedMaNhanVien,
-        selectedHoTen,
-        maPhongBan,
-        selectedNgaySinh,
-        selectedLuongCoBan,
-        selectedSDT,
-        selectedDiaChi,
-        selectedEmail,
-        selectedTenChucVu, // thêm thuộc tính tenChucVu
-        selectedGioiTinh
-    );
+                selectedMaNhanVien,
+                selectedHoTen,
+                maPhongBan,
+                selectedNgaySinh,
+                selectedLuongCoBan,
+                selectedSDT,
+                selectedDiaChi,
+                selectedEmail,
+                selectedTenChucVu, // thêm thuộc tính tenChucVu
+                selectedGioiTinh
+            );
             suaNhanVienForm.ShowDialog();
         }
 
@@ -209,6 +218,26 @@ namespace Main
         {
             AboutForm aboutForm = new AboutForm();
             aboutForm.Show();
+        }
+
+        private void addToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            toolStripMenuItem1_Click(sender, e);
+        }
+
+        private void editToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            toolStripMenuItem2_Click(sender, e);
+        }
+
+        private void removeToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            toolStripMenuItem3_Click(sender, e);
+        }
+
+        private void updateToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            toolStripMenuItem4_Click(sender,e);
         }
     }
 }

@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
+using System.Web.UI.WebControls;
 
 namespace Main
 {
@@ -65,6 +66,10 @@ namespace Main
         private void picTimTK_Click(object sender, EventArgs e)
         {
             string search = txtTimTK.Text.Trim();
+            if (string.IsNullOrEmpty(search) || txtTimTK.Font.Style.HasFlag(FontStyle.Italic))
+            {
+                return;
+            }
             string query = "select * from TaiKhoan where tenDangNhap like '%" + search + "%'";
             Function.LoadDataGridView(dgvDanhSachTaiKhoan, query);
         }
@@ -202,6 +207,16 @@ namespace Main
         private void thốngkêToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Function.ExportToExcel(dgvDanhSachTaiKhoan);
+        }
+
+        private void addToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            thêmToolStripMenuItem_Click(sender, e);
+        }
+
+        private void statusStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
+        {
+
         }
     }
 }

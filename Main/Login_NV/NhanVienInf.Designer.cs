@@ -35,7 +35,6 @@
             this.addToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.label2 = new System.Windows.Forms.Label();
-            this.lblTen = new System.Windows.Forms.Label();
             this.lblGT = new System.Windows.Forms.Label();
             this.lblNS = new System.Windows.Forms.Label();
             this.lblDC = new System.Windows.Forms.Label();
@@ -119,25 +118,12 @@
             this.label2.Text = "Câp nhật thông tin nhân viên";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // lblTen
-            // 
-            this.lblTen.AutoSize = true;
-            this.lblTen.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTen.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.lblTen.Location = new System.Drawing.Point(175, 58);
-            this.lblTen.Name = "lblTen";
-            this.lblTen.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.lblTen.Size = new System.Drawing.Size(218, 37);
-            this.lblTen.TabIndex = 0;
-            this.lblTen.Text = "Tên nhân viên";
-            this.lblTen.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
             // lblGT
             // 
             this.lblGT.AutoSize = true;
             this.lblGT.Font = new System.Drawing.Font("Century Gothic", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblGT.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.lblGT.Location = new System.Drawing.Point(613, 191);
+            this.lblGT.Location = new System.Drawing.Point(588, 32);
             this.lblGT.Name = "lblGT";
             this.lblGT.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.lblGT.Size = new System.Drawing.Size(103, 27);
@@ -150,7 +136,7 @@
             this.lblNS.AutoSize = true;
             this.lblNS.Font = new System.Drawing.Font("Century Gothic", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblNS.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.lblNS.Location = new System.Drawing.Point(234, 196);
+            this.lblNS.Location = new System.Drawing.Point(209, 37);
             this.lblNS.Name = "lblNS";
             this.lblNS.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.lblNS.Size = new System.Drawing.Size(122, 27);
@@ -163,7 +149,7 @@
             this.lblDC.AutoSize = true;
             this.lblDC.Font = new System.Drawing.Font("Century Gothic", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblDC.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.lblDC.Location = new System.Drawing.Point(234, 410);
+            this.lblDC.Location = new System.Drawing.Point(209, 251);
             this.lblDC.Name = "lblDC";
             this.lblDC.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.lblDC.Size = new System.Drawing.Size(89, 27);
@@ -176,7 +162,7 @@
             this.lblLuong.AutoSize = true;
             this.lblLuong.Font = new System.Drawing.Font("Century Gothic", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblLuong.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.lblLuong.Location = new System.Drawing.Point(613, 337);
+            this.lblLuong.Location = new System.Drawing.Point(588, 178);
             this.lblLuong.Name = "lblLuong";
             this.lblLuong.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.lblLuong.Size = new System.Drawing.Size(152, 27);
@@ -189,7 +175,7 @@
             this.lblSdt.AutoSize = true;
             this.lblSdt.Font = new System.Drawing.Font("Century Gothic", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblSdt.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.lblSdt.Location = new System.Drawing.Point(613, 410);
+            this.lblSdt.Location = new System.Drawing.Point(588, 251);
             this.lblSdt.Name = "lblSdt";
             this.lblSdt.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.lblSdt.Size = new System.Drawing.Size(146, 27);
@@ -202,7 +188,7 @@
             this.lblCV.AutoSize = true;
             this.lblCV.Font = new System.Drawing.Font("Century Gothic", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCV.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.lblCV.Location = new System.Drawing.Point(234, 270);
+            this.lblCV.Location = new System.Drawing.Point(209, 111);
             this.lblCV.Name = "lblCV";
             this.lblCV.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.lblCV.Size = new System.Drawing.Size(103, 27);
@@ -215,7 +201,7 @@
             this.lblEmail.AutoSize = true;
             this.lblEmail.Font = new System.Drawing.Font("Century Gothic", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblEmail.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.lblEmail.Location = new System.Drawing.Point(613, 264);
+            this.lblEmail.Location = new System.Drawing.Point(588, 105);
             this.lblEmail.Name = "lblEmail";
             this.lblEmail.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.lblEmail.Size = new System.Drawing.Size(74, 27);
@@ -228,7 +214,7 @@
             this.lblPB.AutoSize = true;
             this.lblPB.Font = new System.Drawing.Font("Century Gothic", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblPB.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.lblPB.Location = new System.Drawing.Point(234, 337);
+            this.lblPB.Location = new System.Drawing.Point(209, 178);
             this.lblPB.Name = "lblPB";
             this.lblPB.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.lblPB.Size = new System.Drawing.Size(136, 27);
@@ -239,7 +225,7 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = global::Main.Properties.Resources.a11;
-            this.pictureBox1.Location = new System.Drawing.Point(171, 331);
+            this.pictureBox1.Location = new System.Drawing.Point(146, 172);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(35, 35);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -249,7 +235,7 @@
             // pictureBox4
             // 
             this.pictureBox4.Image = global::Main.Properties.Resources.hierarchy_line_icon_outline_symbol_vector_illustration_concept_sign_2JPD1852;
-            this.pictureBox4.Location = new System.Drawing.Point(171, 267);
+            this.pictureBox4.Location = new System.Drawing.Point(146, 108);
             this.pictureBox4.Name = "pictureBox4";
             this.pictureBox4.Size = new System.Drawing.Size(35, 35);
             this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -259,7 +245,7 @@
             // pictureBox11
             // 
             this.pictureBox11.Image = global::Main.Properties.Resources._4202011emailgmaillogomailsocialsocialmedia_115677_115624;
-            this.pictureBox11.Location = new System.Drawing.Point(550, 262);
+            this.pictureBox11.Location = new System.Drawing.Point(525, 103);
             this.pictureBox11.Name = "pictureBox11";
             this.pictureBox11.Size = new System.Drawing.Size(35, 35);
             this.pictureBox11.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -269,7 +255,7 @@
             // pictureBox12
             // 
             this.pictureBox12.Image = global::Main.Properties.Resources.phone_blue_35145;
-            this.pictureBox12.Location = new System.Drawing.Point(550, 410);
+            this.pictureBox12.Location = new System.Drawing.Point(525, 251);
             this.pictureBox12.Name = "pictureBox12";
             this.pictureBox12.Size = new System.Drawing.Size(35, 35);
             this.pictureBox12.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -279,7 +265,7 @@
             // pictureBox13
             // 
             this.pictureBox13.Image = global::Main.Properties.Resources.salary_marketing_income_financial_earn_money_is_work_icon_230480__1_;
-            this.pictureBox13.Location = new System.Drawing.Point(550, 336);
+            this.pictureBox13.Location = new System.Drawing.Point(525, 177);
             this.pictureBox13.Name = "pictureBox13";
             this.pictureBox13.Size = new System.Drawing.Size(35, 35);
             this.pictureBox13.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -289,7 +275,7 @@
             // pictureBox14
             // 
             this.pictureBox14.Image = global::Main.Properties.Resources._31_1048801;
-            this.pictureBox14.Location = new System.Drawing.Point(171, 401);
+            this.pictureBox14.Location = new System.Drawing.Point(146, 242);
             this.pictureBox14.Name = "pictureBox14";
             this.pictureBox14.Size = new System.Drawing.Size(35, 35);
             this.pictureBox14.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -299,7 +285,7 @@
             // pictureBox16
             // 
             this.pictureBox16.Image = global::Main.Properties.Resources.date;
-            this.pictureBox16.Location = new System.Drawing.Point(171, 196);
+            this.pictureBox16.Location = new System.Drawing.Point(146, 37);
             this.pictureBox16.Name = "pictureBox16";
             this.pictureBox16.Size = new System.Drawing.Size(35, 35);
             this.pictureBox16.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -309,7 +295,7 @@
             // pictureBox17
             // 
             this.pictureBox17.Image = global::Main.Properties.Resources.sex;
-            this.pictureBox17.Location = new System.Drawing.Point(550, 188);
+            this.pictureBox17.Location = new System.Drawing.Point(525, 29);
             this.pictureBox17.Name = "pictureBox17";
             this.pictureBox17.Size = new System.Drawing.Size(35, 35);
             this.pictureBox17.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -320,7 +306,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(900, 609);
+            this.ClientSize = new System.Drawing.Size(900, 394);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.pictureBox4);
             this.Controls.Add(this.pictureBox11);
@@ -337,7 +323,6 @@
             this.Controls.Add(this.lblDC);
             this.Controls.Add(this.lblNS);
             this.Controls.Add(this.lblGT);
-            this.Controls.Add(this.lblTen);
             this.Controls.Add(this.label2);
             this.Name = "NhanVienInf";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
@@ -364,7 +349,6 @@
         private System.Windows.Forms.ToolStripMenuItem addToolStripMenuItem;
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label lblTen;
         private System.Windows.Forms.Label lblGT;
         private System.Windows.Forms.Label lblNS;
         private System.Windows.Forms.Label lblDC;

@@ -178,7 +178,7 @@ namespace Main
 
                         dgvChamCong.Rows[rowIndex].Cells[$"Day{i}"].Value = status;
 
-                        if (status == "x") totalDays++;
+                        if (status == "x" || status == "P") totalDays++;
                         else if (status == "P")
                         {
                             countP++; // Đếm số ngày "p"
@@ -389,6 +389,16 @@ namespace Main
         private void updateToolStripMenuItem_Click(object sender, EventArgs e)
         {
             LoadAttendanceData();
+        }
+
+        private void toolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            lưuToolStripMenuItem_Click(sender,e);
+        }
+
+        private void toolStripMenuItem2_Click(object sender, EventArgs e)
+        {
+            cậpNhậtToolStripMenuItem_Click(sender , e);
         }
     }
 }

@@ -37,6 +37,7 @@ namespace Main
             {
                 menuStrip2.Visible = false;
                 contextMenuStrip1.Visible = false;
+                contextMenuStrip1.Enabled = false;
             }
         }
 
@@ -58,6 +59,10 @@ namespace Main
         private void picTimPB_Click(object sender, EventArgs e)
         {
             string search = txtTimPB.Text.Trim();
+            if (string.IsNullOrEmpty(search) || txtTimPB.Font.Style.HasFlag(FontStyle.Italic))
+            {
+                return;
+            }
             string query = "SELECT PhongBan.maPhongBan, tenPhongBan, COUNT(NhanVien.hoTen) AS SoLuongNhanVien, heSoPhongBan FROM PhongBan left JOIN NhanVien ON PhongBan.maPhongBan = NhanVien.maPhongBan where tenPhongBan like '%" +search+ "%' GROUP BY PhongBan.maPhongBan, tenPhongBan, heSoPhongBan;";
             Function.LoadDataGridView(dgvDanhSachPhongBan, query);
         }
@@ -102,6 +107,11 @@ namespace Main
 
         private void sửaToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            if (string.IsNullOrEmpty(selectedMaPhongBan))
+            {
+                MessageBox.Show("Vui lòng chọn một phòng ban để sửa.");
+                return;
+            }
             SuaPhongBanForm suaPhongBanForm = new SuaPhongBanForm(selectedMaPhongBan, selectedTenPhongBan,selectedHeSoPhongBan);
             suaPhongBanForm.ShowDialog();
         }

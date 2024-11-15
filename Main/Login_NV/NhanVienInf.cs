@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -12,6 +13,7 @@ namespace Main
 {
     public partial class NhanVienInf : Form
     {
+        private static string hello;
         public NhanVienInf()
         {
             InitializeComponent();
@@ -45,7 +47,7 @@ namespace Main
             DataTable data = Function.GetDataQuery(query);
             DataRow row = data.Rows[0];
 
-            lblTen.Text = "Xin chào " + row["hoTen"].ToString() +" !";
+            hello = "Xin chào " + row["hoTen"].ToString() +" !";
             lblEmail.Text = row["email"].ToString();
             lblCV.Text = row["tenChucVu"].ToString();
             lblDC.Text = row["diaChi"].ToString();
@@ -55,6 +57,10 @@ namespace Main
             lblPB.Text = row["tenPhongBan"].ToString();
             lblSdt.Text = row["soDienThoai"].ToString();
 
+        }
+        public static string GetHello()
+        {
+            return hello;
         }
     }
 }

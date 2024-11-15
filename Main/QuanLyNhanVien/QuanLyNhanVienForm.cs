@@ -55,6 +55,10 @@ namespace Main
         private void picTimNV_Click(object sender, EventArgs e)
         {
             string search = txtTimNV.Text.Trim();
+            if (string.IsNullOrEmpty(search) || txtTimNV.Font.Style.HasFlag(FontStyle.Italic))
+            {
+                return;
+            }
             string query = "SELECT NV.maNhanVien, NV.hoTen, CV.tenChucVu, PB.tenPhongBan, NV.luongCoBan, NV.gioiTinh, NV.ngaySinh, NV.soDienThoai, NV.diaChi, NV.email FROM NhanVien NV JOIN PhongBan PB ON NV.maPhongBan = PB.maPhongBan join ChucVu CV on NV.maChucVu = CV.maChucVu where hoTen like N'%" +search+"%'";
             Function.LoadDataGridView(dvgDanhSachNhanVien, query);
         }
@@ -118,18 +122,23 @@ namespace Main
         }
         private void sửaToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            if (string.IsNullOrEmpty(selectedMaNhanVien))
+            {
+                MessageBox.Show("Vui lòng chọn một nhân viên để sửa.");
+                return;
+            }
             SuaNhanVienForm suaNhanVienForm = new SuaNhanVienForm(
-        selectedMaNhanVien,
-        selectedHoTen,
-        selectedPhongBan,
-        selectedNgaySinh,
-        selectedLuongCoBan,
-        selectedSDT,
-        selectedDiaChi,
-        selectedEmail,
-        selectedTenChucVu, // thêm thuộc tính tenChucVu
-        selectedGioiTinh
-    );
+                selectedMaNhanVien,
+                selectedHoTen,
+                selectedPhongBan,
+                selectedNgaySinh,
+                selectedLuongCoBan,
+                selectedSDT,
+                selectedDiaChi,
+                selectedEmail,
+                selectedTenChucVu, // thêm thuộc tính tenChucVu
+                selectedGioiTinh
+            );
             suaNhanVienForm.ShowDialog();
         }
 

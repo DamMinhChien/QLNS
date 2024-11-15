@@ -66,7 +66,7 @@ namespace Main
                 return ;
             }
 
-            string query = "insert into PhongBan values ( '" + ID + "', '" + tenPhongBan + "', '" + heSoPhongBan + "')";
+            string query = "insert into PhongBan values ( '" + ID + "', N'" + tenPhongBan + "', '" + heSoPhongBan + "')";
 
             Function.UpdateDataQuery(query);
         }

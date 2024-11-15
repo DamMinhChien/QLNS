@@ -35,7 +35,7 @@ namespace Main
             // Kiểm tra xem có giá trị nào được chọn không
             if (!string.IsNullOrEmpty(tenPhongBanCurrent) || !string.IsNullOrEmpty(tenChucVuCurrent))
             {
-                string query3 = "select hoTen from NhanVien nv inner join PhongBan pb on nv.maPhongBan = pb.maPhongBan inner join ChucVu cv on cv.maChucVu = nv.maChucVu where tenPhongBan = N'" + tenPhongBanCurrent + "' and tenChucVu = N'" + tenChucVuCurrent + "'";
+                string query3 = "select distinct hoTen from NhanVien nv inner join PhongBan pb on nv.maPhongBan = pb.maPhongBan inner join ChucVu cv on cv.maChucVu = nv.maChucVu where tenPhongBan = N'" + tenPhongBanCurrent + "' and tenChucVu = N'" + tenChucVuCurrent + "'";
                 DataTable datatabe3 = Function.GetDataQuery(query3);
                 foreach (DataRow row in datatabe3.Rows)
                 {
@@ -135,7 +135,7 @@ namespace Main
                 MessageBox.Show("Vui lòng nhập đầy đủ thông tin!", "Thông báo");
                 return;
             }
-            string query1 = "insert into ThongBao values ('" + idTB + "',N'" + tieuDe + "', N'" + noiDung + "', '" + ngayDang + "', '" + fileDinhKem + "')";
+            string query1 = "insert into ThongBao values ('" + idTB + "',N'" + tieuDe + "', N'" + noiDung + "', '" + ngayDang.ToString("yyyy-MM-dd HH:mm:ss") + "', '" + fileDinhKem + "')";
             Function.UpdateDataQuery(query1);
 
             string query2 = "insert into NhanVien_ThongBao values ('" + idNV + "', '" + idTB + "')";
