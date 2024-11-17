@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -129,14 +130,77 @@ namespace Main
                 return;
             }
 
+            // Lấy mã nhân viên liên kết với phòng ban
+            string queryPhongBan = $"SELECT maNhanVien FROM NhanVien WHERE maPhongBan = '{selectedMaPhongBan}'";
+            DataTable dataTablePhongBan = Function.GetDataQuery(queryPhongBan);
+
+            if (dataTablePhongBan.Rows.Count == 0)
+            {
+                MessageBox.Show("Không có nhân viên nào liên kết với phòng ban này.");
+                return;
+            }
+
             // Xác nhận việc xóa
             var result = MessageBox.Show("Bạn có chắc chắn muốn xóa phòng ban này?", "Xác Nhận", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
             if (result == DialogResult.Yes)
             {
-                string query = "DELETE FROM PhongBan WHERE maPhongBan = '" + selectedMaPhongBan + "'";
-                Function.UpdateDataQuery(query);
-                //refresh luôn
-                cậpNhậtToolStripMenuItem_Click(sender, e);
+                using (SqlConnection connection = new SqlConnection(Function.GetConnectionString()))
+                {
+                    connection.Open();
+                    using (SqlTransaction transaction = connection.BeginTransaction())
+                    {
+                        try
+                        {
+                            using (SqlCommand command = new SqlCommand())
+                            {
+                                command.Connection = connection;
+                                command.Transaction = transaction;
+
+                                // Xóa dữ liệu từ bảng ChamCong trước
+                                foreach (DataRow row in dataTablePhongBan.Rows)
+                                {
+                                    string maNhanVien = row["maNhanVien"].ToString();
+                                    string queryChamCong = $"DELETE FROM ChamCong WHERE maNhanVien = '{maNhanVien}';";
+                                    command.CommandText = queryChamCong;
+                                    command.ExecuteNonQuery();
+                                }
+
+                                // Xóa tài khoản của nhân viên
+                                foreach (DataRow row in dataTablePhongBan.Rows)
+                                {
+                                    string maNhanVien = row["maNhanVien"].ToString();
+                                    string queryTaiKhoan = $"DELETE FROM TaiKhoan WHERE maNhanVien = '{maNhanVien}';";
+                                    command.CommandText = queryTaiKhoan;
+                                    command.ExecuteNonQuery();
+                                }
+
+                                // Xóa nhân viên theo phòng ban
+                                string queryNhanVien = $"DELETE FROM NhanVien WHERE maPhongBan = '{selectedMaPhongBan}';";
+                                command.CommandText = queryNhanVien;
+                                command.ExecuteNonQuery();
+
+                                // Xóa phòng ban
+                                string queryXoaPhongBan = $"DELETE FROM PhongBan WHERE maPhongBan = '{selectedMaPhongBan}';";
+                                command.CommandText = queryXoaPhongBan;
+                                command.ExecuteNonQuery();
+
+                                // Xác nhận giao dịch
+                                transaction.Commit();
+                                MessageBox.Show("Xóa thành công!");
+                            }
+                        }
+                        catch (Exception ex)
+                        {
+                            // Rollback nếu có lỗi
+                            transaction.Rollback();
+                            // Xử lý lỗi
+                            MessageBox.Show(ex.Message);
+                        }
+                    }
+                }
+
+                // Refresh dữ liệu
+                Function.LoadDataGridView(dgvDanhSachPhongBan, "SELECT * FROM PhongBan");
             }
         }
 

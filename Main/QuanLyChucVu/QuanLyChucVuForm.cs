@@ -76,11 +76,20 @@ namespace Main
                 return;
             }
 
+            // Lấy mã nhân viên liên kết với chức vụ
+            string query = $"SELECT maNhanVien FROM NhanVien nv INNER JOIN ChucVu cv ON nv.maChucVu = cv.maChucVu WHERE nv.maChucVu = '{selectedMaChucVu}'";
+            DataTable dataTable = Function.GetDataQuery(query);
+
+            if (dataTable.Rows.Count == 0)
+            {
+                MessageBox.Show("Không có nhân viên nào liên kết với chức vụ này.");
+                return;
+            }
+
             // Xác nhận việc xóa
             var result = MessageBox.Show("Bạn có chắc chắn muốn xóa chức vụ này?", "Xác Nhận", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
             if (result == DialogResult.Yes)
             {
-                string query = "DELETE FROM ChucVu WHERE maChucVu = '" + selectedMaChucVu + "';";
                 using (SqlConnection connection = new SqlConnection(Function.GetConnectionString()))
                 {
                     connection.Open();
@@ -93,21 +102,38 @@ namespace Main
                                 command.Connection = connection;
                                 command.Transaction = transaction;
 
-                                command.CommandText = query;
-                                int rowsAffected = command.ExecuteNonQuery();
+                                // Xóa dữ liệu từ bảng ChamCong trước
+                                foreach (DataRow row in dataTable.Rows)
+                                {
+                                    string maNhanVien = row["maNhanVien"].ToString();
+                                    string queryChamCong = $"DELETE FROM ChamCong WHERE maNhanVien = '{maNhanVien}';";
+                                    command.CommandText = queryChamCong;
+                                    command.ExecuteNonQuery();
+                                }
 
-                                if (rowsAffected >= 0)
+                                // Xóa tài khoản của nhân viên
+                                foreach (DataRow row in dataTable.Rows)
                                 {
-                                    MessageBox.Show("Xóa thành công!");
+                                    string maNhanVien = row["maNhanVien"].ToString();
+                                    string query1 = $"DELETE FROM TaiKhoan WHERE maNhanVien = '{maNhanVien}';";
+                                    command.CommandText = query1;
+                                    command.ExecuteNonQuery();
                                 }
-                                else
-                                {
-                                    MessageBox.Show("Không có bản ghi nào được xóa.");
-                                }
+
+                                // Xóa nhân viên
+                                string query2 = $"DELETE FROM NhanVien WHERE maChucVu = '{selectedMaChucVu}';";
+                                command.CommandText = query2;
+                                command.ExecuteNonQuery();
+
+                                // Xóa chức vụ
+                                string query3 = $"DELETE FROM ChucVu WHERE maChucVu = '{selectedMaChucVu}';";
+                                command.CommandText = query3;
+                                command.ExecuteNonQuery();
+
+                                // Xác nhận giao dịch
+                                transaction.Commit();
+                                MessageBox.Show("Xóa thành công!");
                             }
-
-                            // Xác nhận giao dịch
-                            transaction.Commit();
                         }
                         catch (Exception ex)
                         {
@@ -118,8 +144,9 @@ namespace Main
                         }
                     }
                 }
-                //refresh luôn
-                Function.LoadDataGridView(dgvDanhSachChucVu, "select * from ChucVu");
+
+                // Refresh dữ liệu
+                Function.LoadDataGridView(dgvDanhSachChucVu, "SELECT * FROM ChucVu");
             }
         }
 
