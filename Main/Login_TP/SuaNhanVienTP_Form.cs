@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -97,6 +98,20 @@ namespace Main
             string soDienThoai = txtSDT.Text.Trim();
             string diaChi = txtDiaChi.Text.Trim();
             string maChucVu = cmbMaChucVu.SelectedItem?.ToString(); // ma chuc vu se null khi cmb null
+            // Kiểm tra dữ liệu đầu vào
+            if (string.IsNullOrEmpty(ID) ||
+            string.IsNullOrEmpty(tenNhanVien) ||
+            string.IsNullOrEmpty(soDienThoai) ||
+            string.IsNullOrEmpty(diaChi) ||
+            string.IsNullOrEmpty(email) ||
+            string.IsNullOrEmpty(maChucVu) ||
+            string.IsNullOrEmpty(maPhongBan) ||
+            string.IsNullOrEmpty(chucVu)
+            )
+            {
+                MessageBox.Show("Vui lòng điền đầy đủ thông tin.");
+                return;
+            }
             // Khai báo biến heSoLuong kiểu float
             float heSoLuong;
             if (!float.TryParse(txtLuongCoBan.Text.Trim(), out heSoLuong))
@@ -124,18 +139,9 @@ namespace Main
                 MessageBox.Show("Số điện thoại không hợp lệ.");
                 return;
             }
-            // Kiểm tra dữ liệu đầu vào
-            if (string.IsNullOrEmpty(ID) ||
-            string.IsNullOrEmpty(tenNhanVien) ||
-            string.IsNullOrEmpty(soDienThoai) ||
-            string.IsNullOrEmpty(diaChi) ||
-            string.IsNullOrEmpty(email) ||
-            string.IsNullOrEmpty(maChucVu) ||
-            string.IsNullOrEmpty(maPhongBan) ||
-            string.IsNullOrEmpty(chucVu)
-            )
+            if (CheckIfEmployeeIdExists(ID) && ID != maNhanVien)
             {
-                MessageBox.Show("Vui lòng điền đầy đủ thông tin.");
+                MessageBox.Show("Tài Khoản đã tồn tại, vui lòng nhập lại.");
                 return;
             }
 
@@ -143,7 +149,20 @@ namespace Main
 
             Function.UpdateDataQuery(query);
         }
-
+        private bool CheckIfEmployeeIdExists(string employeeId)
+        {
+            string query = "SELECT COUNT(*) FROM NhanVien WHERE maNhanVien = @maNhanVien"; // Sử dụng tham số
+            using (SqlConnection sqlConnection = new SqlConnection(Function.GetConnectionString()))
+            {
+                sqlConnection.Open(); // Mở kết nối
+                using (SqlCommand cmd = new SqlCommand(query, sqlConnection))
+                {
+                    cmd.Parameters.AddWithValue("@maNhanVien", employeeId); // Thêm tham số vào câu lệnh
+                    int count = (int)cmd.ExecuteScalar(); // Lấy số lượng bản ghi
+                    return count > 0; // Trả về true nếu mã đã tồn tại
+                }
+            }
+        }
         private void btnClear_Click(object sender, EventArgs e)
         {
             txtID.Text = "";

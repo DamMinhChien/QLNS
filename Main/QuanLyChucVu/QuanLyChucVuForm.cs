@@ -77,11 +77,10 @@ namespace Main
             }
 
             // Xác nhận việc xóa
-            var result = MessageBox.Show("Bạn có chắc chắn muốn xóa nhân viên này?", "Xác Nhận", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+            var result = MessageBox.Show("Bạn có chắc chắn muốn xóa chức vụ này?", "Xác Nhận", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
             if (result == DialogResult.Yes)
             {
-                string query1 = "DELETE FROM TaiKhoan WHERE maChucVu = '" + selectedMaChucVu + "';";
-                string query2 = "DELETE FROM ChucVu WHERE maChucVu = '" + selectedMaChucVu + "';";
+                string query = "DELETE FROM ChucVu WHERE maChucVu = '" + selectedMaChucVu + "';";
                 using (SqlConnection connection = new SqlConnection(Function.GetConnectionString()))
                 {
                     connection.Open();
@@ -94,14 +93,10 @@ namespace Main
                                 command.Connection = connection;
                                 command.Transaction = transaction;
 
-                                command.CommandText = query1;
-                                command.ExecuteNonQuery();
-
-                                // Lệnh DELETE thứ hai
-                                command.CommandText = query2;
+                                command.CommandText = query;
                                 int rowsAffected = command.ExecuteNonQuery();
 
-                                if (rowsAffected > 0)
+                                if (rowsAffected >= 0)
                                 {
                                     MessageBox.Show("Xóa thành công!");
                                 }

@@ -77,9 +77,9 @@ namespace Main
                 MessageBox.Show("Vui lòng nhập dầy đủ thông tin.");
                 return;
             }
-            if (!CheckIfEmployeeIdExists(ID))
+            if (!CheckIfEmployeeIdExists(ID) && ID != maPhongBan)
             {
-                MessageBox.Show("Không tìm thấy mã phòng ban, vui lòng nhập lại.");
+                MessageBox.Show("Mã phòng ban đã tồn tại, vui lòng nhập lại.");
                 return;
             }
 

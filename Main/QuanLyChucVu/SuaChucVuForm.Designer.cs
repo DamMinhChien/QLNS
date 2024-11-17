@@ -165,8 +165,7 @@
             this.txtID.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtID.Location = new System.Drawing.Point(386, 135);
             this.txtID.Name = "txtID";
-            this.txtID.ReadOnly = true;
-            this.txtID.Size = new System.Drawing.Size(487, 34);
+            this.txtID.Size = new System.Drawing.Size(174, 34);
             this.txtID.TabIndex = 0;
             // 
             // pictureBox4

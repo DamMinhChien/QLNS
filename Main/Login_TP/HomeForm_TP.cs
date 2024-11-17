@@ -100,5 +100,45 @@ namespace Main
             QuanLyThongBao_TP_Form quanLyThongBao_TP_Form = new QuanLyThongBao_TP_Form(maPhongBan, tenPhongBan);
             quanLyThongBao_TP_Form.Show();
         }
+
+        private void picQuanLyNhanVien_MouseEnter(object sender, EventArgs e)
+        {
+            Function.EnterFormatPanel(pnlQuanLyNhanVien);
+        }
+
+        private void picQuanLyNhanVien_MouseLeave(object sender, EventArgs e)
+        {
+            Function.LeaveFormatPanel(pnlQuanLyNhanVien);
+        }
+
+        private void picQuanLyphongBan_MouseEnter(object sender, EventArgs e)
+        {
+            Function.EnterFormatPanel(pnlQuanLyPhongBan);
+        }
+
+        private void picQuanLyphongBan_MouseLeave(object sender, EventArgs e)
+        {
+            Function.LeaveFormatPanel(pnlQuanLyPhongBan);
+        }
+
+        private void picQuanLyChamCong_MouseEnter(object sender, EventArgs e)
+        {
+            Function.EnterFormatPanel(pnlQuanLyChamCong);
+        }
+
+        private void picQuanLyChamCong_MouseLeave(object sender, EventArgs e)
+        {
+            Function.LeaveFormatPanel(pnlQuanLyChamCong);
+        }
+
+        private void picThongBao_MouseEnter(object sender, EventArgs e)
+        {
+            Function.EnterFormatPanel(pnlThongBao);
+        }
+
+        private void picThongBao_MouseLeave(object sender, EventArgs e)
+        {
+            Function.LeaveFormatPanel(pnlThongBao);
+        }
     }
 }

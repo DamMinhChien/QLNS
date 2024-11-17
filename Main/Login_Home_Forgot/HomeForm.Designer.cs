@@ -49,7 +49,7 @@
             this.picQuanLyNhanVien = new System.Windows.Forms.PictureBox();
             this.pnlChucVu = new System.Windows.Forms.Panel();
             this.lblQuanLyChucVu = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.picQuanLyChucVu = new System.Windows.Forms.PictureBox();
             this.pnlQuanLyTaiKhoan = new System.Windows.Forms.Panel();
             this.lblQuanLyTaiKhoan = new System.Windows.Forms.Label();
             this.picQuanLyTaiKhoan = new System.Windows.Forms.PictureBox();
@@ -67,7 +67,7 @@
             this.pnlQuanLyNhanVien.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picQuanLyNhanVien)).BeginInit();
             this.pnlChucVu.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picQuanLyChucVu)).BeginInit();
             this.pnlQuanLyTaiKhoan.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picQuanLyTaiKhoan)).BeginInit();
             this.statusStrip1.SuspendLayout();
@@ -75,13 +75,14 @@
             // 
             // menuStrip1
             // 
+            this.menuStrip1.BackColor = System.Drawing.Color.White;
             this.menuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.hệThốngToolStripMenuItem,
             this.trợGiúpToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(1261, 30);
+            this.menuStrip1.Size = new System.Drawing.Size(1261, 28);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -91,7 +92,7 @@
             this.đăngXuấtToolStripMenuItem,
             this.thoátỨngDụngToolStripMenuItem});
             this.hệThốngToolStripMenuItem.Name = "hệThốngToolStripMenuItem";
-            this.hệThốngToolStripMenuItem.Size = new System.Drawing.Size(85, 26);
+            this.hệThốngToolStripMenuItem.Size = new System.Drawing.Size(85, 24);
             this.hệThốngToolStripMenuItem.Text = "&Hệ thống";
             // 
             // đăngXuấtToolStripMenuItem
@@ -111,7 +112,7 @@
             // trợGiúpToolStripMenuItem
             // 
             this.trợGiúpToolStripMenuItem.Name = "trợGiúpToolStripMenuItem";
-            this.trợGiúpToolStripMenuItem.Size = new System.Drawing.Size(64, 26);
+            this.trợGiúpToolStripMenuItem.Size = new System.Drawing.Size(64, 24);
             this.trợGiúpToolStripMenuItem.Text = "&About";
             this.trợGiúpToolStripMenuItem.Click += new System.EventHandler(this.trợGiúpToolStripMenuItem_Click);
             // 
@@ -136,10 +137,12 @@
             // 
             this.pnlThongBao.Controls.Add(this.lbllThongBao);
             this.pnlThongBao.Controls.Add(this.picThongBao);
-            this.pnlThongBao.Location = new System.Drawing.Point(754, 385);
+            this.pnlThongBao.Location = new System.Drawing.Point(796, 385);
             this.pnlThongBao.Name = "pnlThongBao";
             this.pnlThongBao.Size = new System.Drawing.Size(234, 261);
             this.pnlThongBao.TabIndex = 5;
+            this.pnlThongBao.MouseEnter += new System.EventHandler(this.pnlThongBao_MouseEnter);
+            this.pnlThongBao.MouseLeave += new System.EventHandler(this.pnlThongBao_MouseLeave);
             // 
             // lbllThongBao
             // 
@@ -152,6 +155,8 @@
             this.lbllThongBao.TabIndex = 1;
             this.lbllThongBao.Text = "Thông báo";
             this.lbllThongBao.Click += new System.EventHandler(this.lbllThongBao_Click);
+            this.lbllThongBao.MouseEnter += new System.EventHandler(this.picThongBao_MouseEnter);
+            this.lbllThongBao.MouseLeave += new System.EventHandler(this.picThongBao_MouseLeave);
             // 
             // picThongBao
             // 
@@ -164,6 +169,8 @@
             this.picThongBao.TabIndex = 0;
             this.picThongBao.TabStop = false;
             this.picThongBao.Click += new System.EventHandler(this.picThongBao_Click);
+            this.picThongBao.MouseEnter += new System.EventHandler(this.picThongBao_MouseEnter);
+            this.picThongBao.MouseLeave += new System.EventHandler(this.picThongBao_MouseLeave);
             // 
             // pnlQuanLyChamCong
             // 
@@ -173,18 +180,22 @@
             this.pnlQuanLyChamCong.Name = "pnlQuanLyChamCong";
             this.pnlQuanLyChamCong.Size = new System.Drawing.Size(234, 261);
             this.pnlQuanLyChamCong.TabIndex = 4;
+            this.pnlQuanLyChamCong.MouseEnter += new System.EventHandler(this.pnlQuanLyChamCong_MouseEnter);
+            this.pnlQuanLyChamCong.MouseLeave += new System.EventHandler(this.pnlQuanLyChamCong_MouseLeave);
             // 
             // lblQuanLyChamCong
             // 
             this.lblQuanLyChamCong.AutoSize = true;
             this.lblQuanLyChamCong.Cursor = System.Windows.Forms.Cursors.Hand;
             this.lblQuanLyChamCong.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblQuanLyChamCong.Location = new System.Drawing.Point(17, 205);
+            this.lblQuanLyChamCong.Location = new System.Drawing.Point(18, 205);
             this.lblQuanLyChamCong.Name = "lblQuanLyChamCong";
             this.lblQuanLyChamCong.Size = new System.Drawing.Size(200, 39);
             this.lblQuanLyChamCong.TabIndex = 1;
             this.lblQuanLyChamCong.Text = "Chấm công";
             this.lblQuanLyChamCong.Click += new System.EventHandler(this.picQuanLyChamCong_Click);
+            this.lblQuanLyChamCong.MouseEnter += new System.EventHandler(this.picQuanLyChamCong_MouseEnter);
+            this.lblQuanLyChamCong.MouseLeave += new System.EventHandler(this.picQuanLyChamCong_MouseLeave);
             // 
             // picQuanLyChamCong
             // 
@@ -197,27 +208,33 @@
             this.picQuanLyChamCong.TabIndex = 0;
             this.picQuanLyChamCong.TabStop = false;
             this.picQuanLyChamCong.Click += new System.EventHandler(this.picQuanLyChamCong_Click);
+            this.picQuanLyChamCong.MouseEnter += new System.EventHandler(this.picQuanLyChamCong_MouseEnter);
+            this.picQuanLyChamCong.MouseLeave += new System.EventHandler(this.picQuanLyChamCong_MouseLeave);
             // 
             // pnlQuanLyPhongBan
             // 
             this.pnlQuanLyPhongBan.Controls.Add(this.lblQuanLyPhongBan);
             this.pnlQuanLyPhongBan.Controls.Add(this.picQuanLyphongBan);
-            this.pnlQuanLyPhongBan.Location = new System.Drawing.Point(754, 81);
+            this.pnlQuanLyPhongBan.Location = new System.Drawing.Point(796, 81);
             this.pnlQuanLyPhongBan.Name = "pnlQuanLyPhongBan";
             this.pnlQuanLyPhongBan.Size = new System.Drawing.Size(234, 261);
             this.pnlQuanLyPhongBan.TabIndex = 2;
+            this.pnlQuanLyPhongBan.MouseEnter += new System.EventHandler(this.pnlQuanLyPhongBan_MouseEnter);
+            this.pnlQuanLyPhongBan.MouseLeave += new System.EventHandler(this.pnlQuanLyPhongBan_MouseLeave);
             // 
             // lblQuanLyPhongBan
             // 
             this.lblQuanLyPhongBan.AutoSize = true;
             this.lblQuanLyPhongBan.Cursor = System.Windows.Forms.Cursors.Hand;
             this.lblQuanLyPhongBan.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblQuanLyPhongBan.Location = new System.Drawing.Point(19, 205);
+            this.lblQuanLyPhongBan.Location = new System.Drawing.Point(21, 205);
             this.lblQuanLyPhongBan.Name = "lblQuanLyPhongBan";
             this.lblQuanLyPhongBan.Size = new System.Drawing.Size(195, 39);
             this.lblQuanLyPhongBan.TabIndex = 1;
             this.lblQuanLyPhongBan.Text = "Phòng Ban";
             this.lblQuanLyPhongBan.Click += new System.EventHandler(this.lblQuanLyPhongBan_Click);
+            this.lblQuanLyPhongBan.MouseEnter += new System.EventHandler(this.picQuanLyphongBan_MouseEnter);
+            this.lblQuanLyPhongBan.MouseLeave += new System.EventHandler(this.picQuanLyphongBan_MouseLeave);
             // 
             // picQuanLyphongBan
             // 
@@ -230,6 +247,8 @@
             this.picQuanLyphongBan.TabIndex = 0;
             this.picQuanLyphongBan.TabStop = false;
             this.picQuanLyphongBan.Click += new System.EventHandler(this.pictureBox4_Click);
+            this.picQuanLyphongBan.MouseEnter += new System.EventHandler(this.picQuanLyphongBan_MouseEnter);
+            this.picQuanLyphongBan.MouseLeave += new System.EventHandler(this.picQuanLyphongBan_MouseLeave);
             // 
             // pnlQuanLyNhanVien
             // 
@@ -239,17 +258,21 @@
             this.pnlQuanLyNhanVien.Name = "pnlQuanLyNhanVien";
             this.pnlQuanLyNhanVien.Size = new System.Drawing.Size(234, 261);
             this.pnlQuanLyNhanVien.TabIndex = 1;
+            this.pnlQuanLyNhanVien.MouseEnter += new System.EventHandler(this.pnlQuanLyNhanVien_MouseEnter);
+            this.pnlQuanLyNhanVien.MouseLeave += new System.EventHandler(this.pnlQuanLyNhanVien_MouseLeave);
             // 
             // lblQuanLyNhanVien
             // 
             this.lblQuanLyNhanVien.AutoSize = true;
             this.lblQuanLyNhanVien.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblQuanLyNhanVien.Location = new System.Drawing.Point(25, 209);
+            this.lblQuanLyNhanVien.Location = new System.Drawing.Point(29, 209);
             this.lblQuanLyNhanVien.Name = "lblQuanLyNhanVien";
             this.lblQuanLyNhanVien.Size = new System.Drawing.Size(178, 38);
             this.lblQuanLyNhanVien.TabIndex = 1;
             this.lblQuanLyNhanVien.Text = "Nhân Viên";
             this.lblQuanLyNhanVien.Click += new System.EventHandler(this.lblQuanLyNhanVien_Click);
+            this.lblQuanLyNhanVien.MouseEnter += new System.EventHandler(this.picQuanLyNhanVien_MouseEnter);
+            this.lblQuanLyNhanVien.MouseLeave += new System.EventHandler(this.picQuanLyNhanVien_MouseLeave);
             // 
             // picQuanLyNhanVien
             // 
@@ -262,17 +285,21 @@
             this.picQuanLyNhanVien.TabIndex = 0;
             this.picQuanLyNhanVien.TabStop = false;
             this.picQuanLyNhanVien.Click += new System.EventHandler(this.picQuanLyNhanVien_Click_1);
+            this.picQuanLyNhanVien.MouseEnter += new System.EventHandler(this.picQuanLyNhanVien_MouseEnter);
+            this.picQuanLyNhanVien.MouseLeave += new System.EventHandler(this.picQuanLyNhanVien_MouseLeave);
             // 
             // pnlChucVu
             // 
             this.pnlChucVu.Controls.Add(this.lblQuanLyChucVu);
-            this.pnlChucVu.Controls.Add(this.pictureBox1);
-            this.pnlChucVu.Location = new System.Drawing.Point(197, 385);
+            this.pnlChucVu.Controls.Add(this.picQuanLyChucVu);
+            this.pnlChucVu.Location = new System.Drawing.Point(151, 385);
             this.pnlChucVu.Name = "pnlChucVu";
             this.pnlChucVu.Size = new System.Drawing.Size(234, 261);
             this.pnlChucVu.TabIndex = 3;
             this.pnlChucVu.Paint += new System.Windows.Forms.PaintEventHandler(this.pnlQuanLyTaiKhoan_Paint);
             this.pnlChucVu.MouseClick += new System.Windows.Forms.MouseEventHandler(this.pnlQuanLyTaiKhoan_MouseClick);
+            this.pnlChucVu.MouseEnter += new System.EventHandler(this.pnlChucVu_MouseEnter);
+            this.pnlChucVu.MouseLeave += new System.EventHandler(this.pnlChucVu_MouseLeave);
             // 
             // lblQuanLyChucVu
             // 
@@ -285,29 +312,36 @@
             this.lblQuanLyChucVu.TabIndex = 1;
             this.lblQuanLyChucVu.Text = "Chức vụ";
             this.lblQuanLyChucVu.Click += new System.EventHandler(this.pictureBox1_Click_1);
+            this.lblQuanLyChucVu.MouseEnter += new System.EventHandler(this.picQuanLyChucVu_MouseEnter);
+            this.lblQuanLyChucVu.MouseLeave += new System.EventHandler(this.picQuanLyChucVu_MouseLeave);
             // 
-            // pictureBox1
+            // picQuanLyChucVu
             // 
-            this.pictureBox1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pictureBox1.Image = global::Main.Properties.Resources.hierarchy_line_icon_outline_symbol_vector_illustration_concept_sign_2JPD1851;
-            this.pictureBox1.Location = new System.Drawing.Point(41, 22);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(155, 166);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
-            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click_1);
+            this.picQuanLyChucVu.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.picQuanLyChucVu.Image = global::Main.Properties.Resources.hierarchy_line_icon_outline_symbol_vector_illustration_concept_sign_2JPD1851;
+            this.picQuanLyChucVu.Location = new System.Drawing.Point(41, 22);
+            this.picQuanLyChucVu.Name = "picQuanLyChucVu";
+            this.picQuanLyChucVu.Size = new System.Drawing.Size(155, 166);
+            this.picQuanLyChucVu.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.picQuanLyChucVu.TabIndex = 0;
+            this.picQuanLyChucVu.TabStop = false;
+            this.picQuanLyChucVu.Click += new System.EventHandler(this.pictureBox1_Click_1);
+            this.picQuanLyChucVu.MouseEnter += new System.EventHandler(this.picQuanLyChucVu_MouseEnter);
+            this.picQuanLyChucVu.MouseLeave += new System.EventHandler(this.picQuanLyChucVu_MouseLeave);
             // 
             // pnlQuanLyTaiKhoan
             // 
+            this.pnlQuanLyTaiKhoan.BackColor = System.Drawing.Color.White;
             this.pnlQuanLyTaiKhoan.Controls.Add(this.lblQuanLyTaiKhoan);
             this.pnlQuanLyTaiKhoan.Controls.Add(this.picQuanLyTaiKhoan);
-            this.pnlQuanLyTaiKhoan.Location = new System.Drawing.Point(197, 81);
+            this.pnlQuanLyTaiKhoan.Location = new System.Drawing.Point(151, 81);
             this.pnlQuanLyTaiKhoan.Name = "pnlQuanLyTaiKhoan";
             this.pnlQuanLyTaiKhoan.Size = new System.Drawing.Size(234, 261);
             this.pnlQuanLyTaiKhoan.TabIndex = 0;
             this.pnlQuanLyTaiKhoan.Paint += new System.Windows.Forms.PaintEventHandler(this.pnlQuanLyTaiKhoan_Paint);
             this.pnlQuanLyTaiKhoan.MouseClick += new System.Windows.Forms.MouseEventHandler(this.pnlQuanLyTaiKhoan_MouseClick);
+            this.pnlQuanLyTaiKhoan.MouseEnter += new System.EventHandler(this.pnlQuanLyTaiKhoan_MouseEnter_1);
+            this.pnlQuanLyTaiKhoan.MouseLeave += new System.EventHandler(this.pnlQuanLyTaiKhoan_MouseLeave_1);
             // 
             // lblQuanLyTaiKhoan
             // 
@@ -320,6 +354,8 @@
             this.lblQuanLyTaiKhoan.TabIndex = 1;
             this.lblQuanLyTaiKhoan.Text = "Tài Khoản";
             this.lblQuanLyTaiKhoan.Click += new System.EventHandler(this.picQuanLyNhanVien_Click);
+            this.lblQuanLyTaiKhoan.MouseEnter += new System.EventHandler(this.pnlQuanLyTaiKhoan_MouseEnter_1);
+            this.lblQuanLyTaiKhoan.MouseLeave += new System.EventHandler(this.pnlQuanLyTaiKhoan_MouseLeave_1);
             // 
             // picQuanLyTaiKhoan
             // 
@@ -332,6 +368,8 @@
             this.picQuanLyTaiKhoan.TabIndex = 0;
             this.picQuanLyTaiKhoan.TabStop = false;
             this.picQuanLyTaiKhoan.Click += new System.EventHandler(this.picQuanLyNhanVien_Click);
+            this.picQuanLyTaiKhoan.MouseEnter += new System.EventHandler(this.pnlQuanLyTaiKhoan_MouseEnter_1);
+            this.picQuanLyTaiKhoan.MouseLeave += new System.EventHandler(this.pnlQuanLyTaiKhoan_MouseLeave_1);
             // 
             // statusStrip1
             // 
@@ -362,6 +400,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(120F, 120F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.AutoScroll = true;
+            this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1261, 850);
             this.Controls.Add(this.statusStrip1);
             this.Controls.Add(this.gprQuanLy);
@@ -389,7 +428,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.picQuanLyNhanVien)).EndInit();
             this.pnlChucVu.ResumeLayout(false);
             this.pnlChucVu.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picQuanLyChucVu)).EndInit();
             this.pnlQuanLyTaiKhoan.ResumeLayout(false);
             this.pnlQuanLyTaiKhoan.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picQuanLyTaiKhoan)).EndInit();
@@ -425,7 +464,7 @@
         private System.Windows.Forms.PictureBox picQuanLyNhanVien;
         private System.Windows.Forms.Panel pnlChucVu;
         private System.Windows.Forms.Label lblQuanLyChucVu;
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox picQuanLyChucVu;
         private System.Windows.Forms.Panel pnlThongBao;
         private System.Windows.Forms.Label lbllThongBao;
         private System.Windows.Forms.PictureBox picThongBao;

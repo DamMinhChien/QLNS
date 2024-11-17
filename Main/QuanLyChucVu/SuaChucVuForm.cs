@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -81,12 +82,29 @@ namespace Main
                 MessageBox.Show("Vui lòng điền đầy đủ thông tin.");
                 return;
             }
-
-            string query = "update ChucVu set maChucVu = '" + ID + "', tenChucVu = '" + tenChucVu + "', heSoChucVu = '" + heSoChucVu + "'where maChucVu = '"+this.maChucVu+"' ";
+            if (CheckIfEmployeeIdExists(ID) && ID != maChucVu)
+            {
+                MessageBox.Show("Mã chức vụ đã tồn tại, vui lòng nhập lại.");
+                return;
+            }
+            string query = "update ChucVu set maChucVu = '" + ID + "', tenChucVu = N'" + tenChucVu + "', heSoChucVu = '" + heSoChucVu + "'where maChucVu = '"+this.maChucVu+"' ";
 
             Function.UpdateDataQuery(query);
         }
-
+        private bool CheckIfEmployeeIdExists(string employeeId)
+        {
+            string query = "SELECT COUNT(*) FROM ChucVu WHERE maChucVu = @maChucVu"; // Sử dụng tham số
+            using (SqlConnection sqlConnection = new SqlConnection(Function.GetConnectionString()))
+            {
+                sqlConnection.Open(); // Mở kết nối
+                using (SqlCommand cmd = new SqlCommand(query, sqlConnection))
+                {
+                    cmd.Parameters.AddWithValue("@maChucVu", employeeId); // Thêm tham số vào câu lệnh
+                    int count = (int)cmd.ExecuteScalar(); // Lấy số lượng bản ghi
+                    return count > 0; // Trả về true nếu mã đã tồn tại
+                }
+            }
+        }
         private void trợGiúpToolStripMenuItem_Click(object sender, EventArgs e)
         {
             AboutForm aboutForm = new AboutForm();

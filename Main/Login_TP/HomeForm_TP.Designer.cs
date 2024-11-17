@@ -74,6 +74,8 @@
             this.picQuanLyphongBan.TabIndex = 0;
             this.picQuanLyphongBan.TabStop = false;
             this.picQuanLyphongBan.Click += new System.EventHandler(this.picQuanLyphongBan_Click);
+            this.picQuanLyphongBan.MouseEnter += new System.EventHandler(this.picQuanLyphongBan_MouseEnter);
+            this.picQuanLyphongBan.MouseLeave += new System.EventHandler(this.picQuanLyphongBan_MouseLeave);
             // 
             // picQuanLyChamCong
             // 
@@ -86,6 +88,8 @@
             this.picQuanLyChamCong.TabIndex = 0;
             this.picQuanLyChamCong.TabStop = false;
             this.picQuanLyChamCong.Click += new System.EventHandler(this.picQuanLyChamCong_Click);
+            this.picQuanLyChamCong.MouseEnter += new System.EventHandler(this.picQuanLyChamCong_MouseEnter);
+            this.picQuanLyChamCong.MouseLeave += new System.EventHandler(this.picQuanLyChamCong_MouseLeave);
             // 
             // toolStripProgressBar1
             // 
@@ -121,6 +125,8 @@
             this.lblQuanLyNhanVien.TabIndex = 1;
             this.lblQuanLyNhanVien.Text = "Nhân Viên";
             this.lblQuanLyNhanVien.Click += new System.EventHandler(this.picQuanLyNhanVien_Click);
+            this.lblQuanLyNhanVien.MouseEnter += new System.EventHandler(this.picQuanLyNhanVien_MouseEnter);
+            this.lblQuanLyNhanVien.MouseLeave += new System.EventHandler(this.picQuanLyNhanVien_MouseLeave);
             // 
             // lblQuanLyPhongBan
             // 
@@ -132,6 +138,8 @@
             this.lblQuanLyPhongBan.Size = new System.Drawing.Size(195, 39);
             this.lblQuanLyPhongBan.TabIndex = 1;
             this.lblQuanLyPhongBan.Text = "Phòng Ban";
+            this.lblQuanLyPhongBan.MouseEnter += new System.EventHandler(this.picQuanLyphongBan_MouseEnter);
+            this.lblQuanLyPhongBan.MouseLeave += new System.EventHandler(this.picQuanLyphongBan_MouseLeave);
             // 
             // pnlQuanLyPhongBan
             // 
@@ -141,6 +149,8 @@
             this.pnlQuanLyPhongBan.Name = "pnlQuanLyPhongBan";
             this.pnlQuanLyPhongBan.Size = new System.Drawing.Size(234, 261);
             this.pnlQuanLyPhongBan.TabIndex = 1;
+            this.pnlQuanLyPhongBan.MouseEnter += new System.EventHandler(this.picQuanLyphongBan_MouseEnter);
+            this.pnlQuanLyPhongBan.MouseLeave += new System.EventHandler(this.picQuanLyphongBan_MouseLeave);
             // 
             // lblQuanLyChamCong
             // 
@@ -152,6 +162,8 @@
             this.lblQuanLyChamCong.Size = new System.Drawing.Size(200, 39);
             this.lblQuanLyChamCong.TabIndex = 1;
             this.lblQuanLyChamCong.Text = "Chấm công";
+            this.lblQuanLyChamCong.MouseEnter += new System.EventHandler(this.picQuanLyChamCong_MouseEnter);
+            this.lblQuanLyChamCong.MouseLeave += new System.EventHandler(this.picQuanLyChamCong_MouseLeave);
             // 
             // pnlQuanLyChamCong
             // 
@@ -161,6 +173,8 @@
             this.pnlQuanLyChamCong.Name = "pnlQuanLyChamCong";
             this.pnlQuanLyChamCong.Size = new System.Drawing.Size(234, 261);
             this.pnlQuanLyChamCong.TabIndex = 2;
+            this.pnlQuanLyChamCong.MouseEnter += new System.EventHandler(this.picQuanLyChamCong_MouseEnter);
+            this.pnlQuanLyChamCong.MouseLeave += new System.EventHandler(this.picQuanLyChamCong_MouseLeave);
             // 
             // trợGiúpToolStripMenuItem
             // 
@@ -215,6 +229,8 @@
             this.picQuanLyNhanVien.TabIndex = 0;
             this.picQuanLyNhanVien.TabStop = false;
             this.picQuanLyNhanVien.Click += new System.EventHandler(this.picQuanLyNhanVien_Click);
+            this.picQuanLyNhanVien.MouseEnter += new System.EventHandler(this.picQuanLyNhanVien_MouseEnter);
+            this.picQuanLyNhanVien.MouseLeave += new System.EventHandler(this.picQuanLyNhanVien_MouseLeave);
             // 
             // pnlQuanLyNhanVien
             // 
@@ -224,6 +240,8 @@
             this.pnlQuanLyNhanVien.Name = "pnlQuanLyNhanVien";
             this.pnlQuanLyNhanVien.Size = new System.Drawing.Size(234, 261);
             this.pnlQuanLyNhanVien.TabIndex = 0;
+            this.pnlQuanLyNhanVien.MouseEnter += new System.EventHandler(this.picQuanLyNhanVien_MouseEnter);
+            this.pnlQuanLyNhanVien.MouseLeave += new System.EventHandler(this.picQuanLyNhanVien_MouseLeave);
             // 
             // gprQuanLy
             // 
@@ -247,6 +265,8 @@
             this.pnlThongBao.Name = "pnlThongBao";
             this.pnlThongBao.Size = new System.Drawing.Size(234, 261);
             this.pnlThongBao.TabIndex = 3;
+            this.pnlThongBao.MouseEnter += new System.EventHandler(this.picThongBao_MouseEnter);
+            this.pnlThongBao.MouseLeave += new System.EventHandler(this.picThongBao_MouseLeave);
             // 
             // lbllThongBao
             // 
@@ -258,6 +278,8 @@
             this.lbllThongBao.Size = new System.Drawing.Size(189, 39);
             this.lbllThongBao.TabIndex = 1;
             this.lbllThongBao.Text = "Thông báo";
+            this.lbllThongBao.MouseEnter += new System.EventHandler(this.picThongBao_MouseEnter);
+            this.lbllThongBao.MouseLeave += new System.EventHandler(this.picThongBao_MouseLeave);
             // 
             // picThongBao
             // 
@@ -270,6 +292,8 @@
             this.picThongBao.TabIndex = 0;
             this.picThongBao.TabStop = false;
             this.picThongBao.Click += new System.EventHandler(this.picThongBao_Click);
+            this.picThongBao.MouseEnter += new System.EventHandler(this.picThongBao_MouseEnter);
+            this.picThongBao.MouseLeave += new System.EventHandler(this.picThongBao_MouseLeave);
             // 
             // HomeForm_TP
             // 

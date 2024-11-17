@@ -149,5 +149,125 @@ namespace Main
                 ID = value;
             }
         }
+
+        private void pnlQuanLyTaiKhoan_MouseEnter(object sender, EventArgs e)
+        {
+            Function.EnterFormatPanel(pnlQuanLyTaiKhoan);
+        }
+
+        private void pnlQuanLyTaiKhoan_MouseLeave(object sender, EventArgs e)
+        {
+            Function.LeaveFormatPanel(pnlQuanLyTaiKhoan);
+        }
+
+        private void pnlQuanLyNhanVien_MouseEnter(object sender, EventArgs e)
+        {
+            Function.EnterFormatPanel(pnlQuanLyNhanVien);
+        }
+
+        private void pnlQuanLyNhanVien_MouseLeave(object sender, EventArgs e)
+        {
+            Function.LeaveFormatPanel(pnlQuanLyNhanVien);
+        }
+
+        private void pnlQuanLyPhongBan_MouseEnter(object sender, EventArgs e)
+        {
+            Function.EnterFormatPanel(pnlQuanLyPhongBan);
+        }
+
+        private void pnlQuanLyPhongBan_MouseLeave(object sender, EventArgs e)
+        {
+            Function.LeaveFormatPanel(pnlQuanLyPhongBan);
+        }
+
+        private void pnlChucVu_MouseEnter(object sender, EventArgs e)
+        {
+            Function.EnterFormatPanel(pnlChucVu);
+        }
+
+        private void pnlChucVu_MouseLeave(object sender, EventArgs e)
+        {
+            Function.LeaveFormatPanel(pnlChucVu);
+        }
+
+        private void pnlQuanLyChamCong_MouseEnter(object sender, EventArgs e)
+        {
+            Function.EnterFormatPanel(pnlQuanLyChamCong);
+        }
+
+        private void pnlQuanLyChamCong_MouseLeave(object sender, EventArgs e)
+        {
+            Function.LeaveFormatPanel(pnlQuanLyChamCong);
+        }
+
+        private void pnlThongBao_MouseEnter(object sender, EventArgs e)
+        {
+            Function.EnterFormatPanel(pnlThongBao);
+        }
+
+        private void pnlThongBao_MouseLeave(object sender, EventArgs e)
+        {
+            Function.LeaveFormatPanel(pnlThongBao);
+        }
+
+        private void pnlQuanLyTaiKhoan_MouseEnter_1(object sender, EventArgs e)
+        {
+            pnlQuanLyTaiKhoan_MouseEnter(sender, e);
+        }
+
+        private void pnlQuanLyTaiKhoan_MouseLeave_1(object sender, EventArgs e)
+        {
+            pnlQuanLyTaiKhoan_MouseLeave(sender, e);
+        }
+
+        private void picQuanLyNhanVien_MouseEnter(object sender, EventArgs e)
+        {
+            pnlQuanLyNhanVien_MouseEnter(sender,e);
+        }
+
+        private void picQuanLyNhanVien_MouseLeave(object sender, EventArgs e)
+        {
+            pnlQuanLyNhanVien_MouseLeave(sender, e);
+        }
+
+        private void picQuanLyphongBan_MouseEnter(object sender, EventArgs e)
+        {
+            pnlQuanLyPhongBan_MouseEnter(sender,e );
+        }
+
+        private void picQuanLyphongBan_MouseLeave(object sender, EventArgs e)
+        {
+            pnlQuanLyPhongBan_MouseLeave(sender, e);
+        }
+
+        private void picQuanLyChucVu_MouseEnter(object sender, EventArgs e)
+        {
+            pnlChucVu_MouseEnter(sender, e);
+        }
+
+        private void picQuanLyChucVu_MouseLeave(object sender, EventArgs e)
+        {
+            pnlChucVu_MouseLeave(sender, e);
+        }
+
+        private void picQuanLyChamCong_MouseEnter(object sender, EventArgs e)
+        {
+            pnlQuanLyChamCong_MouseEnter(sender, e);
+        }
+
+        private void picQuanLyChamCong_MouseLeave(object sender, EventArgs e)
+        {
+            pnlQuanLyChamCong_MouseLeave(sender, e);
+        }
+
+        private void picThongBao_MouseEnter(object sender, EventArgs e)
+        {
+            pnlThongBao_MouseEnter(sender, e);
+        }
+
+        private void picThongBao_MouseLeave(object sender, EventArgs e)
+        {
+            pnlThongBao_MouseLeave(sender, e);
+        }
     }
 }

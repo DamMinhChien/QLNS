@@ -64,6 +64,8 @@ namespace Main
                 }
                 else
                 {
+                    string query = "insert into NhanVien values ( '12345', N'admin',N'nam', '2004/02/22', '012345677',N'admin','abc@gmail.com', '2','PB01' ,'ad001')";
+                    Function.UpdateDataQuery(query);
                     Function.UpdateDataQuery("INSERT INTO TaiKhoan (maTaiKhoan,tenDangNhap , matKhau, maNhanVien) VALUES ('12345','admin' ,'" + newPass + "', 'admin')");
                 }
             }

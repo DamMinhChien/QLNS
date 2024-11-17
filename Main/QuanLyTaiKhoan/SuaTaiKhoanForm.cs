@@ -113,9 +113,9 @@ namespace Main
                 MessageBox.Show("Vui lòng nhập dầy đủ thông tin.");
                 return;
             }
-            if (!CheckIfEmployeeIdExists(ID))
+            if (CheckIfEmployeeIdExists(ID) && ID != maTaiKhoan)
             {
-                MessageBox.Show("Không tìm thấy mã nhân viên, vui lòng nhập lại.");
+                MessageBox.Show("Tài Khoản đã tồn tại, vui lòng nhập lại.");
                 return;
             }
 

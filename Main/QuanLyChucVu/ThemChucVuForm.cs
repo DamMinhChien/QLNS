@@ -30,19 +30,7 @@ namespace Main
 
         private void ThemChucVuForm_Load(object sender, EventArgs e)
         {
-            string query2 = "select distinct maChucVu from ChucVu";
-            DataTable dataTable2 = Function.GetDataQuery(query2);
-            // Xóa các item cũ trong ComboBox
-            cmbChucVu.Items.Clear();
 
-            // Duyệt qua từng hàng trong DataTable
-            foreach (DataRow row in dataTable2.Rows)
-            {
-                // Lấy giá trị của cột hoTen
-                string chucVu = row[0].ToString();
-                // Thêm vào ComboBox
-                cmbChucVu.Items.Add(chucVu);
-            }
         }
 
         private bool CheckIfEmployeeIdExists(string employeeId)
@@ -62,7 +50,7 @@ namespace Main
 
         private void btnAdd_Click(object sender, EventArgs e)
         {
-            string ID = cmbChucVu.SelectedItem.ToString();
+            string ID = txtChucVu.Text.Trim();
             string tenChucVu = txtTenChucVu.Text.Trim();
             float heSoChucVu;
 
@@ -86,7 +74,7 @@ namespace Main
                 return;
             }
 
-            string query = "insert into ChucVu values ( '" + ID + "', '" + tenChucVu + "', '" + heSoChucVu + "'  )";
+            string query = "insert into ChucVu values ( '" + ID + "', N'" + tenChucVu + "', '" + heSoChucVu + "'  )";
 
             Function.UpdateDataQuery(query);
         }
@@ -98,13 +86,51 @@ namespace Main
 
         private void cmbChucVu_SelectedIndexChanged(object sender, EventArgs e)
         {
-
+            UpdateMaChucVu();
         }
+        private void UpdateMaChucVu()
+        {
+            string tenChucVuCurrent = cmbChucVu.SelectedItem?.ToString().Trim();
 
+            // Kiểm tra xem có giá trị nào được chọn không
+            if (!string.IsNullOrEmpty(tenChucVuCurrent))
+            {
+                if (tenChucVuCurrent == "Admin")
+                {
+                    txtChucVu.Text = "ad" + GenerateRandomEmployeeId();
+                }
+                else if (tenChucVuCurrent == "Trưởng Phòng")
+                {
+                    txtChucVu.Text = "TP" + GenerateRandomEmployeeId();
+                }
+                else
+                {
+                    txtChucVu.Text = "NV" + GenerateRandomEmployeeId();
+                }
+            }
+        }
+        private string GenerateRandomEmployeeId()
+        {
+            Random random = new Random();
+            string employeeId;
+
+            do
+            {
+                int randomNumber = random.Next(100, 1000); // Sinh số ngẫu nhiên từ 100 đến 999
+                employeeId = randomNumber.ToString(); 
+            } while (CheckIfEmployeeIdExists(employeeId)); // Kiểm tra xem mã đã tồn tại chưa
+
+            return employeeId;
+        }
         private void trợGiúpToolStripMenuItem_Click(object sender, EventArgs e)
         {
             AboutForm aboutForm = new AboutForm();
             aboutForm.Show();
+        }
+
+        private void label4_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
