@@ -130,42 +130,44 @@ namespace Main
             if (confirmResult == DialogResult.Yes)
             {
                 // Câu lệnh SQL để xóa bản ghi
-                string query1 = "DELETE FROM PhongBan_ThongBao WHERE maThongBao = @maThongBao"; // Sửa câu lệnh này
-                string query2 = "DELETE FROM ThongBao WHERE maThongBao = @maThongBao";
+                string query1 = "DELETE FROM PhongBan_ThongBao WHERE maThongBao = @maThongBao";
+                string query2 = "DELETE FROM NhanVien_ThongBao WHERE maThongBao = @maThongBao";
+                string query3 = "DELETE FROM ThongBao WHERE maThongBao = @maThongBao";
 
                 using (SqlConnection sqlConnection = new SqlConnection(Function.GetConnectionString()))
                 {
                     sqlConnection.Open(); // Mở kết nối
 
-                    using (SqlCommand cmd1 = new SqlCommand(query1, sqlConnection))
+                    using (SqlTransaction transaction = sqlConnection.BeginTransaction())
                     {
-                        cmd1.Parameters.AddWithValue("@maThongBao", selectedMaThongBao); // Thêm tham số cho câu lệnh đầu tiên
-
                         try
                         {
-                            // Thực thi câu lệnh xóa trong bảng NhanVien_ThongBao
-                            int rowsAffected1 = cmd1.ExecuteNonQuery();
-
-                            using (SqlCommand cmd2 = new SqlCommand(query2, sqlConnection))
+                            using (SqlCommand cmd1 = new SqlCommand(query1, sqlConnection, transaction))
                             {
-                                cmd2.Parameters.AddWithValue("@maThongBao", selectedMaThongBao); // Thêm tham số cho câu lệnh thứ hai
-
-                                // Thực thi câu lệnh xóa trong bảng ThongBao
-                                int rowsAffected2 = cmd2.ExecuteNonQuery();
-
-                                if (rowsAffected1 > 0 || rowsAffected2 > 0)
-                                {
-                                    MessageBox.Show("Thông báo đã được xóa thành công.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                                    RefreshData(); // Cập nhật lại dữ liệu trong DataGridView
-                                }
-                                else
-                                {
-                                    MessageBox.Show("Không tìm thấy thông báo để xóa.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                                }
+                                cmd1.Parameters.AddWithValue("@maThongBao", selectedMaThongBao);
+                                int rowsAffected1 = cmd1.ExecuteNonQuery();
                             }
+
+                            using (SqlCommand cmd2 = new SqlCommand(query2, sqlConnection, transaction))
+                            {
+                                cmd2.Parameters.AddWithValue("@maThongBao", selectedMaThongBao);
+                                int rowsAffected2 = cmd2.ExecuteNonQuery();
+                            }
+
+                            using (SqlCommand cmd3 = new SqlCommand(query3, sqlConnection, transaction))
+                            {
+                                cmd3.Parameters.AddWithValue("@maThongBao", selectedMaThongBao);
+                                int rowsAffected3 = cmd3.ExecuteNonQuery();
+                            }
+
+                            transaction.Commit(); // Xác nhận giao dịch
+
+                            MessageBox.Show("Thông báo đã được xóa thành công.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            RefreshData(); // Cập nhật lại dữ liệu trong DataGridView
                         }
                         catch (Exception ex)
                         {
+                            transaction.Rollback(); // Hoàn tác giao dịch nếu có lỗi
                             MessageBox.Show($"Đã xảy ra lỗi: {ex.Message}", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
                         }
                     }
