@@ -134,12 +134,6 @@ namespace Main
             string queryPhongBan = $"SELECT maNhanVien FROM NhanVien WHERE maPhongBan = '{selectedMaPhongBan}'";
             DataTable dataTablePhongBan = Function.GetDataQuery(queryPhongBan);
 
-            if (dataTablePhongBan.Rows.Count == 0)
-            {
-                MessageBox.Show("Không có nhân viên nào liên kết với phòng ban này.");
-                return;
-            }
-
             // Xác nhận việc xóa
             var result = MessageBox.Show("Bạn có chắc chắn muốn xóa phòng ban này?", "Xác Nhận", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
             if (result == DialogResult.Yes)
@@ -174,9 +168,24 @@ namespace Main
                                     command.ExecuteNonQuery();
                                 }
 
+                                // Xóa NhanVien_ThongBao
+                                string queryNhanVien_ThongBao = $"DELETE FROM NhanVien_ThongBao WHERE maNhanVien IN (SELECT maNhanVien FROM NhanVien WHERE maPhongBan = '{selectedMaPhongBan}');";
+                                command.CommandText = queryNhanVien_ThongBao;
+                                command.ExecuteNonQuery();
+
+                                // Xóa PhongBan_ThongBao
+                                string queryPhongBan_ThongBao = $"DELETE FROM PhongBan_ThongBao WHERE maPhongBan = '{selectedMaPhongBan}';";
+                                command.CommandText = queryPhongBan_ThongBao;
+                                command.ExecuteNonQuery();
+
                                 // Xóa nhân viên theo phòng ban
                                 string queryNhanVien = $"DELETE FROM NhanVien WHERE maPhongBan = '{selectedMaPhongBan}';";
                                 command.CommandText = queryNhanVien;
+                                command.ExecuteNonQuery();
+
+                                // Xóa thông báo liên quan
+                                string queryThongBao = $"DELETE FROM ThongBao WHERE maThongBao IN (SELECT maThongBao FROM NhanVien_ThongBao WHERE maNhanVien IN (SELECT maNhanVien FROM NhanVien WHERE maPhongBan = '{selectedMaPhongBan}')) OR maThongBao IN (SELECT maThongBao FROM PhongBan_ThongBao WHERE maPhongBan = '{selectedMaPhongBan}');";
+                                command.CommandText = queryThongBao;
                                 command.ExecuteNonQuery();
 
                                 // Xóa phòng ban

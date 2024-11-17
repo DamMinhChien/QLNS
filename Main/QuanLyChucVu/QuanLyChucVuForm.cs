@@ -77,14 +77,8 @@ namespace Main
             }
 
             // Lấy mã nhân viên liên kết với chức vụ
-            string query = $"SELECT maNhanVien FROM NhanVien nv INNER JOIN ChucVu cv ON nv.maChucVu = cv.maChucVu WHERE nv.maChucVu = '{selectedMaChucVu}'";
+            string query = $"SELECT maNhanVien FROM NhanVien WHERE maChucVu = '{selectedMaChucVu}'";
             DataTable dataTable = Function.GetDataQuery(query);
-
-            if (dataTable.Rows.Count == 0)
-            {
-                MessageBox.Show("Không có nhân viên nào liên kết với chức vụ này.");
-                return;
-            }
 
             // Xác nhận việc xóa
             var result = MessageBox.Show("Bạn có chắc chắn muốn xóa chức vụ này?", "Xác Nhận", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
@@ -115,19 +109,29 @@ namespace Main
                                 foreach (DataRow row in dataTable.Rows)
                                 {
                                     string maNhanVien = row["maNhanVien"].ToString();
-                                    string query1 = $"DELETE FROM TaiKhoan WHERE maNhanVien = '{maNhanVien}';";
-                                    command.CommandText = query1;
+                                    string queryTaiKhoan = $"DELETE FROM TaiKhoan WHERE maNhanVien = '{maNhanVien}';";
+                                    command.CommandText = queryTaiKhoan;
                                     command.ExecuteNonQuery();
                                 }
 
+                                // Xóa NhanVien_ThongBao
+                                string queryNhanVien_ThongBao = $"DELETE FROM NhanVien_ThongBao WHERE maNhanVien IN (SELECT maNhanVien FROM NhanVien WHERE maChucVu = '{selectedMaChucVu}');";
+                                command.CommandText = queryNhanVien_ThongBao;
+                                command.ExecuteNonQuery();
+
+                                // Xóa thông báo liên quan
+                                string queryThongBao = $"DELETE FROM ThongBao WHERE maThongBao IN (SELECT maThongBao FROM NhanVien_ThongBao WHERE maNhanVien IN (SELECT maNhanVien FROM NhanVien WHERE maChucVu = '{selectedMaChucVu}'));";
+                                command.CommandText = queryThongBao;
+                                command.ExecuteNonQuery();
+
                                 // Xóa nhân viên
-                                string query2 = $"DELETE FROM NhanVien WHERE maChucVu = '{selectedMaChucVu}';";
-                                command.CommandText = query2;
+                                string queryNhanVien = $"DELETE FROM NhanVien WHERE maChucVu = '{selectedMaChucVu}';";
+                                command.CommandText = queryNhanVien;
                                 command.ExecuteNonQuery();
 
                                 // Xóa chức vụ
-                                string query3 = $"DELETE FROM ChucVu WHERE maChucVu = '{selectedMaChucVu}';";
-                                command.CommandText = query3;
+                                string queryChucVu = $"DELETE FROM ChucVu WHERE maChucVu = '{selectedMaChucVu}';";
+                                command.CommandText = queryChucVu;
                                 command.ExecuteNonQuery();
 
                                 // Xác nhận giao dịch
@@ -146,7 +150,7 @@ namespace Main
                 }
 
                 // Refresh dữ liệu
-                Function.LoadDataGridView(dgvDanhSachChucVu, "SELECT * FROM ChucVu");
+                toolStripMenuItem7_Click(sender, e);
             }
         }
 

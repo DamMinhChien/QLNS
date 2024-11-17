@@ -3,32 +3,8 @@
   "WorkspaceRootPath": "C:\\Users\\dammi\\source\\repos\\QLNS\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{D52E2193-B411-4269-B729-60D5E9A55ADC}|Main\\Main.csproj|c:\\users\\dammi\\source\\repos\\qlns\\main\\quanlythongbao\\thongbao_phongbanform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D52E2193-B411-4269-B729-60D5E9A55ADC}|Main\\Main.csproj|solutionrelative:main\\quanlythongbao\\thongbao_phongbanform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D52E2193-B411-4269-B729-60D5E9A55ADC}|Main\\Main.csproj|c:\\users\\dammi\\source\\repos\\qlns\\main\\quanlythongbao\\thongbao_phongbanform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{D52E2193-B411-4269-B729-60D5E9A55ADC}|Main\\Main.csproj|solutionrelative:main\\quanlythongbao\\thongbao_phongbanform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D52E2193-B411-4269-B729-60D5E9A55ADC}|Main\\Main.csproj|c:\\users\\dammi\\source\\repos\\qlns\\main\\quanlythongbao\\thongbao_nhanvienform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D52E2193-B411-4269-B729-60D5E9A55ADC}|Main\\Main.csproj|solutionrelative:main\\quanlythongbao\\thongbao_nhanvienform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D52E2193-B411-4269-B729-60D5E9A55ADC}|Main\\Main.csproj|c:\\users\\dammi\\source\\repos\\qlns\\main\\quanlythongbao\\thongbao_nhanvienform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{D52E2193-B411-4269-B729-60D5E9A55ADC}|Main\\Main.csproj|solutionrelative:main\\quanlythongbao\\thongbao_nhanvienform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D52E2193-B411-4269-B729-60D5E9A55ADC}|Main\\Main.csproj|c:\\users\\dammi\\source\\repos\\qlns\\main\\quanlythongbao\\quanlythongbaoform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D52E2193-B411-4269-B729-60D5E9A55ADC}|Main\\Main.csproj|solutionrelative:main\\quanlythongbao\\quanlythongbaoform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D52E2193-B411-4269-B729-60D5E9A55ADC}|Main\\Main.csproj|c:\\users\\dammi\\source\\repos\\qlns\\main\\quanlythongbao\\quanlythongbaoform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{D52E2193-B411-4269-B729-60D5E9A55ADC}|Main\\Main.csproj|solutionrelative:main\\quanlythongbao\\quanlythongbaoform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D52E2193-B411-4269-B729-60D5E9A55ADC}|Main\\Main.csproj|c:\\users\\dammi\\source\\repos\\qlns\\main\\quanlynhanvien\\quanlynhanvienform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{D52E2193-B411-4269-B729-60D5E9A55ADC}|Main\\Main.csproj|solutionrelative:main\\quanlynhanvien\\quanlynhanvienform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{D52E2193-B411-4269-B729-60D5E9A55ADC}|Main\\Main.csproj|c:\\users\\dammi\\source\\repos\\qlns\\main\\quanlyphongban\\suaphongbanform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{D52E2193-B411-4269-B729-60D5E9A55ADC}|Main\\Main.csproj|solutionrelative:main\\quanlyphongban\\suaphongbanform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     }
   ],
   "DocumentGroupContainers": [
@@ -43,88 +19,13 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "ThongBao_PhongBanForm.cs",
-              "DocumentMoniker": "C:\\Users\\dammi\\source\\repos\\QLNS\\Main\\QuanLyThongBao\\ThongBao_PhongBanForm.cs",
-              "RelativeDocumentMoniker": "Main\\QuanLyThongBao\\ThongBao_PhongBanForm.cs",
-              "ToolTip": "C:\\Users\\dammi\\source\\repos\\QLNS\\Main\\QuanLyThongBao\\ThongBao_PhongBanForm.cs",
-              "RelativeToolTip": "Main\\QuanLyThongBao\\ThongBao_PhongBanForm.cs",
-              "ViewState": "AgIAAHQAAAAAAAAAAAAQwK4AAAANAAAAAAAAAA==",
+              "Title": "SuaPhongBanForm.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\dammi\\source\\repos\\QLNS\\Main\\QuanLyPhongBan\\SuaPhongBanForm.cs",
+              "RelativeDocumentMoniker": "Main\\QuanLyPhongBan\\SuaPhongBanForm.cs",
+              "ToolTip": "C:\\Users\\dammi\\source\\repos\\QLNS\\Main\\QuanLyPhongBan\\SuaPhongBanForm.cs [Design]",
+              "RelativeToolTip": "Main\\QuanLyPhongBan\\SuaPhongBanForm.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-17T07:12:01.252Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "ThongBao_PhongBanForm.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\dammi\\source\\repos\\QLNS\\Main\\QuanLyThongBao\\ThongBao_PhongBanForm.cs",
-              "RelativeDocumentMoniker": "Main\\QuanLyThongBao\\ThongBao_PhongBanForm.cs",
-              "ToolTip": "C:\\Users\\dammi\\source\\repos\\QLNS\\Main\\QuanLyThongBao\\ThongBao_PhongBanForm.cs [Design]",
-              "RelativeToolTip": "Main\\QuanLyThongBao\\ThongBao_PhongBanForm.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-17T07:11:59.635Z",
-              "EditorCaption": " [Design]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "ThongBao_NhanVienForm.cs",
-              "DocumentMoniker": "C:\\Users\\dammi\\source\\repos\\QLNS\\Main\\QuanLyThongBao\\ThongBao_NhanVienForm.cs",
-              "RelativeDocumentMoniker": "Main\\QuanLyThongBao\\ThongBao_NhanVienForm.cs",
-              "ToolTip": "C:\\Users\\dammi\\source\\repos\\QLNS\\Main\\QuanLyThongBao\\ThongBao_NhanVienForm.cs",
-              "RelativeToolTip": "Main\\QuanLyThongBao\\ThongBao_NhanVienForm.cs",
-              "ViewState": "AgIAAHoAAAAAAAAAAAAgwCcAAAAMAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-17T07:11:34.59Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "ThongBao_NhanVienForm.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\dammi\\source\\repos\\QLNS\\Main\\QuanLyThongBao\\ThongBao_NhanVienForm.cs",
-              "RelativeDocumentMoniker": "Main\\QuanLyThongBao\\ThongBao_NhanVienForm.cs",
-              "ToolTip": "C:\\Users\\dammi\\source\\repos\\QLNS\\Main\\QuanLyThongBao\\ThongBao_NhanVienForm.cs [Design]",
-              "RelativeToolTip": "Main\\QuanLyThongBao\\ThongBao_NhanVienForm.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-17T07:11:31.44Z",
-              "EditorCaption": " [Design]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "QuanLyThongBaoForm.cs",
-              "DocumentMoniker": "C:\\Users\\dammi\\source\\repos\\QLNS\\Main\\QuanLyThongBao\\QuanLyThongBaoForm.cs",
-              "RelativeDocumentMoniker": "Main\\QuanLyThongBao\\QuanLyThongBaoForm.cs",
-              "ToolTip": "C:\\Users\\dammi\\source\\repos\\QLNS\\Main\\QuanLyThongBao\\QuanLyThongBaoForm.cs",
-              "RelativeToolTip": "Main\\QuanLyThongBao\\QuanLyThongBaoForm.cs",
-              "ViewState": "AgIAALgAAAAAAAAAAADgv8cAAABDAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-17T07:09:38.951Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "QuanLyThongBaoForm.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\dammi\\source\\repos\\QLNS\\Main\\QuanLyThongBao\\QuanLyThongBaoForm.cs",
-              "RelativeDocumentMoniker": "Main\\QuanLyThongBao\\QuanLyThongBaoForm.cs",
-              "ToolTip": "C:\\Users\\dammi\\source\\repos\\QLNS\\Main\\QuanLyThongBao\\QuanLyThongBaoForm.cs [Design]",
-              "RelativeToolTip": "Main\\QuanLyThongBao\\QuanLyThongBaoForm.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-17T07:09:36.235Z",
-              "EditorCaption": " [Design]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "QuanLyNhanVienForm.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\dammi\\source\\repos\\QLNS\\Main\\QuanLyNhanVien\\QuanLyNhanVienForm.cs",
-              "RelativeDocumentMoniker": "Main\\QuanLyNhanVien\\QuanLyNhanVienForm.cs",
-              "ToolTip": "C:\\Users\\dammi\\source\\repos\\QLNS\\Main\\QuanLyNhanVien\\QuanLyNhanVienForm.cs [Design]",
-              "RelativeToolTip": "Main\\QuanLyNhanVien\\QuanLyNhanVienForm.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-17T07:09:26.527Z",
+              "WhenOpened": "2024-11-17T09:06:56.384Z",
               "EditorCaption": " [Design]"
             }
           ]
