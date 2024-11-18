@@ -73,7 +73,7 @@ namespace Main
                 MessageBox.Show("Vui lòng nhập đầy đủ thông tin!", "Thông báo");
                 return;
             }
-            string query = "update ThongBao set tieuDe = N'" + tieuDe + "', noiDung = N'" + noiDung + "', ngayDang = '" + dateTime + "',fileDinhKem = '" + fileDinhKem + "' where maThongBao = '" + maThongBao + "'";
+            string query = "update ThongBao set tieuDe = N'" + tieuDe + "', noiDung = N'" + noiDung + "', ngayDang = '" + dateTime.ToString("yyyy-MM-dd HH:mm:ss") + "',fileDinhKem = '" + fileDinhKem + "' where maThongBao = '" + maThongBao + "'";
             Function.UpdateDataQuery(query);
         }
 

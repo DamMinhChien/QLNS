@@ -76,7 +76,7 @@ namespace Main
             }
             if (string.IsNullOrEmpty(filePath))
             {
-                MessageBox.Show("Vui lòng chọn tệp để lưu.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Không tìm thấy tệp có sẵn.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return; // Dừng lại nếu không có tệp hợp lệ
             }
             //Mở hộp thoại lưu

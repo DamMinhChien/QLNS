@@ -62,5 +62,25 @@ namespace Main
         {
             return filePath_PB;
         }
+
+        private void dgvTB_PB_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            // Kiểm tra xem hàng được nhấn có hợp lệ không
+            if (e.RowIndex >= 0)
+            {
+                DataGridViewRow row = dgvTB_PB.Rows[e.RowIndex];
+
+                // Kiểm tra cột "fileDinhKem" có tồn tại không
+                if (row.Cells["fileDinhKem"].Value != null)
+                {
+                    // Lấy đường dẫn file từ cột "fileDinhKem"
+                    filePath_PB = row.Cells["fileDinhKem"].Value.ToString();
+                }
+                else
+                {
+                    MessageBox.Show("Không có giá trị trong cột fileDinhKem.");
+                }
+            }
+        }
     }
 }

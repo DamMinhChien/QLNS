@@ -129,15 +129,15 @@ namespace Main
             string filePath;
             if (currentButton == "NV")
             {
-                filePath = ThongBao_NhanVienForm.getPath();
+                filePath = PhongBanSoanThongBaoForm.getPath();
             }
             else
             {
-                filePath = ThongBao_PhongBanForm.getPath();
+                filePath = PhongBanXemThongBaoForm.getPath();
             }
             if (string.IsNullOrEmpty(filePath))
             {
-                MessageBox.Show("Vui lòng chọn tệp để lưu.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Không tìm thấy tệp có sẵn.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return; // Dừng lại nếu không có tệp hợp lệ
             }
             //Mở hộp thoại lưu

@@ -46,6 +46,7 @@
             this.dgvTB_PB.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvTB_PB.Size = new System.Drawing.Size(936, 340);
             this.dgvTB_PB.TabIndex = 2;
+            this.dgvTB_PB.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvTB_PB_CellClick);
             // 
             // PhongBanXemThongBaoForm
             // 

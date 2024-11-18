@@ -61,18 +61,21 @@ namespace Main
         private void button1_Click(object sender, EventArgs e)
         {
             OpenChildForm(new NhanVienInf(username, password));
+            HideLbl();
             lblTen.Text = NhanVienInf.GetHello();
             lblTen.Visible = true;
         }
 
         private void btn_Sys_Click(object sender, EventArgs e)
         {
+            HideLbl();
             lblSys.Visible = true;
             OpenChildForm(new NhanVien_sys());
         }
 
         private void btn_About_Click(object sender, EventArgs e)
         {
+            HideLbl();
             OpenChildForm(new About_NV());
             lblAbout.Visible = true;
         }
@@ -107,15 +110,20 @@ namespace Main
 
         private void btnThongBaoPhongBan_Click(object sender, EventArgs e)
         {
+            HideLbl();
             lblPB.Visible = true;
             lblPB.Text = $"Thông báo {this.tenPhongBan}";
             OpenChildForm(new PhongBanXemThongBaoForm(maPhongBan));
+            ((PhongBanXemThongBaoForm)currentFormChild).RefreshData();
+            panel_Body.ContextMenuStrip = contextMenuStrip2;
         }
 
         private void btnThongBaoCaNhan_Click(object sender, EventArgs e)
         {
+            HideLbl();
             lblCN.Visible = true;
             OpenChildForm(new NhanVien_TBCN(maNhanVien));
+            ((NhanVien_TBCN)currentFormChild).RefreshData();
         }
         private void EnterFormat(Button button)
         {
@@ -183,32 +191,81 @@ namespace Main
 
         private void btn_Sys_Leave(object sender, EventArgs e)
         {
-            lblSys.Visible = false;
+            //lblSys.Visible = false;
         }
 
         private void btnInf_Leave(object sender, EventArgs e)
         {
-            lblTen.Visible = false;
+            //lblTen.Visible = false;
         }
 
         private void btnThongBaoPhongBan_Leave(object sender, EventArgs e)
         {
-            lblPB.Visible = false;
+            //lblPB.Visible = false;
         }
 
         private void btnThongBaoCaNhan_Leave(object sender, EventArgs e)
         {
-            lblCN.Visible = false;
+            //lblCN.Visible = false;
         }
 
         private void btn_About_Leave(object sender, EventArgs e)
         {
-            lblAbout.Visible = false;
+            //lblAbout.Visible = false;
         }
 
         private void panel_title_Paint(object sender, PaintEventArgs e)
         {
+            
+        }
+        private void HideLbl()
+        {
+            foreach (Control control in panel_title.Controls)
+            {
+                if(control is Label label)
+                {
+                    label.Visible = false;
+                }
+            }
+        }
 
+        private void toolStripMenuItem9_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void toolStripMenuItem10_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void toolStripMenuItem10_Click_1(object sender, EventArgs e)
+        {
+            ((PhongBanXemThongBaoForm)currentFormChild).RefreshData();
+        }
+
+        private void toolStripMenuItem9_Click_1(object sender, EventArgs e)
+        {
+            string filePath = PhongBanXemThongBaoForm.getPath();
+            if (string.IsNullOrEmpty(filePath))
+            {
+                MessageBox.Show("Không tìm thấy tệp có sẵn.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return; // Dừng lại nếu không có tệp hợp lệ
+            }
+            //Mở hộp thoại lưu
+            SaveFileDialog saveFileDialog = new SaveFileDialog
+            {
+                FileName = System.IO.Path.GetFileName(filePath), // Đặt tên file mặc định
+                Filter = "Text Files (*.pdf)|*.pdf",
+                InitialDirectory = System.IO.Path.GetDirectoryName(filePath)
+            };
+
+            if (saveFileDialog.ShowDialog() == DialogResult.OK)
+            {
+                // Lưu file vào đường dẫn đã chọn
+                System.IO.File.Copy(filePath, saveFileDialog.FileName, overwrite: true);
+                MessageBox.Show($"File saved to {saveFileDialog.FileName}");
+            }
         }
     }
 }

@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.panel1 = new System.Windows.Forms.Panel();
             this.btn_About = new System.Windows.Forms.Button();
             this.btn_Sys = new System.Windows.Forms.Button();
@@ -38,15 +39,19 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel_Body = new System.Windows.Forms.Panel();
             this.panel_title = new System.Windows.Forms.Panel();
-            this.lblSys = new System.Windows.Forms.Label();
-            this.lblTen = new System.Windows.Forms.Label();
-            this.lblPB = new System.Windows.Forms.Label();
-            this.lblCN = new System.Windows.Forms.Label();
             this.lblAbout = new System.Windows.Forms.Label();
+            this.lblCN = new System.Windows.Forms.Label();
+            this.lblPB = new System.Windows.Forms.Label();
+            this.lblTen = new System.Windows.Forms.Label();
+            this.lblSys = new System.Windows.Forms.Label();
+            this.contextMenuStrip2 = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.toolStripMenuItem9 = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItem10 = new System.Windows.Forms.ToolStripMenuItem();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel_title.SuspendLayout();
+            this.contextMenuStrip2.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -171,6 +176,7 @@
             // 
             // panel_Body
             // 
+            this.panel_Body.BackColor = System.Drawing.Color.White;
             this.panel_Body.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel_Body.Location = new System.Drawing.Point(312, 162);
             this.panel_Body.Name = "panel_Body";
@@ -180,6 +186,7 @@
             // 
             // panel_title
             // 
+            this.panel_title.BackColor = System.Drawing.Color.White;
             this.panel_title.Controls.Add(this.lblAbout);
             this.panel_title.Controls.Add(this.lblCN);
             this.panel_title.Controls.Add(this.lblPB);
@@ -192,47 +199,19 @@
             this.panel_title.TabIndex = 2;
             this.panel_title.Paint += new System.Windows.Forms.PaintEventHandler(this.panel_title_Paint);
             // 
-            // lblSys
+            // lblAbout
             // 
-            this.lblSys.AutoSize = true;
-            this.lblSys.Font = new System.Drawing.Font("Century Gothic", 25.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblSys.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.lblSys.Location = new System.Drawing.Point(359, 52);
-            this.lblSys.Name = "lblSys";
-            this.lblSys.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.lblSys.Size = new System.Drawing.Size(200, 49);
-            this.lblSys.TabIndex = 3;
-            this.lblSys.Text = "Hệ thống";
-            this.lblSys.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.lblSys.Visible = false;
-            // 
-            // lblTen
-            // 
-            this.lblTen.AutoSize = true;
-            this.lblTen.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTen.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.lblTen.Location = new System.Drawing.Point(281, 64);
-            this.lblTen.Name = "lblTen";
-            this.lblTen.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.lblTen.Size = new System.Drawing.Size(218, 37);
-            this.lblTen.TabIndex = 4;
-            this.lblTen.Text = "Tên nhân viên";
-            this.lblTen.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.lblTen.Visible = false;
-            // 
-            // lblPB
-            // 
-            this.lblPB.AutoSize = true;
-            this.lblPB.Font = new System.Drawing.Font("Century Gothic", 25.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPB.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.lblPB.Location = new System.Drawing.Point(124, 52);
-            this.lblPB.Name = "lblPB";
-            this.lblPB.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.lblPB.Size = new System.Drawing.Size(404, 49);
-            this.lblPB.TabIndex = 5;
-            this.lblPB.Text = "Thông báo phòng ";
-            this.lblPB.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.lblPB.Visible = false;
+            this.lblAbout.AutoSize = true;
+            this.lblAbout.Font = new System.Drawing.Font("Century Gothic", 25.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblAbout.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.lblAbout.Location = new System.Drawing.Point(379, 54);
+            this.lblAbout.Name = "lblAbout";
+            this.lblAbout.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.lblAbout.Size = new System.Drawing.Size(149, 49);
+            this.lblAbout.TabIndex = 7;
+            this.lblAbout.Text = "About";
+            this.lblAbout.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblAbout.Visible = false;
             // 
             // lblCN
             // 
@@ -248,19 +227,74 @@
             this.lblCN.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.lblCN.Visible = false;
             // 
-            // lblAbout
+            // lblPB
             // 
-            this.lblAbout.AutoSize = true;
-            this.lblAbout.Font = new System.Drawing.Font("Century Gothic", 25.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblAbout.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.lblAbout.Location = new System.Drawing.Point(379, 54);
-            this.lblAbout.Name = "lblAbout";
-            this.lblAbout.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.lblAbout.Size = new System.Drawing.Size(149, 49);
-            this.lblAbout.TabIndex = 7;
-            this.lblAbout.Text = "About";
-            this.lblAbout.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.lblAbout.Visible = false;
+            this.lblPB.AutoSize = true;
+            this.lblPB.Font = new System.Drawing.Font("Century Gothic", 25.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPB.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.lblPB.Location = new System.Drawing.Point(189, 54);
+            this.lblPB.Name = "lblPB";
+            this.lblPB.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.lblPB.Size = new System.Drawing.Size(404, 49);
+            this.lblPB.TabIndex = 5;
+            this.lblPB.Text = "Thông báo phòng ";
+            this.lblPB.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblPB.Visible = false;
+            // 
+            // lblTen
+            // 
+            this.lblTen.AutoSize = true;
+            this.lblTen.Font = new System.Drawing.Font("Century Gothic", 25.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTen.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.lblTen.Location = new System.Drawing.Point(244, 54);
+            this.lblTen.Name = "lblTen";
+            this.lblTen.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.lblTen.Size = new System.Drawing.Size(312, 49);
+            this.lblTen.TabIndex = 4;
+            this.lblTen.Text = "Tên nhân viên";
+            this.lblTen.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblTen.Visible = false;
+            // 
+            // lblSys
+            // 
+            this.lblSys.AutoSize = true;
+            this.lblSys.Font = new System.Drawing.Font("Century Gothic", 25.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblSys.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.lblSys.Location = new System.Drawing.Point(359, 52);
+            this.lblSys.Name = "lblSys";
+            this.lblSys.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.lblSys.Size = new System.Drawing.Size(200, 49);
+            this.lblSys.TabIndex = 3;
+            this.lblSys.Text = "Hệ thống";
+            this.lblSys.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblSys.Visible = false;
+            // 
+            // contextMenuStrip2
+            // 
+            this.contextMenuStrip2.ImageScalingSize = new System.Drawing.Size(20, 20);
+            this.contextMenuStrip2.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripMenuItem9,
+            this.toolStripMenuItem10});
+            this.contextMenuStrip2.Name = "contextMenuStrip1";
+            this.contextMenuStrip2.Size = new System.Drawing.Size(232, 56);
+            // 
+            // toolStripMenuItem9
+            // 
+            this.toolStripMenuItem9.Image = global::Main.Properties.Resources.downloadfolder_993671;
+            this.toolStripMenuItem9.Name = "toolStripMenuItem9";
+            this.toolStripMenuItem9.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.S)));
+            this.toolStripMenuItem9.Size = new System.Drawing.Size(231, 26);
+            this.toolStripMenuItem9.Text = "Download PDF";
+            this.toolStripMenuItem9.Click += new System.EventHandler(this.toolStripMenuItem9_Click_1);
+            // 
+            // toolStripMenuItem10
+            // 
+            this.toolStripMenuItem10.Image = global::Main.Properties.Resources.repeat_update_refresh_reload_sync_icon_225556;
+            this.toolStripMenuItem10.Name = "toolStripMenuItem10";
+            this.toolStripMenuItem10.ShortcutKeys = System.Windows.Forms.Keys.F5;
+            this.toolStripMenuItem10.Size = new System.Drawing.Size(231, 26);
+            this.toolStripMenuItem10.Text = "Update";
+            this.toolStripMenuItem10.Click += new System.EventHandler(this.toolStripMenuItem10_Click_1);
             // 
             // Home_NV
             // 
@@ -283,6 +317,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel_title.ResumeLayout(false);
             this.panel_title.PerformLayout();
+            this.contextMenuStrip2.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -304,5 +339,8 @@
         private System.Windows.Forms.Label lblPB;
         private System.Windows.Forms.Label lblCN;
         private System.Windows.Forms.Label lblAbout;
+        private System.Windows.Forms.ContextMenuStrip contextMenuStrip2;
+        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem9;
+        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem10;
     }
 }

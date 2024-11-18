@@ -54,7 +54,7 @@ namespace Main
         {
             if (string.IsNullOrEmpty(filePath))
             {
-                MessageBox.Show("Vui lòng chọn tệp để lưu.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Không tìm thấy tệp có sẵn.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return; // Dừng lại nếu không có tệp hợp lệ
             }
             //Mở hộp thoại lưu
@@ -97,6 +97,11 @@ namespace Main
                 }
 
             }
+        }
+        public void RefreshData()
+        {
+            string query = "select tb.maThongBao, nv.hoTen,tieuDe, noiDung,ngayDang, fileDinhKem from ThongBao tb inner join NhanVien_ThongBao nv_tb on tb.maThongBao = nv_tb.maThongBao inner join NhanVien nv on nv.maNhanVien = nv_tb.maNhanVien where nv.maNhanVien = '" + maNhanVien + "'";
+            LoadDataGridView(dgvTB_CaNhan, query);
         }
     }
 }
