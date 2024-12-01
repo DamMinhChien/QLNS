@@ -3,6 +3,18 @@
   "WorkspaceRootPath": "C:\\Users\\dammi\\source\\repos\\QLNS\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{D52E2193-B411-4269-B729-60D5E9A55ADC}|Main\\Main.csproj|c:\\users\\dammi\\source\\repos\\qlns\\main\\chamcong\\chamcongform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{D52E2193-B411-4269-B729-60D5E9A55ADC}|Main\\Main.csproj|solutionrelative:main\\chamcong\\chamcongform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D52E2193-B411-4269-B729-60D5E9A55ADC}|Main\\Main.csproj|c:\\users\\dammi\\source\\repos\\qlns\\main\\chamcong\\chamcongform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D52E2193-B411-4269-B729-60D5E9A55ADC}|Main\\Main.csproj|solutionrelative:main\\chamcong\\chamcongform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D52E2193-B411-4269-B729-60D5E9A55ADC}|Main\\Main.csproj|c:\\users\\dammi\\source\\repos\\qlns\\main\\quanlythongbao\\quanlythongbaoform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{D52E2193-B411-4269-B729-60D5E9A55ADC}|Main\\Main.csproj|solutionrelative:main\\quanlythongbao\\quanlythongbaoform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{D52E2193-B411-4269-B729-60D5E9A55ADC}|Main\\Main.csproj|c:\\users\\dammi\\source\\repos\\qlns\\main\\login_home_forgot\\loginform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{D52E2193-B411-4269-B729-60D5E9A55ADC}|Main\\Main.csproj|solutionrelative:main\\login_home_forgot\\loginform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -26,24 +38,61 @@
       "DocumentGroups": [
         {
           "DockedWidth": 421,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "ChamCongForm.cs",
+              "DocumentMoniker": "C:\\Users\\dammi\\source\\repos\\QLNS\\Main\\ChamCong\\ChamCongForm.cs",
+              "RelativeDocumentMoniker": "Main\\ChamCong\\ChamCongForm.cs",
+              "ToolTip": "C:\\Users\\dammi\\source\\repos\\QLNS\\Main\\ChamCong\\ChamCongForm.cs",
+              "RelativeToolTip": "Main\\ChamCong\\ChamCongForm.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAGUBAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-20T12:30:42.369Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "ChamCongForm.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\dammi\\source\\repos\\QLNS\\Main\\ChamCong\\ChamCongForm.cs",
+              "RelativeDocumentMoniker": "Main\\ChamCong\\ChamCongForm.cs",
+              "ToolTip": "C:\\Users\\dammi\\source\\repos\\QLNS\\Main\\ChamCong\\ChamCongForm.cs [Design]",
+              "RelativeToolTip": "Main\\ChamCong\\ChamCongForm.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-20T12:30:39.649Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "QuanLyThongBaoForm.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\dammi\\source\\repos\\QLNS\\Main\\QuanLyThongBao\\QuanLyThongBaoForm.cs",
+              "RelativeDocumentMoniker": "Main\\QuanLyThongBao\\QuanLyThongBaoForm.cs",
+              "ToolTip": "C:\\Users\\dammi\\source\\repos\\QLNS\\Main\\QuanLyThongBao\\QuanLyThongBaoForm.cs [Design]",
+              "RelativeToolTip": "Main\\QuanLyThongBao\\QuanLyThongBaoForm.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-20T12:30:28.393Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
               "Title": "LoginForm.cs",
               "DocumentMoniker": "C:\\Users\\dammi\\source\\repos\\QLNS\\Main\\Login_Home_Forgot\\LoginForm.cs",
               "RelativeDocumentMoniker": "Main\\Login_Home_Forgot\\LoginForm.cs",
               "ToolTip": "C:\\Users\\dammi\\source\\repos\\QLNS\\Main\\Login_Home_Forgot\\LoginForm.cs",
               "RelativeToolTip": "Main\\Login_Home_Forgot\\LoginForm.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAASAAAAAAAAAA==",
+              "ViewState": "AgIAAG0AAAAAAAAAAADwvw4AAAAKAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-18T08:52:34.177Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 4,
               "Title": "LoginForm.cs [Design]",
               "DocumentMoniker": "C:\\Users\\dammi\\source\\repos\\QLNS\\Main\\Login_Home_Forgot\\LoginForm.cs",
               "RelativeDocumentMoniker": "Main\\Login_Home_Forgot\\LoginForm.cs",
@@ -54,7 +103,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 6,
               "Title": "QuanLyThongBao_TP_Form.cs",
               "DocumentMoniker": "C:\\Users\\dammi\\source\\repos\\QLNS\\Main\\Login_TP\\QuanLyThongBao_TP_Form.cs",
               "RelativeDocumentMoniker": "Main\\Login_TP\\QuanLyThongBao_TP_Form.cs",
@@ -66,7 +115,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 5,
               "Title": "QuanLyThongBao_TP_Form.cs [Design]",
               "DocumentMoniker": "C:\\Users\\dammi\\source\\repos\\QLNS\\Main\\Login_TP\\QuanLyThongBao_TP_Form.cs",
               "RelativeDocumentMoniker": "Main\\Login_TP\\QuanLyThongBao_TP_Form.cs",
