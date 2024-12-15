@@ -183,16 +183,17 @@ namespace Main
                         {
                             countP++; // Đếm số ngày "p"
                         }
-                        // Kiểm tra số lượng "p"
-                        if (countP > 2)
-                        {
-                            // Tính "p" như không có mặt
-                            // Không tăng totalDays
-                        }
-                        else
-                        {
-                            totalDays += countP; // Nếu có ít hơn hoặc bằng 2 "p", tính vào tổng ngày công
-                        }
+                        
+                    }
+                    // Kiểm tra số lượng "p"
+                    if (countP > 2)
+                    {
+                        // Tính "p" như không có mặt
+                        // Không tăng totalDays
+                    }
+                    else
+                    {
+                        totalDays += countP; // Nếu có ít hơn hoặc bằng 2 "p", tính vào tổng ngày công
                     }
 
                     salary += (luong_co_ban / daysInMonth) * totalDays * he_so;
