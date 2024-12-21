@@ -242,26 +242,5 @@ namespace Main
             panel.BackColor = Color.White; // Màu nền mặc định
 
         }
-        private static void CenterControlsVertically(Panel panel)
-        {
-            // Tính toán tổng chiều cao của các control
-            int totalHeight = 0;
-            foreach (Control control in panel.Controls)
-            {
-                totalHeight += control.Height;
-            }
-
-            // Tính toán vị trí bắt đầu
-            int startY = (panel.Height - totalHeight) / 2;
-
-            // Căn giữa từng control theo chiều dọc
-            foreach (Control control in panel.Controls)
-            {
-                control.Location = new Point(
-                    (panel.Width - control.Width) / 2, // Căn giữa theo chiều ngang
-                    startY); // Vị trí theo chiều dọc
-                startY += control.Height; // Cập nhật vị trí cho control tiếp theo
-            }
-        }
     }
 }

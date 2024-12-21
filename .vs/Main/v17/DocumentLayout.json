@@ -3,48 +3,12 @@
   "WorkspaceRootPath": "C:\\Users\\dammi\\source\\repos\\QLNS\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{D52E2193-B411-4269-B729-60D5E9A55ADC}|Main\\Main.csproj|c:\\users\\dammi\\source\\repos\\qlns\\main\\chamcong\\chamcongtp_form.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D52E2193-B411-4269-B729-60D5E9A55ADC}|Main\\Main.csproj|solutionrelative:main\\chamcong\\chamcongtp_form.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{D52E2193-B411-4269-B729-60D5E9A55ADC}|Main\\Main.csproj|c:\\users\\dammi\\source\\repos\\qlns\\main\\function\\function.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D52E2193-B411-4269-B729-60D5E9A55ADC}|Main\\Main.csproj|solutionrelative:main\\function\\function.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{D52E2193-B411-4269-B729-60D5E9A55ADC}|Main\\Main.csproj|C:\\Users\\dammi\\source\\repos\\QLNS\\main\\chamcong\\chamcongtp_form.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{D52E2193-B411-4269-B729-60D5E9A55ADC}|Main\\Main.csproj|solutionrelative:main\\chamcong\\chamcongtp_form.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D52E2193-B411-4269-B729-60D5E9A55ADC}|Main\\Main.csproj|C:\\Users\\dammi\\source\\repos\\QLNS\\main\\chamcong\\chamcongform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D52E2193-B411-4269-B729-60D5E9A55ADC}|Main\\Main.csproj|solutionrelative:main\\chamcong\\chamcongform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D52E2193-B411-4269-B729-60D5E9A55ADC}|Main\\Main.csproj|C:\\Users\\dammi\\source\\repos\\QLNS\\main\\chamcong\\chamcongform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{D52E2193-B411-4269-B729-60D5E9A55ADC}|Main\\Main.csproj|solutionrelative:main\\chamcong\\chamcongform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D52E2193-B411-4269-B729-60D5E9A55ADC}|Main\\Main.csproj|C:\\Users\\dammi\\source\\repos\\QLNS\\main\\login_home_forgot\\forgotpassform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D52E2193-B411-4269-B729-60D5E9A55ADC}|Main\\Main.csproj|solutionrelative:main\\login_home_forgot\\forgotpassform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D52E2193-B411-4269-B729-60D5E9A55ADC}|Main\\Main.csproj|C:\\Users\\dammi\\source\\repos\\QLNS\\main\\login_home_forgot\\forgotpassform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{D52E2193-B411-4269-B729-60D5E9A55ADC}|Main\\Main.csproj|solutionrelative:main\\login_home_forgot\\forgotpassform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D52E2193-B411-4269-B729-60D5E9A55ADC}|Main\\Main.csproj|C:\\Users\\dammi\\source\\repos\\QLNS\\main\\quanlythongbao\\quanlythongbaoform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{D52E2193-B411-4269-B729-60D5E9A55ADC}|Main\\Main.csproj|solutionrelative:main\\quanlythongbao\\quanlythongbaoform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D52E2193-B411-4269-B729-60D5E9A55ADC}|Main\\Main.csproj|C:\\Users\\dammi\\source\\repos\\QLNS\\main\\login_home_forgot\\loginform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{D52E2193-B411-4269-B729-60D5E9A55ADC}|Main\\Main.csproj|solutionrelative:main\\login_home_forgot\\loginform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D52E2193-B411-4269-B729-60D5E9A55ADC}|Main\\Main.csproj|C:\\Users\\dammi\\source\\repos\\QLNS\\main\\login_tp\\quanlythongbao_tp_form.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{D52E2193-B411-4269-B729-60D5E9A55ADC}|Main\\Main.csproj|solutionrelative:main\\login_tp\\quanlythongbao_tp_form.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D52E2193-B411-4269-B729-60D5E9A55ADC}|Main\\Main.csproj|C:\\Users\\dammi\\source\\repos\\QLNS\\main\\login_home_forgot\\loginform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D52E2193-B411-4269-B729-60D5E9A55ADC}|Main\\Main.csproj|solutionrelative:main\\login_home_forgot\\loginform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D52E2193-B411-4269-B729-60D5E9A55ADC}|Main\\Main.csproj|C:\\Users\\dammi\\source\\repos\\QLNS\\main\\login_tp\\quanlythongbao_tp_form.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D52E2193-B411-4269-B729-60D5E9A55ADC}|Main\\Main.csproj|solutionrelative:main\\login_tp\\quanlythongbao_tp_form.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{D52E2193-B411-4269-B729-60D5E9A55ADC}|Main\\Main.csproj|C:\\Users\\dammi\\source\\repos\\QLNS\\main\\quanlynhansudataset.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D52E2193-B411-4269-B729-60D5E9A55ADC}|Main\\Main.csproj|solutionrelative:main\\quanlynhansudataset.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -53,135 +17,33 @@
       "VerticalTabListWidth": 256,
       "DocumentGroups": [
         {
-          "DockedWidth": 421,
+          "DockedWidth": 431,
           "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "ChamCongTP_Form.cs",
-              "DocumentMoniker": "C:\\Users\\dammi\\source\\repos\\QLNS\\Main\\ChamCong\\ChamCongTP_Form.cs",
-              "RelativeDocumentMoniker": "Main\\ChamCong\\ChamCongTP_Form.cs",
-              "ToolTip": "C:\\Users\\dammi\\source\\repos\\QLNS\\Main\\ChamCong\\ChamCongTP_Form.cs",
-              "RelativeToolTip": "Main\\ChamCong\\ChamCongTP_Form.cs",
-              "ViewState": "AgIAAKoAAAAAAAAAAAAAALAAAAAZAAAAAAAAAA==",
+              "Title": "Function.cs",
+              "DocumentMoniker": "C:\\Users\\dammi\\source\\repos\\QLNS\\Main\\Function\\Function.cs",
+              "RelativeDocumentMoniker": "Main\\Function\\Function.cs",
+              "ToolTip": "C:\\Users\\dammi\\source\\repos\\QLNS\\Main\\Function\\Function.cs",
+              "RelativeToolTip": "Main\\Function\\Function.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAC4AAAA+AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-15T07:12:30.809Z",
+              "WhenOpened": "2024-12-21T05:02:52.992Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "ChamCongTP_Form.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\dammi\\source\\repos\\QLNS\\Main\\ChamCong\\ChamCongTP_Form.cs",
-              "RelativeDocumentMoniker": "Main\\ChamCong\\ChamCongTP_Form.cs",
-              "ToolTip": "C:\\Users\\dammi\\source\\repos\\QLNS\\Main\\ChamCong\\ChamCongTP_Form.cs [Design]",
-              "RelativeToolTip": "Main\\ChamCong\\ChamCongTP_Form.cs [Design]",
+              "Title": "QuanLyNhanSuDataSet.Designer.cs",
+              "DocumentMoniker": "C:\\Users\\dammi\\source\\repos\\QLNS\\Main\\QuanLyNhanSuDataSet.Designer.cs",
+              "RelativeDocumentMoniker": "Main\\QuanLyNhanSuDataSet.Designer.cs",
+              "ToolTip": "C:\\Users\\dammi\\source\\repos\\QLNS\\Main\\QuanLyNhanSuDataSet.Designer.cs",
+              "RelativeToolTip": "Main\\QuanLyNhanSuDataSet.Designer.cs",
+              "ViewState": "AgIAAJQBAAAAAAAAAAAUwAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-15T07:12:28.835Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "ForgotPassForm.cs",
-              "DocumentMoniker": "C:\\Users\\dammi\\source\\repos\\QLNS\\Main\\Login_Home_Forgot\\ForgotPassForm.cs",
-              "RelativeDocumentMoniker": "Main\\Login_Home_Forgot\\ForgotPassForm.cs",
-              "ToolTip": "C:\\Users\\dammi\\source\\repos\\QLNS\\Main\\Login_Home_Forgot\\ForgotPassForm.cs",
-              "RelativeToolTip": "Main\\Login_Home_Forgot\\ForgotPassForm.cs",
-              "ViewState": "AgIAAC8AAAAAAAAAAAAgwD8AAAARAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-15T06:45:59.346Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "ForgotPassForm.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\dammi\\source\\repos\\QLNS\\Main\\Login_Home_Forgot\\ForgotPassForm.cs",
-              "RelativeDocumentMoniker": "Main\\Login_Home_Forgot\\ForgotPassForm.cs",
-              "ToolTip": "C:\\Users\\dammi\\source\\repos\\QLNS\\Main\\Login_Home_Forgot\\ForgotPassForm.cs [Design]",
-              "RelativeToolTip": "Main\\Login_Home_Forgot\\ForgotPassForm.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-15T06:45:57.257Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "ChamCongForm.cs",
-              "DocumentMoniker": "C:\\Users\\dammi\\source\\repos\\QLNS\\Main\\ChamCong\\ChamCongForm.cs",
-              "RelativeDocumentMoniker": "Main\\ChamCong\\ChamCongForm.cs",
-              "ToolTip": "C:\\Users\\dammi\\source\\repos\\QLNS\\Main\\ChamCong\\ChamCongForm.cs",
-              "RelativeToolTip": "Main\\ChamCong\\ChamCongForm.cs",
-              "ViewState": "AgIAAOoAAAAAAAAAAAAtwCoAAAAMAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-20T12:30:42.369Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "ChamCongForm.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\dammi\\source\\repos\\QLNS\\Main\\ChamCong\\ChamCongForm.cs",
-              "RelativeDocumentMoniker": "Main\\ChamCong\\ChamCongForm.cs",
-              "ToolTip": "C:\\Users\\dammi\\source\\repos\\QLNS\\Main\\ChamCong\\ChamCongForm.cs [Design]",
-              "RelativeToolTip": "Main\\ChamCong\\ChamCongForm.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-20T12:30:39.649Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "QuanLyThongBaoForm.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\dammi\\source\\repos\\QLNS\\Main\\QuanLyThongBao\\QuanLyThongBaoForm.cs",
-              "RelativeDocumentMoniker": "Main\\QuanLyThongBao\\QuanLyThongBaoForm.cs",
-              "ToolTip": "C:\\Users\\dammi\\source\\repos\\QLNS\\Main\\QuanLyThongBao\\QuanLyThongBaoForm.cs [Design]",
-              "RelativeToolTip": "Main\\QuanLyThongBao\\QuanLyThongBaoForm.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-20T12:30:28.393Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "LoginForm.cs",
-              "DocumentMoniker": "C:\\Users\\dammi\\source\\repos\\QLNS\\Main\\Login_Home_Forgot\\LoginForm.cs",
-              "RelativeDocumentMoniker": "Main\\Login_Home_Forgot\\LoginForm.cs",
-              "ToolTip": "C:\\Users\\dammi\\source\\repos\\QLNS\\Main\\Login_Home_Forgot\\LoginForm.cs",
-              "RelativeToolTip": "Main\\Login_Home_Forgot\\LoginForm.cs",
-              "ViewState": "AgIAAG0AAAAAAAAAAADwvw4AAAAKAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-18T08:52:34.177Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "LoginForm.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\dammi\\source\\repos\\QLNS\\Main\\Login_Home_Forgot\\LoginForm.cs",
-              "RelativeDocumentMoniker": "Main\\Login_Home_Forgot\\LoginForm.cs",
-              "ToolTip": "C:\\Users\\dammi\\source\\repos\\QLNS\\Main\\Login_Home_Forgot\\LoginForm.cs [Design]",
-              "RelativeToolTip": "Main\\Login_Home_Forgot\\LoginForm.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-18T08:52:31.979Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "QuanLyThongBao_TP_Form.cs",
-              "DocumentMoniker": "C:\\Users\\dammi\\source\\repos\\QLNS\\Main\\Login_TP\\QuanLyThongBao_TP_Form.cs",
-              "RelativeDocumentMoniker": "Main\\Login_TP\\QuanLyThongBao_TP_Form.cs",
-              "ToolTip": "C:\\Users\\dammi\\source\\repos\\QLNS\\Main\\Login_TP\\QuanLyThongBao_TP_Form.cs",
-              "RelativeToolTip": "Main\\Login_TP\\QuanLyThongBao_TP_Form.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAIIAAAANAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-18T08:48:25.34Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "QuanLyThongBao_TP_Form.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\dammi\\source\\repos\\QLNS\\Main\\Login_TP\\QuanLyThongBao_TP_Form.cs",
-              "RelativeDocumentMoniker": "Main\\Login_TP\\QuanLyThongBao_TP_Form.cs",
-              "ToolTip": "C:\\Users\\dammi\\source\\repos\\QLNS\\Main\\Login_TP\\QuanLyThongBao_TP_Form.cs [Design]",
-              "RelativeToolTip": "Main\\Login_TP\\QuanLyThongBao_TP_Form.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-18T08:48:23.941Z"
+              "WhenOpened": "2024-12-21T05:01:43.375Z"
             }
           ]
         }
